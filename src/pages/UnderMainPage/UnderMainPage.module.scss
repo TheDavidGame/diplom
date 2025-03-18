@@ -1,0 +1,51 @@
+.wrapper {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.header {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 80px;
+
+  .burger,
+  .reservation {
+    flex: 0 0 auto;
+    z-index: 1;
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+
+  .logo {
+    position: absolute;
+    left: 50%;
+    top: 80%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+
+    img {
+      height: auto;
+    }
+  }
+}
+
+.background {
+  position: absolute;
+  width: 100%;
+  height: 216px;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.underHeader {
+  margin-top: 216px;
+  padding: 40px;
+}
