@@ -46,7 +46,6 @@ const MainPage = () => {
             />
 
             <div className={MainPageStyles.ctaBlock}>
-                <span className={MainPageStyles.ctaText}>Смотреть дальше</span>
                 <img
                     src="/mainPageArrow.svg"
                     alt="arrow"
