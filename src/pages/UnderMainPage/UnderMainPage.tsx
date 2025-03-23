@@ -1,5 +1,6 @@
 import React, {useRef, useState, useEffect} from 'react';
 import UnderMainPageStyles from './UnderMainPage.module.scss';
+import Slider, {SlideItem} from "../../components/Slider/Slider";
 
 interface UnderMainPageProps {
     mainPageRef: React.RefObject<HTMLDivElement | null>;
@@ -14,6 +15,10 @@ const UnderMainPage: React.FC<UnderMainPageProps> = ({
                                                      }) => {
     const scrollerItems = ['testImage', 'testImage', 'testImage', 'testImage', 'testImage'];
     const duplicatedImages = [...scrollerItems, ...scrollerItems];
+    const slides: SlideItem[] = duplicatedImages.map(item => ({
+        image: `/${item}.jpg`,
+        text: 'Текст под фото'
+    }));
     const headerRef = useRef<HTMLDivElement>(null);
     const [headerHeight, setHeaderHeight] = useState(0);
 
@@ -95,18 +100,10 @@ const UnderMainPage: React.FC<UnderMainPageProps> = ({
                 </div>
             </div>
 
-            <div className={UnderMainPageStyles.scroller}>
-                <div className={UnderMainPageStyles.scrollerContainer}>
-                    {duplicatedImages.map((item) => (
-                        <div key={item} className={UnderMainPageStyles.scrollerItem}>
-                            <img
-                                src={`/${item}.jpg`}
-                                alt={`Gallery ${item}`}
-                            />
-                        </div>
-                    ))}
-                </div>
-            </div>
+            <Slider
+                slides={slides}
+                showText={false}
+            />
 
             <div className={UnderMainPageStyles.underScroller}>
                 <div className={UnderMainPageStyles.underScrollerText}>

@@ -2,6 +2,7 @@
   display: flex;
   align-items: center;
   justify-content: space-around;
+  margin-bottom: 100px;
 
   &Photo {
 
@@ -13,6 +14,47 @@
 }
 
 .artFoodDescription {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+
+  &Title {
+      font-size: 96px;
+      font-weight: 800;
+      text-align: left;
+      max-width: 650px;
+      margin-bottom: 64px;
+  }
+
+  &Text {
+    font-size: 64px;
+    font-weight: 500;
+    text-align: left;
+    max-width: 866px;
+  }
+
+  &Btn {
+    margin-top: 64px;
+  }
+}
+
+.artFoodWrapperBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: row-reverse;
+  margin: 100px 0 100px 0;
+  &Photo {
+
+  }
+
+  &Description {
+
+  }
+}
+
+.artFoodBarDescription {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
