@@ -3,6 +3,7 @@ import MainPage from "../MainPage/MainPage";
 import UnderMainPage from "../UnderMainPage/UnderMainPage";
 import AboutUsPage from "../AboutUsPage/AboutUsPage";
 import EventsPage from "../EventsPage/EventsPage";
+import AwardsPage from "../AwardsPage/AwardsPage";
 
 const App = () => {
     const mainPageRef = useRef<HTMLDivElement>(null);
@@ -18,6 +19,7 @@ const App = () => {
             />
             <AboutUsPage />
             <EventsPage />
+            <AwardsPage />
         </div>
     );
 }
