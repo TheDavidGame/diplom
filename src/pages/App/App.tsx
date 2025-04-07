@@ -2,6 +2,7 @@ import { useRef, useState } from 'react';
 import MainPage from "../MainPage/MainPage";
 import UnderMainPage from "../UnderMainPage/UnderMainPage";
 import AboutUsPage from "../AboutUsPage/AboutUsPage";
+import EventsPage from "../EventsPage/EventsPage";
 
 const App = () => {
     const mainPageRef = useRef<HTMLDivElement>(null);
@@ -16,6 +17,7 @@ const App = () => {
                 setIsMainPageVisible={setIsMainPageVisible}
             />
             <AboutUsPage />
+            <EventsPage />
         </div>
     );
 }
