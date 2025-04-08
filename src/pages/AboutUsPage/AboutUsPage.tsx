@@ -1,6 +1,7 @@
 import React from 'react';
 import AboutUsPageStyles from './AboutUsPage.module.scss';
-import Slider, {SlideItem} from "../../components/Slider/Slider";
+import Slider from "../../components/Slider/Slider";
+import {SlideItem} from "../../entity/index.entity";
 
 const AboutUsPage = () => {
     const scrollerItems = ['testImage', 'testImage', 'testImage', 'testImage', 'testImage'];

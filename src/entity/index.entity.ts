@@ -25,3 +25,7 @@ export interface UnderMainPageProps {
     isMainPageVisible: boolean;
     setIsMainPageVisible: (visible: boolean) => void;
 }
+
+export interface menuHeaderItem {
+    text: string;
+}

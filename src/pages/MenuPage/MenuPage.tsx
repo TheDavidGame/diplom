@@ -1,42 +1,50 @@
 import React from 'react';
 import MenuPageStyles from './MenuPage.module.scss';
-import {EventSlideItem} from "../../entity/index.entity";
+import {EventSlideItem, menuHeaderItem} from "../../entity/index.entity";
+import AboutUsPageStyles from "../AboutUsPage/AboutUsPage.module.scss";
+import EventPageStyles from "../EventsPage/EventsPage.module.scss";
 
 const MenuPage = () => {
 
-    const slides: EventSlideItem[] = [
+    const menuHeader: menuHeaderItem[] = [
         {
-            image: '/eventSliderItemFirst.svg',
-            date: 'ПН, 12 ИЮЛЯ',
-            text: 'Джазовый сет от наших музыкантов. Lounge, bossa-nova. Начало в 19:00'
+            text: 'ОСНОВНЫЕ БЛЮДА'
         },
         {
-            image: '/eventSliderItemSecond.svg',
-            date: 'ВТ—ЧТ, 13—15 ИЮЛЯ',
-            text: 'Турнир по шахматам. Начало в 18:00'
+            text: 'СОБЫТИЙНОЕ МЕНЮ'
         },
         {
-            image: '/eventSliderItemFirst.svg',
-            date: 'ПТ, 16 ИЮЛЯ',
-            text: 'Концерт Lasta R’evero, под аккомпонемент Six Guys'
+            text: 'НАПИТКИ'
         },
         {
-            image: '/eventSliderItemFirst.svg',
-            date: 'СБ—ВС, 17—18 ИЮЛЯ',
-            text: 'Джазовый сет от наших музыкантов. Lounge, bossa-nova. Начало в 19:00 '
+            text: 'ДЕССЕРТЫ'
+        },
+        {
+            text: 'ЗАКУСКИ'
+        },
+        {
+            text: 'САЛАТЫ'
         }
     ];
 
     return (
         <div className={MenuPageStyles.wrapper}>
-            <div>МЕНЮ</div>
-            <div>
-
+            <div className={MenuPageStyles.title}>МЕНЮ</div>
+            <div className={MenuPageStyles.menuHeader}>
+                {menuHeader.map((elem, index) => (
+                    <div key={index} className={MenuPageStyles.menuItem}>
+                        <div className={MenuPageStyles.menuHeaderText}>{elem.text}</div>
+                    </div>
+                ))}
             </div>
-            <div>
-
+            <div className={MenuPageStyles.filter}>
+                <img
+                    src="/MenuPageFilter.svg"
+                    alt="MenuPageFilter"
+                    className={MenuPageStyles.filterItem}
+                />
             </div>
-            <div>ОСНОВНЫЕ БЛЮДА</div>
+            <div className={MenuPageStyles.mainDishes}>ОСНОВНЫЕ БЛЮДА</div>
             <div></div>
         </div>
     );
