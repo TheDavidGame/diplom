@@ -1,8 +1,6 @@
 import React from 'react';
 import MenuPageStyles from './MenuPage.module.scss';
-import {EventSlideItem, menuHeaderItem} from "../../entity/index.entity";
-import AboutUsPageStyles from "../AboutUsPage/AboutUsPage.module.scss";
-import EventPageStyles from "../EventsPage/EventsPage.module.scss";
+import {menuHeaderItem} from "../../entity/index.entity";
 
 const MenuPage = () => {
 
