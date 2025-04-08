@@ -1,12 +1,9 @@
 import React, {useRef, useState, useEffect} from 'react';
 import UnderMainPageStyles from './UnderMainPage.module.scss';
-import Slider, {SlideItem} from "../../components/Slider/Slider";
+import Slider from "../../components/Slider/Slider";
+import {SlideItem, UnderMainPageProps} from "../../entity/index.entity";
 
-interface UnderMainPageProps {
-    mainPageRef: React.RefObject<HTMLDivElement | null>;
-    isMainPageVisible: boolean;
-    setIsMainPageVisible: (visible: boolean) => void;
-}
+
 
 const UnderMainPage: React.FC<UnderMainPageProps> = ({
                                                          mainPageRef,

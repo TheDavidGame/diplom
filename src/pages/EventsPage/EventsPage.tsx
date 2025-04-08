@@ -1,11 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import EventPageStyles from './EventsPage.module.scss';
-
-export interface EventSlideItem {
-    image: string;
-    date: string;
-    text: string;
-}
+import {EventSlideItem} from "../../entity/index.entity";
 
 const EventsPage = () => {
     const [currentSlide, setCurrentSlide] = useState(0);

@@ -1,9 +1,6 @@
 import React, {forwardRef} from 'react';
 import MainPageStyles from './MainPage.module.scss';
-
-interface MainPageProps {
-    ref?: React.Ref<HTMLDivElement>;
-}
+import {MainPageProps} from "../../entity/index.entity";
 
 const MainPage = forwardRef<HTMLDivElement, MainPageProps>((props, ref) => {
     return (

@@ -1,15 +1,8 @@
 import React, {useRef, useCallback, useEffect} from 'react';
 import styles from './Slider.module.scss';
+import {ImageSliderProps} from "../../entity/index.entity";
 
-export interface SlideItem {
-    image: string;
-    text?: string;
-}
 
-interface ImageSliderProps {
-    slides: SlideItem[];
-    showText: boolean;
-}
 
 const Slider: React.FC<ImageSliderProps> = ({slides, showText}) => {
     const scrollerContainerRef = useRef<HTMLDivElement>(null);
