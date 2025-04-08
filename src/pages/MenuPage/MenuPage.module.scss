@@ -1,0 +1,45 @@
+.wrapper {
+  background-color: #FFE7C5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+.title {
+  font-size: 96px;
+  font-weight: 800;
+  margin-bottom: 64px;
+}
+
+.menuHeader {
+  display: flex;
+  gap: 24px 48px;
+  justify-items: start;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 1488px;
+}
+
+.menuHeaderText {
+  font-size: 48px;
+  font-weight: 600;
+  color: #2E281D;
+  white-space: nowrap;
+}
+
+.menuHeaderStar {
+  width: 100px;
+  height: 64px;
+  object-fit: contain;
+}
+
+.mainDishes {
+  font-size: 96px;
+  font-weight: 800;
+  margin-bottom: 64px;
+}
+
+.filter {
+  margin: 120px 0 190px 0;
+}
