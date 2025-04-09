@@ -2,8 +2,8 @@ import React, {useRef, useState, useEffect} from 'react';
 import UnderMainPageStyles from './UnderMainPage.module.scss';
 import Slider from "../../components/Slider/Slider";
 import {SlideItem, UnderMainPageProps} from "../../entity/index.entity";
-
-
+import Modal from "../../components/Modal/Modal";
+import BurgerModalPage from "../BurgerModalPage/BurgerModalPage";
 
 const UnderMainPage: React.FC<UnderMainPageProps> = ({
                                                          mainPageRef,
@@ -18,6 +18,7 @@ const UnderMainPage: React.FC<UnderMainPageProps> = ({
     }));
     const headerRef = useRef<HTMLDivElement>(null);
     const [headerHeight, setHeaderHeight] = useState(0);
+    const [isModalOpen, setIsModalOpen] = useState(false);
 
     useEffect(() => {
         const observer = new IntersectionObserver(
@@ -45,6 +46,14 @@ const UnderMainPage: React.FC<UnderMainPageProps> = ({
         }
     }, []);
 
+    const handleOpenModal = () => {
+        setIsModalOpen(true);
+    };
+
+    const handleCloseModal = () => {
+        setIsModalOpen(false);
+    };
+
     return (
         <div className={UnderMainPageStyles.wrapper}>
             <div style={{height: !isMainPageVisible ? headerHeight : 0}}/>
@@ -59,7 +68,7 @@ const UnderMainPage: React.FC<UnderMainPageProps> = ({
                     className={UnderMainPageStyles.background}
                 />
 
-                <div className={UnderMainPageStyles.burger}>
+                <div onClick={handleOpenModal} className={UnderMainPageStyles.burger}>
                     <img src="/burgerHeader.svg" alt="Menu"/>
                 </div>
 
@@ -112,6 +121,12 @@ const UnderMainPage: React.FC<UnderMainPageProps> = ({
                     <img src="/aboutUsUnderScroller.svg" alt="aboutUsUnderScroller"/>
                 </div>
             </div>
+
+            {isModalOpen && (
+                <Modal onClose={handleCloseModal}>
+                   <BurgerModalPage />
+                </Modal>
+            )}
         </div>
     )
 }

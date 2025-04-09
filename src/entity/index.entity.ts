@@ -29,3 +29,9 @@ export interface UnderMainPageProps {
 export interface menuHeaderItem {
     text: string;
 }
+
+export interface ModalProps {
+    onClose: () => void;
+    children: React.ReactNode;
+    modalType?: string;
+}
