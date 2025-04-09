@@ -1,10 +1,16 @@
-import React, {useEffect, useState} from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 import EventPageStyles from './EventsPage.module.scss';
 import {EventSlideItem} from "../../entity/index.entity";
+import { motion, useInView } from 'framer-motion';
 
 const EventsPage = () => {
     const [currentSlide, setCurrentSlide] = useState(0);
     const [slideWidth, setSlideWidth] = useState(0);
+    const ref = useRef<HTMLDivElement>(null);
+    const isInView = useInView(ref, {
+        once: true,
+        margin: "0px 0px -30% 0px"
+    });
     const slides: EventSlideItem[] = [
         {
             image: '/eventSliderItemFirst.svg',
@@ -57,7 +63,24 @@ const EventsPage = () => {
 
     return (
         <div className={EventPageStyles.wrapper}>
-            <div className={EventPageStyles.title}>СОБЫТИЯ</div>
+            <motion.div
+                className={EventPageStyles.title}
+                ref={ref}
+                initial={{ y: 100, opacity: 0 }}
+                animate={isInView ? {
+                    y: 0,
+                    opacity: 1,
+                    top: '20%',
+                    transition: {
+                        type: "spring",
+                        stiffness: 80,
+                        damping: 10
+                    }
+                } : {}}
+                style={{ position: 'relative' }}
+            >
+                СОБЫТИЯ
+            </motion.div>
 
             <div className={EventPageStyles.slider}>
                 <div
