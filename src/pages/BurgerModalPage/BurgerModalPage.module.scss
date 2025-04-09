@@ -25,11 +25,32 @@
     margin-bottom: 30px;
     text-align: left;
     white-space: nowrap;
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: translateY(-3px);
+
+      .underline {
+        width: 100%;
+      }
+    }
 
     &:last-child {
       margin-bottom: 0;
     }
   }
+}
+
+.underline {
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 0;
+  height: 4px;
+  background-color: white;
+  transition: width 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 .star {

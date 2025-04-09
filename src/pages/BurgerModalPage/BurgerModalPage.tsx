@@ -73,7 +73,10 @@ const BurgerModalPage = () => {
 
             <div className={BurgerModalPageStyles.list}>
                 {menuList.map((el, index) => (
-                    <div className={BurgerModalPageStyles.listItem} key={index}> {el.text} </div>
+                    <div className={BurgerModalPageStyles.listItem} key={index}>
+                        {el.text}
+                    <div className={BurgerModalPageStyles.underline}></div>
+                    </div>
                 ))}
             </div>
 
