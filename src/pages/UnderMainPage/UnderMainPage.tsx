@@ -4,6 +4,7 @@ import Slider from "../../components/Slider/Slider";
 import {SlideItem, UnderMainPageProps} from "../../entity/index.entity";
 import Modal from "../../components/Modal/Modal";
 import BurgerModalPage from "../BurgerModalPage/BurgerModalPage";
+import { motion, useInView } from 'framer-motion';
 
 const UnderMainPage: React.FC<UnderMainPageProps> = ({
                                                          mainPageRef,
@@ -19,6 +20,11 @@ const UnderMainPage: React.FC<UnderMainPageProps> = ({
     const headerRef = useRef<HTMLDivElement>(null);
     const [headerHeight, setHeaderHeight] = useState(0);
     const [isModalOpen, setIsModalOpen] = useState(false);
+    const ref = useRef<HTMLDivElement>(null);
+    const isInView = useInView(ref, {
+        once: true,
+        margin: "0px 0px -30% 0px"
+    });
 
     useEffect(() => {
         const observer = new IntersectionObserver(
@@ -82,9 +88,24 @@ const UnderMainPage: React.FC<UnderMainPageProps> = ({
             </div>
 
             <div className={UnderMainPageStyles.underHeader}>
-                <div className={UnderMainPageStyles.underHeaderText}>
+                <motion.div
+                    className={UnderMainPageStyles.underHeaderText}
+                    ref={ref}
+                    initial={{ y: 100, opacity: 0 }}
+                    animate={isInView ? {
+                        y: 0,
+                        opacity: 1,
+                        top: '20%',
+                        transition: {
+                            type: "spring",
+                            stiffness: 80,
+                            damping: 10
+                        }
+                    } : {}}
+                    style={{ position: 'relative' }}
+                >
                     МЕСТО СИЛЫ ЛЮБИТЕЛЕЙ ДЖАЗА <br/> И ОБЩЕНИЯ
-                </div>
+                </motion.div>
                 <div className={UnderMainPageStyles.underHeaderList}>
                     <img src="/starUnderMain.svg" alt="star"/>
                     <div>
@@ -124,7 +145,7 @@ const UnderMainPage: React.FC<UnderMainPageProps> = ({
 
             {isModalOpen && (
                 <Modal onClose={handleCloseModal}>
-                   <BurgerModalPage />
+                    <BurgerModalPage/>
                 </Modal>
             )}
         </div>

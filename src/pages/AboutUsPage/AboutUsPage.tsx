@@ -1,7 +1,8 @@
-import React from 'react';
+import React, {useRef} from 'react';
 import AboutUsPageStyles from './AboutUsPage.module.scss';
 import Slider from "../../components/Slider/Slider";
 import {SlideItem} from "../../entity/index.entity";
+import { motion, useInView } from 'framer-motion';
 
 const AboutUsPage = () => {
     const scrollerItems = ['testImage', 'testImage', 'testImage', 'testImage', 'testImage'];
@@ -10,6 +11,19 @@ const AboutUsPage = () => {
         image: `/${item}.jpg`,
         text: 'Текст под фото'
     }));
+    const ref1 = useRef<HTMLDivElement>(null);
+    const ref2 = useRef<HTMLDivElement>(null);
+
+    const isInView1 = useInView(ref1, {
+        once: true,
+        margin: "0px 0px -30% 0px"
+    });
+
+    const isInView2 = useInView(ref2, {
+        once: true,
+        margin: "0px 0px -30% 0px"
+    });
+
 
     return (
         <div className={AboutUsPageStyles.wrapper}>
@@ -20,9 +34,24 @@ const AboutUsPage = () => {
                     className={AboutUsPageStyles.artFoodWrapperPhoto}
                 />
                 <div className={AboutUsPageStyles.artFoodDescription}>
-                    <div className={AboutUsPageStyles.artFoodDescriptionTitle}>
+                    <motion.div
+                        className={AboutUsPageStyles.artFoodDescriptionTitle}
+                        ref={ref1}
+                        initial={{ y: 100, opacity: 0 }}
+                        animate={isInView1 ? {
+                            y: 0,
+                            opacity: 1,
+                            top: '20%',
+                            transition: {
+                                type: "spring",
+                                stiffness: 80,
+                                damping: 10
+                            }
+                        } : {}}
+                        style={{ position: 'relative' }}
+                    >
                         Искусство и еда
-                    </div>
+                    </motion.div>
                     <div className={AboutUsPageStyles.artFoodDescriptionText}>
                         Забудьте о скучных <br/>
                         местах и откройте для <br/>
@@ -56,10 +85,25 @@ const AboutUsPage = () => {
                     className={AboutUsPageStyles.artFoodBarPhoto}
                 />
                 <div className={AboutUsPageStyles.artFoodBarDescription}>
-                    <div className={AboutUsPageStyles.artFoodBarDescriptionTitle}>
+                    <motion.div
+                        className={AboutUsPageStyles.artFoodBarDescriptionTitle}
+                        ref={ref2}
+                        initial={{ y: 100, opacity: 0 }}
+                        animate={isInView2 ? {
+                            y: 0,
+                            opacity: 1,
+                            top: '20%',
+                            transition: {
+                                type: "spring",
+                                stiffness: 80,
+                                damping: 10
+                            }
+                        } : {}}
+                        style={{ position: 'relative' }}
+                    >
                         Крафт <br/>
                         и коктейли
-                    </div>
+                    </motion.div>
                     <div className={AboutUsPageStyles.artFoodBarDescriptionText}>
                         Каждый напиток — как
                         джазовая импровизация:
