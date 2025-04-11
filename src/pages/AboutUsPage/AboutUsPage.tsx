@@ -2,7 +2,7 @@ import React, {useRef} from 'react';
 import AboutUsPageStyles from './AboutUsPage.module.scss';
 import Slider from "../../components/Slider/Slider";
 import {SlideItem} from "../../entity/index.entity";
-import { motion, useInView } from 'framer-motion';
+import {motion, useInView} from 'framer-motion';
 
 const AboutUsPage = () => {
     const scrollerItems = ['testImage', 'testImage', 'testImage', 'testImage', 'testImage'];
@@ -37,7 +37,7 @@ const AboutUsPage = () => {
                     <motion.div
                         className={AboutUsPageStyles.artFoodDescriptionTitle}
                         ref={ref1}
-                        initial={{ y: 100, opacity: 0 }}
+                        initial={{y: 100, opacity: 0}}
                         animate={isInView1 ? {
                             y: 0,
                             opacity: 1,
@@ -48,7 +48,7 @@ const AboutUsPage = () => {
                                 damping: 10
                             }
                         } : {}}
-                        style={{ position: 'relative' }}
+                        style={{position: 'relative'}}
                     >
                         Искусство и еда
                     </motion.div>
@@ -68,16 +68,13 @@ const AboutUsPage = () => {
                     </div>
                 </div>
             </div>
-            <div>
-
-                <div>
-                    <Slider
-                        slides={slides}
-                        showText={true}
-                    />
-                </div>
-
+            <div style={{backgroundColor: '#FFE7C5'}}>
+                <Slider
+                    slides={slides}
+                    showText={true}
+                />
             </div>
+
             <div className={AboutUsPageStyles.artFoodWrapperBar}>
                 <img
                     src="/artFoodBarPhoto.svg"
@@ -88,7 +85,7 @@ const AboutUsPage = () => {
                     <motion.div
                         className={AboutUsPageStyles.artFoodBarDescriptionTitle}
                         ref={ref2}
-                        initial={{ y: 100, opacity: 0 }}
+                        initial={{y: 100, opacity: 0}}
                         animate={isInView2 ? {
                             y: 0,
                             opacity: 1,
@@ -99,7 +96,7 @@ const AboutUsPage = () => {
                                 damping: 10
                             }
                         } : {}}
-                        style={{ position: 'relative' }}
+                        style={{position: 'relative'}}
                     >
                         Крафт <br/>
                         и коктейли

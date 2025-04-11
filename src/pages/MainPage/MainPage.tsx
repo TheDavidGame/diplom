@@ -44,6 +44,11 @@ const MainPage = forwardRef<HTMLDivElement, MainPageProps>((props, ref) => {
                 alt="main content"
                 className={MainPageStyles.mainPhoto}
             />
+            <img
+                src="/mainPageStar.svg"
+                alt="main content"
+                className={MainPageStyles.mainPhotoStar}
+            />
 
             <div className={MainPageStyles.ctaBlock}>
                 <img

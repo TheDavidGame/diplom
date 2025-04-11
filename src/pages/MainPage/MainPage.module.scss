@@ -59,6 +59,16 @@
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
+    z-index: 5;
+  }
+
+  .mainPhotoStar {
+    position: absolute;
+    width: 768px;
+    height: 768px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
     z-index: 4;
     animation: rotate 20s linear infinite;
     transform-origin: center center;
@@ -86,7 +96,6 @@
     padding-bottom: 48px;
 
     .ctaText {
-      font-family: 'TT Neoris', serif;
       font-size: 32px;
       color: white;
       text-transform: uppercase;

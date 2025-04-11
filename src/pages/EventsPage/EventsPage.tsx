@@ -148,6 +148,14 @@ const EventsPage = () => {
                     className={EventPageStyles.btn}
                 />
             </div>
+
+            <div className={EventPageStyles.footer}>
+                <img
+                    src={'/eventsPageFooter.svg'}
+                    alt={'eventsPageFooter'}
+                    className={EventPageStyles.footerItem}
+                />
+            </div>
         </div>
     );
 };
