@@ -1,4 +1,4 @@
-import { useRef, useState } from 'react';
+import {useRef, useState} from 'react';
 import MainPage from "../MainPage/MainPage";
 import UnderMainPage from "../UnderMainPage/UnderMainPage";
 import AboutUsPage from "../AboutUsPage/AboutUsPage";
