@@ -1,7 +1,6 @@
 import React, {useRef} from 'react';
 import AwardsPageStyles from './AwardsPage.module.scss';
 import { motion, useInView } from 'framer-motion';
-import UnderMainPageStyles from "../UnderMainPage/UnderMainPage.module.scss";
 
 const AWARDS_IMAGES = [
     '/awardsPageFirst.svg',
@@ -56,6 +55,13 @@ const AwardsPage = () => {
                     className={AwardsPageStyles.mainImage}
                 />
             </div>
+            {/*<div className={AwardsPageStyles.footer}>*/}
+            {/*    <img*/}
+            {/*        src="/awardsPageFooter.svg"*/}
+            {/*        alt="awardsPageFooter"*/}
+            {/*        className={AwardsPageStyles.footerItem}*/}
+            {/*    />*/}
+            {/*</div>*/}
         </div>
     );
 };

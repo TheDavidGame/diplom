@@ -2,7 +2,7 @@ import React, {useRef} from 'react';
 import AboutUsPageStyles from './AboutUsPage.module.scss';
 import Slider from "../../components/Slider/Slider";
 import {SlideItem} from "../../entity/index.entity";
-import { motion, useInView } from 'framer-motion';
+import {motion, useInView} from 'framer-motion';
 
 const AboutUsPage = () => {
     const scrollerItems = ['testImage', 'testImage', 'testImage', 'testImage', 'testImage'];
@@ -33,11 +33,18 @@ const AboutUsPage = () => {
                     alt="artFoodWrapperPhoto"
                     className={AboutUsPageStyles.artFoodWrapperPhoto}
                 />
+
+                <img
+                    src="/artFoodWrapperStar.svg"
+                    alt="artFoodWrapperStar"
+                    className={AboutUsPageStyles.artFoodWrapperStar}
+                />
+
                 <div className={AboutUsPageStyles.artFoodDescription}>
                     <motion.div
                         className={AboutUsPageStyles.artFoodDescriptionTitle}
                         ref={ref1}
-                        initial={{ y: 100, opacity: 0 }}
+                        initial={{y: 100, opacity: 0}}
                         animate={isInView1 ? {
                             y: 0,
                             opacity: 1,
@@ -48,16 +55,15 @@ const AboutUsPage = () => {
                                 damping: 10
                             }
                         } : {}}
-                        style={{ position: 'relative' }}
+                        style={{position: 'relative'}}
                     >
                         Искусство и еда
                     </motion.div>
                     <div className={AboutUsPageStyles.artFoodDescriptionText}>
-                        Забудьте о скучных <br/>
-                        местах и откройте для <br/>
-                        себя пространство, где
-                        искусство и кулинария
-                        объединяются.
+                        Забудьте о скучных местах! <br />
+                        Откройте для себя особое <br/>
+                        пространство, где искусство <br/>
+                        и кулинария объединяются.
                     </div>
                     <div className={AboutUsPageStyles.artFoodDescriptionBtn}>
                         <img
@@ -68,16 +74,24 @@ const AboutUsPage = () => {
                     </div>
                 </div>
             </div>
-            <div>
+            <div style={{backgroundColor: '#FF5101'}}>
+                <img
+                    src="/artFoodSliderArrowTop.svg"
+                    alt="artFoodSliderArrowTop"
+                    className={AboutUsPageStyles.artFoodSliderArrowTop}
+                />
+                <Slider
+                    slides={slides}
+                    showText={true}
 
-                <div>
-                    <Slider
-                        slides={slides}
-                        showText={true}
-                    />
-                </div>
-
+                />
+                <img
+                    src="/artFoodSliderArrowBot.svg"
+                    alt="artFoodSliderArrowBot"
+                    className={AboutUsPageStyles.artFoodSliderArrowBot}
+                />
             </div>
+
             <div className={AboutUsPageStyles.artFoodWrapperBar}>
                 <img
                     src="/artFoodBarPhoto.svg"
@@ -85,10 +99,15 @@ const AboutUsPage = () => {
                     className={AboutUsPageStyles.artFoodBarPhoto}
                 />
                 <div className={AboutUsPageStyles.artFoodBarDescription}>
+                    <img
+                        src="/artFoodWrapperStar.svg"
+                        alt="artFoodWrapperStar"
+                        className={AboutUsPageStyles.artFoodBarDescriptionStar}
+                    />
                     <motion.div
                         className={AboutUsPageStyles.artFoodBarDescriptionTitle}
                         ref={ref2}
-                        initial={{ y: 100, opacity: 0 }}
+                        initial={{y: 100, opacity: 0}}
                         animate={isInView2 ? {
                             y: 0,
                             opacity: 1,
@@ -99,16 +118,15 @@ const AboutUsPage = () => {
                                 damping: 10
                             }
                         } : {}}
-                        style={{ position: 'relative' }}
+                        style={{position: 'relative'}}
                     >
                         Крафт <br/>
                         и коктейли
                     </motion.div>
                     <div className={AboutUsPageStyles.artFoodBarDescriptionText}>
-                        Каждый напиток — как
-                        джазовая импровизация:
-                        непредсказуемый, но <br/>
-                        всегда гармоничный.
+                        Каждый напиток — как джазовая <br/>
+                        импровизация: непредсказуемый, <br/>
+                        но всегда гармоничный.
                     </div>
                     <div className={AboutUsPageStyles.artFoodBarDescriptionBtn}>
                         <img

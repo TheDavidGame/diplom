@@ -38,7 +38,7 @@ const EventsPage = () => {
         const calculateSlideWidth = () => {
             const screenWidth = window.innerWidth;
             if (screenWidth >= 1200) {
-                return 572;
+                return 424;
             }
             return 300;
         };
@@ -49,11 +49,11 @@ const EventsPage = () => {
     }, []);
 
     const handlePrev = () => {
-        setCurrentSlide(prev => (prev > 0 ? prev - 1 : slides.length - 1));
+        setCurrentSlide(prev => (prev > 0 ? prev - 3 : slides.length - 1));
     };
 
     const handleNext = () => {
-        setCurrentSlide(prev => (prev < slides.length - 1 ? prev + 1 : 0));
+        setCurrentSlide(prev => (prev < slides.length - 1 ? prev + 3 : 0));
     };
 
     const getOffset = () => {
@@ -63,6 +63,13 @@ const EventsPage = () => {
 
     return (
         <div className={EventPageStyles.wrapper}>
+            <div className={EventPageStyles.header}>
+                <img
+                    src={'/eventsPageHeader.svg'}
+                    alt={'eventsPageHeader'}
+                    className={EventPageStyles.headerItem}
+                />
+            </div>
             <motion.div
                 className={EventPageStyles.title}
                 ref={ref}
@@ -141,11 +148,11 @@ const EventsPage = () => {
                 </div>
             </div>
 
-            <div className={EventPageStyles.btnWrapper}>
+            <div className={EventPageStyles.footer}>
                 <img
-                    src={'/eventsPageBtn.svg'}
-                    alt={'eventsPageBtn'}
-                    className={EventPageStyles.btn}
+                    src={'/eventsPageFooter.svg'}
+                    alt={'eventsPageFooter'}
+                    className={EventPageStyles.footerItem}
                 />
             </div>
         </div>

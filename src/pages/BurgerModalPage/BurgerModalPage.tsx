@@ -13,14 +13,14 @@ const BurgerModalPage = () => {
             text: 'МЕНЮ'
         },
         {
+            text: 'БАРНАЯ КАРТА'
+        },
+        {
             text: 'СОБЫТИЯ'
         },
         {
             text: 'О НАС'
-        },
-        {
-            text: 'БАРНАЯ КАРТА'
-        },
+        }
     ];
 
     const footerList: menuHeaderItem[] = [
@@ -73,10 +73,15 @@ const BurgerModalPage = () => {
 
             <div className={BurgerModalPageStyles.list}>
                 {menuList.map((el, index) => (
-                    <div className={BurgerModalPageStyles.listItem} key={index}>
-                        {el.text}
-                    <div className={BurgerModalPageStyles.underline}></div>
-                    </div>
+                    <>
+                        <div className={BurgerModalPageStyles.listItem} key={index}>
+                            {el.text}
+                            <div className={BurgerModalPageStyles.underline}></div>
+                        </div>
+                        <div className={BurgerModalPageStyles.listArrow}>
+                            <img src="/BurgerModalListItemArrow.svg" alt="star" className={BurgerModalPageStyles.listArrowItem}/>
+                        </div>
+                    </>
                 ))}
             </div>
 

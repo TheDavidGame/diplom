@@ -1,10 +1,9 @@
 .wrapper {
-  background-color: #FFE7C5;
+  background-color: #FBF5EE;
 }
 
 .title {
   padding-top: 120px;
-  font-family: 'TT Neoris', sans-serif;
   font-size: 96px;
   font-weight: 800;
   margin-bottom: 40px;
@@ -14,7 +13,7 @@
 .awardsWrapper {
   display: flex;
   justify-content: space-evenly;
-  margin: 80px 0 64px 0;
+  margin: 80px 0 80px 0;
 }
 
 .mainImageWrapper {
@@ -23,4 +22,13 @@
 }
 
 .mainImage {
+
+}
+
+.footer {
+  margin: 120px 0 -5px 0;
+}
+
+.footerItem {
+  width: 99vw;
 }

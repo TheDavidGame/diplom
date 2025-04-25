@@ -1,10 +1,13 @@
 .wrapper {
-  padding: 40px 0;
   background-color: #F1B4D9;
 }
 
+.headerItem {
+  padding-bottom: 80px;
+  width: 99vw;
+}
+
 .title {
-  font-family: 'TT Neoris', sans-serif;
   font-size: 96px;
   font-weight: 800;
   margin-bottom: 40px;
@@ -40,21 +43,21 @@
 }
 
 .slideImage {
-  width: 100%;
-  height: 572px;
+  width: 424px;
+  height: 424px;
   object-fit: cover;
   transition: transform 0.3s;
 }
 
 .slideDate {
-  font-size: 40px;
+  font-size: 28px;
   font-weight: 600;
   margin-top: 20px;
 }
 
 .slideText {
-  width: 486px;
-  font-size: 40px;
+  width: 424px;
+  font-size: 28px;
   margin-top: 15px;
 }
 
@@ -101,17 +104,10 @@
   height: 48px;
 }
 
-.btnWrapper {
-  margin-top: 64px;
-  display: flex;
-  justify-content: center;
+.footer {
+  margin: 110px 0 -5px 0;
+}
 
-  .btn {
-    cursor: pointer;
-    transition: transform 0.3s;
-
-    &:hover {
-      transform: scale(1.05);
-    }
-  }
+.footerItem {
+  width: 99vw;
 }

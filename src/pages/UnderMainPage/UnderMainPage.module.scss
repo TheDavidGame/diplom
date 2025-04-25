@@ -48,7 +48,7 @@
   .logo {
     position: absolute;
     left: 50%;
-    top: 80%;
+    top: 70%;
     transform: translate(-50%, -50%);
     z-index: 2;
     transition: all 0.3s ease;
@@ -62,7 +62,7 @@
 .background {
   position: absolute;
   width: 100%;
-  height: 216px;
+  height: 160px;
   top: 0;
   left: 0;
   object-fit: cover;
@@ -80,15 +80,16 @@
 }
 
 .underHeader {
-  margin-top: 216px;
+  padding-top: 220px;
   transition: margin-top 0.3s ease;
+  background-color: #FBF5EE;
 
   .sticky + & {
-    margin-top: calc(216px + 80px);
+    padding-top: calc(216px + 80px);
   }
 
   &Text {
-    font-size: 128px;
+    font-size: 96px;
     font-weight: 800;
     text-align: center;
     margin: 0 auto;
@@ -108,22 +109,42 @@
     }
 
     div {
-      font-family: 'TT Neoris', sans-serif;
       font-weight: 800;
       text-transform: uppercase;
-      font-size: 36px;
+      font-size: 32px;
     }
   }
 }
 
 .underScroller {
-  margin-top: 240px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
+  background-color: #FBF5EE;
+
+  &StarLeft {
+    position: absolute;
+    left: 0;
+    bottom: 20%;
+    z-index: -1;
+  }
+
+  &StarRight {
+    position: absolute;
+    right: 0;
+    top: 15%;
+    z-index: -1;
+  }
+
+  &Logo {
+    width: 1181px;
+    height: 122px;
+    margin: 360px 0 48px 0;
+  }
 
   &Text {
-    font-size: 64px;
+    font-size: 40px;
     text-align: center;
     max-width: 1164px;
     line-height: 1.1;
