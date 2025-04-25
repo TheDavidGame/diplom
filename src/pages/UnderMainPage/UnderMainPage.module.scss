@@ -127,20 +127,20 @@
     position: absolute;
     left: 0;
     bottom: 20%;
-    z-index: -1;
+    z-index: 1;
   }
 
   &StarRight {
     position: absolute;
     right: 0;
     top: 15%;
-    z-index: -1;
+    z-index: 1;
   }
 
   &Logo {
     width: 1181px;
     height: 122px;
-    margin: 360px 0 48px 0;
+    margin: 250px 0 48px 0;
   }
 
   &Text {
