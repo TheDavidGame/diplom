@@ -63,6 +63,13 @@ const EventsPage = () => {
 
     return (
         <div className={EventPageStyles.wrapper}>
+            <div className={EventPageStyles.header}>
+                <img
+                    src={'/eventsPageHeader.svg'}
+                    alt={'eventsPageHeader'}
+                    className={EventPageStyles.headerItem}
+                />
+            </div>
             <motion.div
                 className={EventPageStyles.title}
                 ref={ref}

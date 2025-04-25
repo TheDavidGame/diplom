@@ -80,11 +80,12 @@
 }
 
 .underHeader {
-  margin-top: 120px;
+  padding-top: 220px;
   transition: margin-top 0.3s ease;
+  background-color: #FBF5EE;
 
   .sticky + & {
-    margin-top: calc(216px + 80px);
+    padding-top: calc(216px + 80px);
   }
 
   &Text {
@@ -116,10 +117,25 @@
 }
 
 .underScroller {
-  margin-top: 240px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
+  background-color: #FBF5EE;
+
+  &StarLeft {
+    position: absolute;
+    left: 0;
+    bottom: 20%;
+    z-index: -1;
+  }
+
+  &StarRight {
+    position: absolute;
+    right: 0;
+    top: 15%;
+    z-index: -1;
+  }
 
   &Logo {
     width: 1181px;

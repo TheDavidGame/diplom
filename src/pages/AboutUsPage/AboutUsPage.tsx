@@ -33,6 +33,13 @@ const AboutUsPage = () => {
                     alt="artFoodWrapperPhoto"
                     className={AboutUsPageStyles.artFoodWrapperPhoto}
                 />
+
+                <img
+                    src="/artFoodWrapperStar.svg"
+                    alt="artFoodWrapperStar"
+                    className={AboutUsPageStyles.artFoodWrapperStar}
+                />
+
                 <div className={AboutUsPageStyles.artFoodDescription}>
                     <motion.div
                         className={AboutUsPageStyles.artFoodDescriptionTitle}
@@ -67,10 +74,21 @@ const AboutUsPage = () => {
                     </div>
                 </div>
             </div>
-            <div>
+            <div style={{backgroundColor: '#FF5101'}}>
+                <img
+                    src="/artFoodSliderArrowTop.svg"
+                    alt="artFoodSliderArrowTop"
+                    className={AboutUsPageStyles.artFoodSliderArrowTop}
+                />
                 <Slider
                     slides={slides}
                     showText={true}
+
+                />
+                <img
+                    src="/artFoodSliderArrowBot.svg"
+                    alt="artFoodSliderArrowBot"
+                    className={AboutUsPageStyles.artFoodSliderArrowBot}
                 />
             </div>
 
@@ -81,6 +99,11 @@ const AboutUsPage = () => {
                     className={AboutUsPageStyles.artFoodBarPhoto}
                 />
                 <div className={AboutUsPageStyles.artFoodBarDescription}>
+                    <img
+                        src="/artFoodWrapperStar.svg"
+                        alt="artFoodWrapperStar"
+                        className={AboutUsPageStyles.artFoodBarDescriptionStar}
+                    />
                     <motion.div
                         className={AboutUsPageStyles.artFoodBarDescriptionTitle}
                         ref={ref2}

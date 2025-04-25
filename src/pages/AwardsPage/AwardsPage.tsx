@@ -55,13 +55,13 @@ const AwardsPage = () => {
                     className={AwardsPageStyles.mainImage}
                 />
             </div>
-            <div className={AwardsPageStyles.footer}>
-                <img
-                    src="/awardsPageFooter.svg"
-                    alt="awardsPageFooter"
-                    className={AwardsPageStyles.footerItem}
-                />
-            </div>
+            {/*<div className={AwardsPageStyles.footer}>*/}
+            {/*    <img*/}
+            {/*        src="/awardsPageFooter.svg"*/}
+            {/*        alt="awardsPageFooter"*/}
+            {/*        className={AwardsPageStyles.footerItem}*/}
+            {/*    />*/}
+            {/*</div>*/}
         </div>
     );
 };

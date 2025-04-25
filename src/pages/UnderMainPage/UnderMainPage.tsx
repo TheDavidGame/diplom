@@ -128,13 +128,24 @@ const UnderMainPage: React.FC<UnderMainPageProps> = ({
                 </div>
             </div>
 
-            <Slider
-                slides={slides}
-                showText={false}
-            />
+            <div style={{backgroundColor: '#FBF5EE'}}>
+                <Slider
+                    slides={slides}
+                    showText={false}
+                />
+            </div>
 
             <div className={UnderMainPageStyles.underScroller}>
-
+                <img
+                    src="/underMainPageStarLeft.svg"
+                    alt="underMainPageStarLeft"
+                    className={UnderMainPageStyles.underScrollerStarLeft}
+                />
+                <img
+                    src="/underMainPageStarRight.svg"
+                    alt="underMainPageStarRight"
+                    className={UnderMainPageStyles.underScrollerStarRight}
+                />
                 <img
                     src="/mainPageLogo.svg"
                     alt="mainPageLogo"
