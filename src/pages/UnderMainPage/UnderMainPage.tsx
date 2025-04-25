@@ -4,7 +4,8 @@ import Slider from "../../components/Slider/Slider";
 import {SlideItem, UnderMainPageProps} from "../../entity/index.entity";
 import Modal from "../../components/Modal/Modal";
 import BurgerModalPage from "../BurgerModalPage/BurgerModalPage";
-import { motion, useInView } from 'framer-motion';
+import {motion, useInView} from 'framer-motion';
+import MainPageStyles from "../MainPage/MainPage.module.scss";
 
 const UnderMainPage: React.FC<UnderMainPageProps> = ({
                                                          mainPageRef,
@@ -91,7 +92,7 @@ const UnderMainPage: React.FC<UnderMainPageProps> = ({
                 <motion.div
                     className={UnderMainPageStyles.underHeaderText}
                     ref={ref}
-                    initial={{ y: 100, opacity: 0 }}
+                    initial={{y: 100, opacity: 0}}
                     animate={isInView ? {
                         y: 0,
                         opacity: 1,
@@ -102,9 +103,9 @@ const UnderMainPage: React.FC<UnderMainPageProps> = ({
                             damping: 10
                         }
                     } : {}}
-                    style={{ position: 'relative' }}
+                    style={{position: 'relative'}}
                 >
-                    МЕСТО СИЛЫ ЛЮБИТЕЛЕЙ ДЖАЗА <br/> И ОБЩЕНИЯ
+                    МЕСТО СИЛЫ <br/> ЛЮБИТЕЛЕЙ ДЖАЗА <br/> И ОБЩЕНИЯ
                 </motion.div>
                 <div className={UnderMainPageStyles.underHeaderList}>
                     <img src="/starUnderMain.svg" alt="star"/>
@@ -133,9 +134,16 @@ const UnderMainPage: React.FC<UnderMainPageProps> = ({
             />
 
             <div className={UnderMainPageStyles.underScroller}>
+
+                <img
+                    src="/mainPageLogo.svg"
+                    alt="mainPageLogo"
+                    className={UnderMainPageStyles.underScrollerLogo}
+                />
+
                 <div className={UnderMainPageStyles.underScrollerText}>
                     Наша вселенная возникла после культурного взрыва.
-                    Музыка, игры, встречи, стихи, море напитков и вкусной еды
+                    <br/> Музыка, игры, встречи, стихи, море напитков и <br/> вкусной еды
                 </div>
 
                 <div className={UnderMainPageStyles.underScrollerAboutUs}>

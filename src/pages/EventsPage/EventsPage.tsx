@@ -38,7 +38,7 @@ const EventsPage = () => {
         const calculateSlideWidth = () => {
             const screenWidth = window.innerWidth;
             if (screenWidth >= 1200) {
-                return 572;
+                return 424;
             }
             return 300;
         };
@@ -139,14 +139,6 @@ const EventsPage = () => {
                         <img src="/eventsSliderNext.svg" alt="Next"/>
                     </button>
                 </div>
-            </div>
-
-            <div className={EventPageStyles.btnWrapper}>
-                <img
-                    src={'/eventsPageBtn.svg'}
-                    alt={'eventsPageBtn'}
-                    className={EventPageStyles.btn}
-                />
             </div>
 
             <div className={EventPageStyles.footer}>

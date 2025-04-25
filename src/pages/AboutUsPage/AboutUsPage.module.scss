@@ -2,11 +2,11 @@
   display: flex;
   align-items: center;
   justify-content: space-around;
-  background-color: #FFE7C5;
   padding: 100px 0 36px 0;
 
   &Photo {
-
+    width: 632px;
+    height: 816px;
   }
 
   &Description {
@@ -29,7 +29,7 @@
   }
 
   &Text {
-    font-size: 64px;
+    font-size: 40px;
     font-weight: 500;
     text-align: left;
     max-width: 866px;
@@ -56,6 +56,11 @@
   }
 }
 
+.artFoodBarPhoto {
+  width: 640px;
+  height: 804px;
+}
+
 .artFoodBarDescription {
   display: flex;
   flex-direction: column;
@@ -71,7 +76,7 @@
   }
 
   &Text {
-    font-size: 64px;
+    font-size: 40px;
     font-weight: 500;
     text-align: left;
     max-width: 866px;

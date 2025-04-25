@@ -53,11 +53,10 @@ const AboutUsPage = () => {
                         Искусство и еда
                     </motion.div>
                     <div className={AboutUsPageStyles.artFoodDescriptionText}>
-                        Забудьте о скучных <br/>
-                        местах и откройте для <br/>
-                        себя пространство, где
-                        искусство и кулинария
-                        объединяются.
+                        Забудьте о скучных местах! <br />
+                        Откройте для себя особое <br/>
+                        пространство, где искусство <br/>
+                        и кулинария объединяются.
                     </div>
                     <div className={AboutUsPageStyles.artFoodDescriptionBtn}>
                         <img
@@ -68,7 +67,7 @@ const AboutUsPage = () => {
                     </div>
                 </div>
             </div>
-            <div style={{backgroundColor: '#FFE7C5'}}>
+            <div>
                 <Slider
                     slides={slides}
                     showText={true}
@@ -102,10 +101,9 @@ const AboutUsPage = () => {
                         и коктейли
                     </motion.div>
                     <div className={AboutUsPageStyles.artFoodBarDescriptionText}>
-                        Каждый напиток — как
-                        джазовая импровизация:
-                        непредсказуемый, но <br/>
-                        всегда гармоничный.
+                        Каждый напиток — как джазовая <br/>
+                        импровизация: непредсказуемый, <br/>
+                        но всегда гармоничный.
                     </div>
                     <div className={AboutUsPageStyles.artFoodBarDescriptionBtn}>
                         <img
