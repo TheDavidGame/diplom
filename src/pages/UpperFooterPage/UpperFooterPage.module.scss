@@ -1,0 +1,54 @@
+.wrapper {
+  background-color: #FF5101;
+  padding-bottom: 76px;
+}
+
+.header {
+  padding-bottom: 112px;
+
+  &Item {
+    width: 99vw;
+  }
+}
+.container {
+  display: flex;
+  position: relative;
+  justify-content: center;
+}
+
+.left {
+  margin-right: 67px;
+  z-index: 2;
+}
+
+.star {
+  position: absolute;
+  top: 4%;
+  left: 37%;
+}
+
+.right {
+  margin-top: 36px;
+  z-index: 2;
+
+  &Title {
+    color: #FBF5EE;
+    font-size: 96px;
+    font-weight: 800;
+    line-height: 1;
+  }
+
+  &UnderTitle {
+    color: #FBF5EE;
+    font-size: 40px;
+    line-height: 1;
+    margin: 40px 0 40px 0;
+  }
+
+  &WorkTime {
+    color: #FBF5EE;
+    font-size: 36px;
+    line-height: 1;
+    margin: 48px 0 48px 0;
+  }
+}
