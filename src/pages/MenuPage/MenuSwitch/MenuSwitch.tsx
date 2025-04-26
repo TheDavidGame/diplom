@@ -67,10 +67,11 @@ const MenuSwitch = () => {
                 </motion.div>
             </div>
 
-            <div className={MenuSwitchStyles.menuFood}>
+            <div className={`${MenuSwitchStyles.menuFood} ${isBar ? MenuSwitchStyles.isBarActive : ''}`}>
                 {isBar ? (
                     menuSwitchBar.map((el, index) => (
-                        <div key={index} className={MenuSwitchStyles.menuFoodItem}>
+                        <div key={index}
+                             className={`${MenuSwitchStyles.menuFoodItem} ${isBar ? MenuSwitchStyles.isBarActive : ''}`}>
                             {el.text}
                         </div>
                     ))
