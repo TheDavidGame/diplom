@@ -14,18 +14,18 @@ const App = () => {
 
     return (
         <div className="App">
-            <MainPage ref={mainPageRef}/>
-            <UnderMainPage
-                mainPageRef={mainPageRef}
-                isMainPageVisible={isMainPageVisible}
-                setIsMainPageVisible={setIsMainPageVisible}
-            />
-            <AboutUsPage/>
-            <EventsPage/>
-            <AwardsPage/>
-            <UpperFooterPage/>
-            <AppFooter/>
-            {/*<MenuPage />*/}
+            {/*<MainPage ref={mainPageRef}/>*/}
+            {/*<UnderMainPage*/}
+            {/*    mainPageRef={mainPageRef}*/}
+            {/*    isMainPageVisible={isMainPageVisible}*/}
+            {/*    setIsMainPageVisible={setIsMainPageVisible}*/}
+            {/*/>*/}
+            {/*<AboutUsPage/>*/}
+            {/*<EventsPage/>*/}
+            {/*<AwardsPage/>*/}
+            {/*<UpperFooterPage/>*/}
+            {/*<AppFooter/>*/}
+            <MenuPage />
         </div>
     );
 }

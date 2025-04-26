@@ -1,0 +1,78 @@
+.wrapper {
+  position: relative;
+  //display: flex;
+  //align-items: center;
+  //justify-content: space-between;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('~../../../../public/menuSwitchImage.svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -1;
+  }
+}
+
+.switchContainer {
+  width: 868px;
+  height: 142px;
+  border-radius: 100px;
+  background-color: #FBF5EE;
+  position: relative;
+  overflow: visible;
+}
+
+.switch {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background-color: #FFBB00;
+  border-radius: 100px;
+  cursor: pointer;
+  z-index: 1;
+  will-change: transform;
+}
+
+.switchLabel {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  pointer-events: none;
+  z-index: 2;
+
+  span {
+    flex: 1;
+    text-align: center;
+    color: #2E281D;
+    font-size: 96px;
+    font-weight: 800;
+    transition: opacity 0.4s ease;
+  }
+}
+
+.menuFoodItem {
+  padding: 10px 15px;
+  border-radius: 5px;
+  background-color: #fff;
+  margin-right: 10px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.filter {
+  // Стили для фильтра (если нужно)
+}
+
+.filterItem {
+  // Стили для иконки фильтра
+}
