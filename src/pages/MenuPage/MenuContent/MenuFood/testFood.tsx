@@ -56,3 +56,62 @@ export const eventsFood = [
         src: '/menuFood/menuFood7.svg'
     },
 ]
+
+export const mainFood = [
+    {
+        id: 1,
+        title: 'ЧЕВАПЧИМИЧИ',
+        subTitle: 'Маленькие колбаски из \n говядины, обжаренные на гриле ',
+        price: 400,
+        weight: 250,
+        src: '/mainFood/mainFood1.svg'
+    },
+    {
+        id: 2,
+        title: 'ЧИЛИ ЧИКЕН',
+        subTitle: 'Обжаренная курица в остром \n чили соусе, с овощами гриль',
+        price: 400,
+        weight: 250,
+        src: '/mainFood/mainFood2.svg'
+    },
+    {
+        id: 3,
+        title: 'ВЕСТЕРН БОУНС',
+        subTitle: 'Запечёная баранина на кости, с зеленью и кавказскими травами',
+        price: 400,
+        weight: 250,
+        src: '/mainFood/mainFood3.svg'
+    },
+    {
+        id: 4,
+        title: 'ПАТАТА ОЛИВ',
+        subTitle: 'Веганские оладьи из картофеля \n с соусом на растительной основе',
+        price: 400,
+        weight: 250,
+        src: '/mainFood/mainFood4.svg'
+    },
+    {
+        id: 5,
+        title: 'ГРИБНОЙ КЕБАБ',
+        subTitle: 'Шампиньоны, маринованные в  \n смеси восточных пряностей и \n трав, обжаренные на гриле',
+        price: 400,
+        weight: 250,
+        src: '/mainFood/mainFood5.svg'
+    },
+    {
+        id: 6,
+        title: 'ФАЛАФЕЛЬ С ТАХИНИ СОУСОМ',
+        subTitle: 'Хрустящий фалафель с нутом, овощами и кремовым соусом',
+        price: 400,
+        weight: 250,
+        src: '/mainFood/mainFood6.svg'
+    },
+    {
+        id: 7,
+        title: 'МЕКСИКАНСКАЯ ФИЕСТА',
+        subTitle: 'Тако-клэм, тако сиера, тако луэс, чили чикен, \n соус тайхо, и напиток на выбор',
+        price: 400,
+        weight: 250,
+        src: '/mainFood/mainFood7.svg'
+    },
+]
