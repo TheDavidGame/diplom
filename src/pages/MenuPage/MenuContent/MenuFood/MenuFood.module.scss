@@ -3,11 +3,14 @@
   padding: 120px 0 145px 0;
   clip-path: polygon(0 0, 100% 40px, 100% 90%, 0 100%);
   position: relative;
+  overflow-x: hidden;
 }
 
 .menuFoodStar {
   position: absolute;
-  z-index: 2;
+  left: 75%;
+  bottom: 0;
+  pointer-events: none;
 }
 
 .events {

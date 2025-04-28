@@ -39,11 +39,10 @@ const MenuFood = () => {
 
             </div>
             <div className={MenuFoodStyles.menuFoodStar}>
-                {/*не хочет экспортироваться*/}
-                {/*<img*/}
-                {/*    src={'/menuFoodStar.png'}*/}
-                {/*    alt='menuFoodStar'*/}
-                {/*/>*/}
+                <img
+                    src={'/menuFoodStar.svg'}
+                    alt='menuFoodStar'
+                />
 
             </div>
             <div>
