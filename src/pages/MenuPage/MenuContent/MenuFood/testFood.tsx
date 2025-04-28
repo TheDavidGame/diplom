@@ -115,3 +115,54 @@ export const mainFood = [
         src: '/mainFood/mainFood7.svg'
     },
 ]
+
+export const snacksFood = [
+    {
+        id: 1,
+        title: 'ТАКО-КЛЭМ',
+        subTitle: 'Веганские тако с красной фасолью, томатным соусом и авокадо',
+        price: 400,
+        weight: 250,
+        src: '/snacksFood/snacksFood1.svg'
+    },
+    {
+        id: 2,
+        title: 'ТАКО СИЕРА',
+        subTitle: 'Острые куриные тако с чили соусом и свежими травами',
+        price: 400,
+        weight: 250,
+        src: '/snacksFood/snacksFood2.svg'
+    },
+    {
+        id: 3,
+        title: 'ТАКО ЛУЭС',
+        subTitle: 'Сытные говяжьи тако с морковью, луком, и чили',
+        price: 400,
+        weight: 250,
+        src: '/snacksFood/snacksFood3.svg'
+    },
+    {
+        id: 4,
+        title: 'КУРИНЫЕ ПАЛОЧКИ',
+        subTitle: 'Хрустящие куриные палочки в остром чили соусе.',
+        price: 400,
+        weight: 250,
+        src: '/snacksFood/snacksFood4.svg'
+    },
+    {
+        id: 5,
+        title: 'СЫРНЫЕ ПИРОЖКИ С КУРИЦЕЙ',
+        subTitle: 'Пирожки с начинкой из курицы и сыра, обжаренные в остром кляре.',
+        price: 400,
+        weight: 250,
+        src: '/snacksFood/snacksFood5.svg'
+    },
+    {
+        id: 6,
+        title: 'НАЧОС',
+        subTitle: 'Кукурузные чипсы: Чили-Лайм / Паприка / Карри',
+        price: 400,
+        weight: 250,
+        src: '/snacksFood/snacksFood6.svg'
+    },
+]

@@ -1,6 +1,6 @@
 import React from 'react';
 import MenuFoodStyles from './MenuFood.module.scss';
-import {eventsFood, mainFood} from "./testFood";
+import {eventsFood, mainFood, snacksFood} from "./testFood";
 
 const MenuFood = () => {
     return (
@@ -83,9 +83,41 @@ const MenuFood = () => {
                     ))}
                 </div>
             </div>
-            <div>
 
+            <div className={MenuFoodStyles.snacks}>
+                <div className={MenuFoodStyles.snacksTitle}>
+                    ЗАКУСКИ
+                </div>
+                <div className={MenuFoodStyles.snacksList}>
+                    {snacksFood.map((el) => (
+                        <div key={el.id} className={MenuFoodStyles.snacksListItem}>
+                            <div className={MenuFoodStyles.snacksListImg}>
+                                <img
+                                    src={el.src}
+                                    alt={el.title}
+                                    className={MenuFoodStyles.snackssnacksImgItem}
+                                />
+                            </div>
+                            <div className={MenuFoodStyles.snacksListTitle} style={{whiteSpace: 'pre-line'}}>
+                                {el.title}
+                            </div>
+                            <div className={MenuFoodStyles.snacksListSubTitle} style={{whiteSpace: 'pre-line'}}>
+                                {el.subTitle}
+                            </div>
+                            <div className={MenuFoodStyles.snacksListDescription}>
+                                <div className={MenuFoodStyles.snacksListDescriptionPrice}>
+                                    {el.price}р
+                                </div>
+                                <div className={MenuFoodStyles.snacksListDescriptionWeight}>
+                                    ({el.weight}г)
+                                </div>
+
+                            </div>
+                        </div>
+                    ))}
+                </div>
             </div>
+
             <div>
 
             </div>

@@ -129,3 +129,59 @@
     }
   }
 }
+
+.snacks {
+  padding-top: 80px;
+  background-color: #FBF5EE;
+
+  &Title {
+    font-size: 96px;
+    text-align: center;
+    font-weight: 800;
+    color: #2E281D;
+  }
+
+  &List {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 64px 20px;
+    margin: 64px 70px;
+
+    &Item {
+      max-width: 424px;
+    }
+
+    &Img {
+      pointer-events: none;
+    }
+
+    &Title {
+      font-size: 28px;
+      color: #2E281D;
+      margin: 16px 0 16px 0;
+      font-weight: 600;
+    }
+
+    &SubTitle {
+      font-size: 24px;
+      color: #2E281D;
+    }
+
+    &Description {
+      display: flex;
+      align-items: center;
+      margin-top: 16px;
+
+      &Price {
+        font-size: 26px;
+        color: #2E281D;
+        margin-right: 10px;
+      }
+
+      &Weight {
+        font-size: 24px;
+        color: #2E281D;
+      }
+    }
+  }
+}
