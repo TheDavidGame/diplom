@@ -45,7 +45,7 @@ const MenuSwitch = () => {
 
     return (
         <div className={MenuSwitchStyles.wrapper}>
-            <div className={MenuSwitchStyles.switchContainer}>
+            <div className={MenuSwitchStyles.switchContainer} onClick={toggleSwitch}>
 
                 <div className={MenuSwitchStyles.switchLabel}>
                     <span className={!isBar ? MenuSwitchStyles.active : ''}>МЕНЮ</span>
@@ -54,7 +54,6 @@ const MenuSwitch = () => {
 
                 <motion.div
                     className={MenuSwitchStyles.switch}
-                    onClick={toggleSwitch}
                     initial={false}
                     animate={{
                         x: isBar ? '434px' : '0',

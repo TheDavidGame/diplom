@@ -3,6 +3,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: -70px;
 
   &::before {
     content: '';
@@ -27,6 +28,7 @@
   position: relative;
   overflow: visible;
   margin: 114px 0 64px 0;
+  cursor: pointer;
 }
 
 .switch {
@@ -37,7 +39,6 @@
   height: 100%;
   background-color: #FFBB00;
   border-radius: 100px;
-  cursor: pointer;
   z-index: 1;
   will-change: transform;
 }

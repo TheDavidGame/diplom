@@ -1,0 +1,61 @@
+.wrapper {
+  background-color: #FF5101;
+  padding: 120px 0 145px 0;
+  clip-path: polygon(0 0, 100% 40px, 100% 90%, 0 100%);
+  position: relative;
+}
+
+.menuFoodStar {
+  position: absolute;
+  z-index: 2;
+}
+
+.events {
+
+  &Title {
+    font-size: 96px;
+    text-align: center;
+    font-weight: 800;
+    color: #FBF5EE;
+  }
+
+  &List {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 64px 20px;
+    margin: 64px 70px;
+
+    &Item {
+      max-width: 424px;
+    }
+
+    &Title {
+      font-size: 28px;
+      color: #FBF5EE;
+      margin: 16px 0 16px 0;
+      font-weight: 600;
+    }
+
+    &SubTitle {
+      font-size: 24px;
+      color: #FBF5EE;
+    }
+
+    &Description {
+      display: flex;
+      align-items: center;
+      margin-top: 16px;
+
+      &Price {
+        font-size: 26px;
+        color: #FBF5EE;
+        margin-right: 10px;
+      }
+
+      &Weight {
+        font-size: 24px;
+        color: #FBF5EE;
+      }
+    }
+  }
+}
