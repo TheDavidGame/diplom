@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import {motion} from 'framer-motion';
 import MenuSwitchStyles from './MenuSwitch.module.scss';
 import {menuHeaderItem} from "../../../entity/index.entity";
+import MenuBarStyles from "../MenuContent/MenuBar/MenuBar.module.scss";
 
 const MenuSwitch = () => {
     const menuSwitchFood: menuHeaderItem[] = [
@@ -91,6 +92,15 @@ const MenuSwitch = () => {
                 />
             </div>
 
+            {isBar ? (
+                <div>
+                    <img
+                        src={'/headerBar.svg'}
+                        alt={'headerBar'}
+                        className={MenuSwitchStyles.bottomItem}
+                    />
+                </div>
+            ) : null}
         </div>
     );
 };
