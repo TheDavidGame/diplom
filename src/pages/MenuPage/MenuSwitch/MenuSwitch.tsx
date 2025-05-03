@@ -1,8 +1,9 @@
-import React, {useState} from 'react';
+import React from 'react';
 import {motion} from 'framer-motion';
 import MenuSwitchStyles from './MenuSwitch.module.scss';
-import {menuHeaderItem} from "../../../entity/index.entity";
-import MenuBarStyles from "../MenuContent/MenuBar/MenuBar.module.scss";
+import {menuHeaderItem, RootState} from "../../../entity/index.entity";
+import {useDispatch, useSelector} from "react-redux";
+import {switchIsBar} from "../../../services/slices/mainSlice";
 
 const MenuSwitch = () => {
     const menuSwitchFood: menuHeaderItem[] = [
@@ -38,10 +39,11 @@ const MenuSwitch = () => {
         },
     ];
 
-    const [isBar, setIsBar] = useState(false);
+    const dispatch = useDispatch();
+    const isBar = useSelector((state: RootState) => state.mainSlice.isBar);
 
     const toggleSwitch = () => {
-        setIsBar(!isBar);
+        dispatch(switchIsBar());
     };
 
     return (

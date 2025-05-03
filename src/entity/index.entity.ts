@@ -35,3 +35,11 @@ export interface ModalProps {
     children: React.ReactNode;
     modalType?: string;
 }
+
+export interface RootState {
+    mainSlice: MainSliceState;
+}
+
+export interface MainSliceState {
+    isBar: boolean;
+}

@@ -1,7 +1,6 @@
 import React from 'react';
 import MenuBarStyles from './MenuBar.module.scss';
 import {beerBar, cocktailBar, nonAlcoholBar, strongBar, wineBar} from "./testBar";
-import EventPageStyles from "../../../EventsPage/EventsPage.module.scss";
 
 const MenuBar = () => {
     return (
