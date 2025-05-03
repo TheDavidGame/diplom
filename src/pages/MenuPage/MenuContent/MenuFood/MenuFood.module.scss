@@ -1,0 +1,187 @@
+.wrapper {
+  overflow-x: hidden;
+  background-color: #FBF5EE;
+  clip-path: polygon(0 0, 100% 40px, 100% 100%, 0 100%);
+}
+
+.menuFoodStar {
+  position: absolute;
+  left: 75%;
+  top: 800px;
+  pointer-events: none;
+}
+
+.events {
+  background-color: #FF5101;
+  padding: 120px 0 145px 0;
+  clip-path: polygon(0 0, 100% 40px, 100% 90%, 0 100%);
+  position: relative;
+
+  &Title {
+    font-size: 96px;
+    text-align: center;
+    font-weight: 800;
+    color: #FBF5EE;
+  }
+
+  &List {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 64px 20px;
+    margin: 64px 70px;
+
+    &Item {
+      max-width: 424px;
+    }
+
+    &Img {
+      pointer-events: none;
+    }
+
+    &Title {
+      font-size: 28px;
+      color: #FBF5EE;
+      margin: 16px 0 16px 0;
+      font-weight: 600;
+    }
+
+    &SubTitle {
+      font-size: 24px;
+      color: #FBF5EE;
+    }
+
+    &Description {
+      display: flex;
+      align-items: center;
+      margin-top: 16px;
+
+      &Price {
+        font-size: 26px;
+        color: #FBF5EE;
+        margin-right: 10px;
+      }
+
+      &Weight {
+        font-size: 24px;
+        color: #FBF5EE;
+      }
+    }
+  }
+}
+
+.main {
+  padding-top: 80px;
+  background-color: #FBF5EE;
+
+  &Title {
+    font-size: 96px;
+    text-align: center;
+    font-weight: 800;
+    color: #2E281D;
+  }
+
+  &List {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 64px 20px;
+    margin: 64px 70px;
+
+    &Item {
+      max-width: 424px;
+    }
+
+    &Item:last-child {
+      max-width: 868px;
+      text-align: center;
+    }
+
+    &Img {
+      pointer-events: none;
+    }
+
+    &Title {
+      font-size: 28px;
+      color: #2E281D;
+      margin: 16px 0 16px 0;
+      font-weight: 600;
+    }
+
+    &SubTitle {
+      font-size: 24px;
+      color: #2E281D;
+    }
+
+    &Description {
+      display: flex;
+      align-items: center;
+      margin-top: 16px;
+
+      &Price {
+        font-size: 26px;
+        color: #2E281D;
+        margin-right: 10px;
+      }
+
+      &Weight {
+        font-size: 24px;
+        color: #2E281D;
+      }
+    }
+  }
+}
+
+.snacks {
+  padding-top: 80px;
+  background-color: #FBF5EE;
+
+  &Title {
+    font-size: 96px;
+    text-align: center;
+    font-weight: 800;
+    color: #2E281D;
+  }
+
+  &List {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 64px 20px;
+    margin: 64px 70px;
+
+    &Item {
+      max-width: 424px;
+    }
+
+    &Img {
+      pointer-events: none;
+    }
+
+    &Title {
+      font-size: 28px;
+      color: #2E281D;
+      margin: 16px 0 16px 0;
+      font-weight: 600;
+    }
+
+    &SubTitle {
+      font-size: 24px;
+      color: #2E281D;
+    }
+
+    &Description {
+      display: flex;
+      align-items: center;
+      margin-top: 16px;
+
+      &Price {
+        font-size: 26px;
+        color: #2E281D;
+        margin-right: 10px;
+      }
+
+      &Weight {
+        font-size: 24px;
+        color: #2E281D;
+      }
+    }
+  }
+}

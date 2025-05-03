@@ -95,6 +95,7 @@
     line-height: 1;
     max-width: 650px;
     margin-bottom: 64px;
+    z-index: 2;
   }
 
   &Text {
@@ -102,6 +103,7 @@
     font-weight: 500;
     text-align: left;
     max-width: 866px;
+    z-index: 2;
   }
 
   &Btn {
@@ -111,5 +113,6 @@
   &Star {
     position: absolute;
     left: -22%;
+    z-index: 1;
   }
 }

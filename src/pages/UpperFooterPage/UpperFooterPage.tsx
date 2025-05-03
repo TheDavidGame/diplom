@@ -1,0 +1,62 @@
+import React from 'react';
+import UpperFooterPageStyles from './UpperFooterPage.module.scss';
+
+const UpperFooterPage = () => {
+    return (
+        <div className={UpperFooterPageStyles.wrapper}>
+            <div className={UpperFooterPageStyles.header}>
+                <img
+                    src="/UpperFooterPageHeader.svg"
+                    alt="UpperFooterPageHeader"
+                    className={UpperFooterPageStyles.headerItem}
+                />
+            </div>
+            <div className={UpperFooterPageStyles.container}>
+                <div className={UpperFooterPageStyles.left}>
+                    <img
+                        src="/UpperFooterPagePhoto.svg"
+                        alt="UpperFooterPagePhoto"
+                        className={UpperFooterPageStyles.leftItem}
+                    />
+                </div>
+                <div className={UpperFooterPageStyles.star}>
+                    <img
+                        src="/UpperFooterPageStar.svg"
+                        alt="UpperFooterPageStar"
+                        className={UpperFooterPageStyles.starItem}
+                    />
+                </div>
+                <div className={UpperFooterPageStyles.right}>
+                    <div className={UpperFooterPageStyles.rightTitle}>
+                        Где мы <br/> находимся
+                    </div>
+                    <div className={UpperFooterPageStyles.rightUnderTitle}>
+                        В уютном дворике на станции <br/> метро Чистые пруды
+                    </div>
+                    <div className={UpperFooterPageStyles.rightAddress}>
+                        <img
+                            src="/UpperFooterPageAddress.svg"
+                            alt="UpperFooterPageAddress"
+                            className={UpperFooterPageStyles.rightAddressItem}
+                        />
+                    </div>
+                    <div className={UpperFooterPageStyles.rightWorkTime}>
+                        Часы работы: <br/>
+                        пн-чт 12:00-00:00 <br/>
+                        пт-вс 12:00-2:00
+                    </div>
+                    <div className={UpperFooterPageStyles.rightBtn}>
+                        <img
+                            src="/UpperFooterPageBtn.svg"
+                            alt="UpperFooterPageBtn"
+                            className={UpperFooterPageStyles.rightAddressItem}
+                        />
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    );
+};
+export default UpperFooterPage;

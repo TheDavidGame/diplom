@@ -25,6 +25,11 @@ export interface UnderMainPageProps {
     isMainPageVisible: boolean;
     setIsMainPageVisible: (visible: boolean) => void;
 }
+export interface HeaderProps {
+    stickyMode?: boolean;
+    mainPageRef?: React.RefObject<HTMLDivElement | null>;
+    setIsMainPageVisible?: (visible: boolean) => void;
+}
 
 export interface menuHeaderItem {
     text: string;
@@ -34,4 +39,12 @@ export interface ModalProps {
     onClose: () => void;
     children: React.ReactNode;
     modalType?: string;
+}
+
+export interface RootState {
+    mainSlice: MainSliceState;
+}
+
+export interface MainSliceState {
+    isBar: boolean;
 }

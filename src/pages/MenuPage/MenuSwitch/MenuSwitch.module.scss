@@ -1,0 +1,114 @@
+.wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: -70px;
+  height: 1280px;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('~../../../../public/menuSwitchImage.svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -1;
+  }
+}
+
+.switchContainer {
+  width: 868px;
+  height: 142px;
+  border-radius: 100px;
+  background-color: #FBF5EE;
+  position: relative;
+  overflow: visible;
+  margin: 114px 0 64px 0;
+  cursor: pointer;
+}
+
+.switch {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background-color: #FFBB00;
+  border-radius: 100px;
+  z-index: 1;
+  will-change: transform;
+}
+
+.switchLabel {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  pointer-events: none;
+  z-index: 2;
+
+  span {
+    flex: 1;
+    text-align: center;
+    color: #2E281D;
+    font-size: 96px;
+    font-weight: 800;
+    transition: opacity 0.4s ease;
+  }
+}
+
+.menuFood {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 48px;
+
+  &Item {
+    color: #FBF5EE;
+    font-size: 40px;
+    text-align: center;
+
+    &:nth-child(3) {
+      justify-self: end;
+    }
+
+    &:nth-child(4) {
+      justify-self: start;
+    }
+
+    &.isBarActive {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      justify-content: center;
+
+      &:nth-child(3) {
+        justify-self: normal;
+      }
+
+      &:nth-child(4) {
+        justify-self: normal;
+      }
+      &:nth-child(5) {
+        grid-column: 1 / span 4;
+        justify-self: center;
+      }
+    }
+  }
+}
+
+.filter {
+  margin: 268px 0 218px 0;
+}
+
+.filterItem {
+  // Стили для иконки фильтра
+}
+
+.bottomItem {
+  padding-bottom: 65px;
+  width: 99vw;
+}

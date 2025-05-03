@@ -1,0 +1,43 @@
+.wrapper {
+  background-color: #FF6505;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.list {
+  display: flex;
+
+  &Item {
+    color: #FBF5EE;
+    font-size: 20px;
+    font-weight: 800;
+    margin: 48px 0 48px 0;
+  }
+
+  &Item:first-child {
+    margin-left: 82px;
+    margin-right: 120px;
+  }
+
+  &Item:not(:first-child) {
+    text-decoration: underline;
+  }
+
+  &Item:last-child {
+    margin-left: 48px;
+    margin-right: 0;
+  }
+}
+
+.icons {
+  display: flex;
+
+  &Item {
+    margin: 48px 24px 48px 24px;
+  }
+
+  &Item:last-child {
+    margin-right: 82px;
+  }
+}
