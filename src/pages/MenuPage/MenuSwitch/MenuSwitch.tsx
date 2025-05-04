@@ -73,13 +73,27 @@ const MenuSwitch = () => {
                 {isBar ? (
                     menuSwitchBar.map((el, index) => (
                         <div key={index}
-                             className={`${MenuSwitchStyles.menuFoodItem} ${isBar ? MenuSwitchStyles.isBarActive : ''}`}>
+                             className={`${MenuSwitchStyles.menuFoodItem} ${isBar ? MenuSwitchStyles.isBarActive : ''}`}
+                             onClick={() => {
+                                 const element = document.getElementById(el.text);
+                                 if (element) {
+                                     element.scrollIntoView({behavior: 'smooth'});
+                                 }
+                             }}
+                        >
                             {el.text}
                         </div>
                     ))
                 ) : (
                     menuSwitchFood.map((el, index) => (
-                        <div key={index} className={MenuSwitchStyles.menuFoodItem}>
+                        <div key={index}
+                             className={MenuSwitchStyles.menuFoodItem}
+                             onClick={() => {
+                                 const element = document.getElementById(el.text);
+                                 if (element) {
+                                     element.scrollIntoView({behavior: 'smooth'});
+                                 }
+                             }}>
                             {el.text}
                         </div>
                     ))
@@ -94,15 +108,6 @@ const MenuSwitch = () => {
                 />
             </div>
 
-            {isBar ? (
-                <div>
-                    <img
-                        src={'/headerBar.svg'}
-                        alt={'headerBar'}
-                        className={MenuSwitchStyles.bottomItem}
-                    />
-                </div>
-            ) : null}
         </div>
     );
 };

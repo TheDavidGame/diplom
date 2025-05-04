@@ -1,12 +1,12 @@
 import React from 'react';
 import MenuFoodStyles from './MenuFood.module.scss';
-import {eventsFood, mainFood, snacksFood} from "./testFood";
+import {eventsFood, mainFood, saladsFood, snacksFood} from "./testFood";
 
 const MenuFood = () => {
     return (
         <div className={MenuFoodStyles.wrapper}>
             <div className={MenuFoodStyles.events}>
-                <div className={MenuFoodStyles.eventsTitle}>
+                <div className={MenuFoodStyles.eventsTitle} id="СОБЫТИЙНОЕ МЕНЮ">
                     СОБЫТИЙНОЕ МЕНЮ
                 </div>
                 <div className={MenuFoodStyles.eventsList}>
@@ -46,7 +46,7 @@ const MenuFood = () => {
             </div>
 
             <div className={MenuFoodStyles.main}>
-                <div className={MenuFoodStyles.mainTitle}>
+                <div className={MenuFoodStyles.mainTitle} id="ОСНОВНЫЕ БЛЮДА">
                     ОСНОВНЫЕ БЛЮДА
                 </div>
                 <div className={MenuFoodStyles.mainList}>
@@ -84,8 +84,42 @@ const MenuFood = () => {
                 </div>
             </div>
 
+            <div className={MenuFoodStyles.salads}>
+                <div className={MenuFoodStyles.snacksTitle} id="САЛАТЫ">
+                    САЛАТЫ
+                </div>
+                <div className={MenuFoodStyles.snacksList}>
+                    {saladsFood.map((el) => (
+                        <div key={el.id} className={MenuFoodStyles.snacksListItem}>
+                            <div className={MenuFoodStyles.snacksListImg}>
+                                <img
+                                    src={el.src}
+                                    alt={el.title}
+                                    className={MenuFoodStyles.snackssnacksImgItem}
+                                />
+                            </div>
+                            <div className={MenuFoodStyles.snacksListTitle} style={{whiteSpace: 'pre-line'}}>
+                                {el.title}
+                            </div>
+                            <div className={MenuFoodStyles.snacksListSubTitle} style={{whiteSpace: 'pre-line'}}>
+                                {el.subTitle}
+                            </div>
+                            <div className={MenuFoodStyles.snacksListDescription}>
+                                <div className={MenuFoodStyles.snacksListDescriptionPrice}>
+                                    {el.price}р
+                                </div>
+                                <div className={MenuFoodStyles.snacksListDescriptionWeight}>
+                                    ({el.weight}г)
+                                </div>
+
+                            </div>
+                        </div>
+                    ))}
+                </div>
+            </div>
+
             <div className={MenuFoodStyles.snacks}>
-                <div className={MenuFoodStyles.snacksTitle}>
+                <div className={MenuFoodStyles.snacksTitle} id="ЗАКУСКИ">
                     ЗАКУСКИ
                 </div>
                 <div className={MenuFoodStyles.snacksList}>
@@ -118,9 +152,6 @@ const MenuFood = () => {
                 </div>
             </div>
 
-            <div>
-
-            </div>
         </div>
     );
 };

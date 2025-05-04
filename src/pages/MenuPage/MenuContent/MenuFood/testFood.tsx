@@ -116,6 +116,41 @@ export const mainFood = [
     },
 ]
 
+export const saladsFood = [
+    {
+        id: 1,
+        title: 'МЕХИКО',
+        subTitle: 'Курица, обжаренная с перцем и луком, авокадо, помидоры, сыр, и заправка из сальсы',
+        price: 400,
+        weight: 250,
+        src: '/snacksFood/snacksFood1.svg'
+    },
+    {
+        id: 2,
+        title: 'ГРИБНОЙ САЛАТ',
+        subTitle: 'Грибы, обжаренные с чесноком, помидоры, зелень, соевый соус',
+        price: 400,
+        weight: 250,
+        src: '/snacksFood/snacksFood2.svg'
+    },
+    {
+        id: 3,
+        title: 'SEAGULL SALAD',
+        subTitle: 'Жареные креветки, рисовая лапша, чука, стручковый горошек, имбирная заправка',
+        price: 400,
+        weight: 250,
+        src: '/snacksFood/snacksFood3.svg'
+    },
+    {
+        id: 4,
+        title: 'КРЕЙЛ',
+        subTitle: 'Черная фасоль, кукуруза, помидоры и авокадо, смешанные с зеленью и заправленные сальсой',
+        price: 400,
+        weight: 250,
+        src: '/snacksFood/snacksFood4.svg'
+    }
+]
+
 export const snacksFood = [
     {
         id: 1,

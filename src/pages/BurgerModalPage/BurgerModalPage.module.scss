@@ -48,6 +48,9 @@
     &Item {
       height: 70px;
     }
+    &:last-child {
+      display: none;
+    }
   }
 }
 

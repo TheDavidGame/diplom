@@ -9,7 +9,10 @@ const MenuPage = () => {
 
     return (
         <div className={MenuPageStyles.wrapper}>
-            <Header />
+            <div className={MenuPageStyles.header}>
+                <Header/>
+            </div>
+
             <MenuSwitch/>
             <MenuContent/>
             <AppFooter/>
