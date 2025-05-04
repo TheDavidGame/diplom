@@ -6,7 +6,7 @@ const MenuBar = () => {
     return (
 
         <div className={MenuBarStyles.wrapper}>
-            <div className={MenuBarStyles.beerTitle}>
+            <div className={MenuBarStyles.beerTitle} id="ПИВО">
                 ПИВО
             </div>
             <div className={MenuBarStyles.beerList}>
@@ -35,7 +35,7 @@ const MenuBar = () => {
             </div>
 
             <div className={MenuBarStyles.wine}>
-                <div className={MenuBarStyles.wineTitle}>
+                <div className={MenuBarStyles.wineTitle} id="ВИНО">
                     ВИНО
                 </div>
                 <div className={MenuBarStyles.wineList}>
@@ -74,7 +74,7 @@ const MenuBar = () => {
                 </div>
             </div>
 
-            <div className={MenuBarStyles.wineTitle}>
+            <div className={MenuBarStyles.wineTitle} id="КОКТЕЙЛИ">
                 КОКТЕЙЛИ
             </div>
             <div className={MenuBarStyles.wineList}>
@@ -105,7 +105,7 @@ const MenuBar = () => {
                 ))}
             </div>
 
-            <div className={MenuBarStyles.wineTitle}>
+            <div className={MenuBarStyles.wineTitle} id="КРЕПКОЕ">
                 КРЕПКОЕ
             </div>
             <div className={MenuBarStyles.wineList}>
@@ -133,8 +133,8 @@ const MenuBar = () => {
                 ))}
             </div>
 
-            <div className={MenuBarStyles.wineTitle}>
-                БЕЗАЛКОГОЛЬНЫЕ
+            <div className={MenuBarStyles.wineTitle} id="БЕЗАЛКОГОЛЬНОЕ">
+                БЕЗАЛКОГОЛЬНОЕ
             </div>
             <div className={MenuBarStyles.wineList}>
                 {nonAlcoholBar.map(el => (
