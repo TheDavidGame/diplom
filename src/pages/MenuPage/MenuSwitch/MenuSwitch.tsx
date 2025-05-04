@@ -108,15 +108,6 @@ const MenuSwitch = () => {
                 />
             </div>
 
-            {isBar ? (
-                <div>
-                    <img
-                        src={'/headerBar.svg'}
-                        alt={'headerBar'}
-                        className={MenuSwitchStyles.bottomItem}
-                    />
-                </div>
-            ) : null}
         </div>
     );
 };

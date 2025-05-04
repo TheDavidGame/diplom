@@ -94,6 +94,7 @@
       &:nth-child(4) {
         justify-self: normal;
       }
+
       &:nth-child(5) {
         grid-column: 1 / span 4;
         justify-self: center;
@@ -103,14 +104,21 @@
 }
 
 .filter {
-  margin: 268px 0 218px 0;
+  position: fixed;
+  z-index: 999;
+  bottom: 70px;
+
+  &Item {
+    animation: rotate 20s linear infinite;
+  }
 }
 
-.filterItem {
-  // Стили для иконки фильтра
-}
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
 
-.bottomItem {
-  padding-bottom: 65px;
-  width: 99vw;
+  100% {
+    transform: rotate(360deg);
+  }
 }
