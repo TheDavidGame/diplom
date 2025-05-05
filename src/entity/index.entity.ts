@@ -50,3 +50,7 @@ export interface MainSliceState {
     selectedDiet: string | null;
     selectedExclusions: string[];
 }
+
+export interface FilterPageProps {
+    onClose: () => void;
+}

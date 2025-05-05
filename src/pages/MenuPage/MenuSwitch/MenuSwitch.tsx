@@ -119,7 +119,7 @@ const MenuSwitch = () => {
             </div>
             {isModalOpen && (
                 <Modal onClose={handleCloseModal}>
-                    <FilterPage />
+                    <FilterPage onClose={handleCloseModal}/>
                 </Modal>
             )}
         </>

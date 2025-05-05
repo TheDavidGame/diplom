@@ -1,12 +1,11 @@
 import React from 'react';
 import FilterPageStyles from './FilterPage.module.scss';
 import {dietTypes, exclusions} from "./filterOptions";
-import {RootState} from "../../../../entity/index.entity";
+import {FilterPageProps, RootState} from "../../../../entity/index.entity";
 import {useDispatch, useSelector} from "react-redux";
 import {clearFilters, setSelectedDiet, toggleExclusion} from "../../../../services/slices/mainSlice";
-import BurgerModalPageStyles from "../../../BurgerModalPage/BurgerModalPage.module.scss";
 
-const FilterPage = () => {
+const FilterPage = ({ onClose }: FilterPageProps) => {
 
     const dispatch = useDispatch();
     const selectedDiet = useSelector((state: RootState) => state.mainSlice.selectedDiet);
@@ -75,7 +74,7 @@ const FilterPage = () => {
             </div>
             <div className={FilterPageStyles.submit}>
                 <div className={FilterPageStyles.submitClearBtn} onClick={handleClearFilters}>Очистить фильтры</div>
-                <div className={FilterPageStyles.submitBtn}>
+                <div className={FilterPageStyles.submitBtn} onClick={onClose}>
                     <img
                         src={'/filterSubmitBtn.svg'}
                         alt={'filterSubmitBtn'}
