@@ -109,6 +109,7 @@
   bottom: 70px;
 
   &Item {
+    cursor: pointer;
     animation: rotate 20s linear infinite;
   }
 }

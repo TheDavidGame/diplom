@@ -47,4 +47,10 @@ export interface RootState {
 
 export interface MainSliceState {
     isBar: boolean;
+    selectedDiet: string | null;
+    selectedExclusions: string[];
+}
+
+export interface FilterPageProps {
+    onClose: () => void;
 }
