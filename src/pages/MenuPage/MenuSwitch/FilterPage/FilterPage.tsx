@@ -1,8 +1,28 @@
 import React from 'react';
 import FilterPageStyles from './FilterPage.module.scss';
 import {dietTypes, exclusions} from "./filterOptions";
+import {RootState} from "../../../../entity/index.entity";
+import {useDispatch, useSelector} from "react-redux";
+import {clearFilters, setSelectedDiet, toggleExclusion} from "../../../../services/slices/mainSlice";
+import BurgerModalPageStyles from "../../../BurgerModalPage/BurgerModalPage.module.scss";
 
 const FilterPage = () => {
+
+    const dispatch = useDispatch();
+    const selectedDiet = useSelector((state: RootState) => state.mainSlice.selectedDiet);
+    const selectedExclusions = useSelector((state: RootState) => state.mainSlice.selectedExclusions);
+
+    const handleDietSelect = (id: string) => {
+        dispatch(setSelectedDiet(id));
+    };
+
+    const handleToggleExclusion = (id: string) => {
+        dispatch(toggleExclusion(id));
+    };
+
+    const handleClearFilters = () => {
+        dispatch(clearFilters());
+    };
 
     return (
         <div className={FilterPageStyles.wrapper}>
@@ -28,10 +48,12 @@ const FilterPage = () => {
                     {dietTypes.map(diet => (
                         <div
                             key={diet.id}
-                            className={`${FilterPageStyles.topFilterItem} `}
-                            // ${selectedDiet === diet.id ? FilterPageStyles.active : ''}
+                            onClick={() => handleDietSelect(diet.id)}
+                            className={`${FilterPageStyles.topFilterItem} ${selectedDiet === diet.id ? FilterPageStyles.topFilterItemActive : ''}`}
+
                         >
                             {diet.label}
+                            <div className={FilterPageStyles.underline}></div>
                         </div>
                     ))}
                 </div>
@@ -42,16 +64,17 @@ const FilterPage = () => {
                     {exclusions.map(item => (
                         <div
                             key={item.id}
-                            className={`${FilterPageStyles.bottomFilterItem} `}
-                            // ${selectedExclusions.includes(item.id) ? FilterPageStyles.active : ''}
+                            onClick={() => handleToggleExclusion(item.id)}
+                            className={`${FilterPageStyles.bottomFilterItem} ${selectedExclusions.includes(item.id) ? FilterPageStyles.bottomFilterItemActive : ''}`}
                         >
                             {item.label}
+                            <div className={FilterPageStyles.underline}></div>
                         </div>
                     ))}
                 </div>
             </div>
             <div className={FilterPageStyles.submit}>
-                <div className={FilterPageStyles.submitClearBtn}>Очистить фильтры</div>
+                <div className={FilterPageStyles.submitClearBtn} onClick={handleClearFilters}>Очистить фильтры</div>
                 <div className={FilterPageStyles.submitBtn}>
                     <img
                         src={'/filterSubmitBtn.svg'}
