@@ -3,17 +3,12 @@ import FilterPageStyles from './FilterPage.module.scss';
 import {dietTypes, exclusions} from "./filterOptions";
 import {FilterPageProps, RootState} from "../../../../entity/index.entity";
 import {useDispatch, useSelector} from "react-redux";
-import {clearFilters, setSelectedDiet, toggleExclusion} from "../../../../services/slices/mainSlice";
+import {clearFilters, toggleExclusion} from "../../../../services/slices/mainSlice";
 
 const FilterPage = ({ onClose }: FilterPageProps) => {
 
     const dispatch = useDispatch();
-    const selectedDiet = useSelector((state: RootState) => state.mainSlice.selectedDiet);
     const selectedExclusions = useSelector((state: RootState) => state.mainSlice.selectedExclusions);
-
-    const handleDietSelect = (id: string) => {
-        dispatch(setSelectedDiet(id));
-    };
 
     const handleToggleExclusion = (id: string) => {
         dispatch(toggleExclusion(id));
@@ -47,8 +42,8 @@ const FilterPage = ({ onClose }: FilterPageProps) => {
                     {dietTypes.map(diet => (
                         <div
                             key={diet.id}
-                            onClick={() => handleDietSelect(diet.id)}
-                            className={`${FilterPageStyles.topFilterItem} ${selectedDiet === diet.id ? FilterPageStyles.topFilterItemActive : ''}`}
+                            onClick={() => handleToggleExclusion(diet.id)}
+                            className={`${FilterPageStyles.topFilterItem} ${selectedExclusions.includes(diet.id) ? FilterPageStyles.topFilterItemActive : ''}`}
 
                         >
                             {diet.label}

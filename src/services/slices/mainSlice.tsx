@@ -5,7 +5,6 @@ const mainSlice = createSlice({
     name: 'mainSlice',
     initialState: {
         isBar: false,
-        selectedDiet: null,
         selectedExclusions: [],
     } as MainSliceState,
     reducers: {
@@ -14,9 +13,6 @@ const mainSlice = createSlice({
         },
         setIsBar: (state, action) => {
             state.isBar = action.payload;
-        },
-        setSelectedDiet: (state, action) => {
-            state.selectedDiet = action.payload;
         },
         toggleExclusion: (state, action) => {
             const item = action.payload;
@@ -27,11 +23,10 @@ const mainSlice = createSlice({
             }
         },
         clearFilters: (state) => {
-            state.selectedDiet = null;
             state.selectedExclusions = [];
         }
     },
 });
 
-export const { switchIsBar, setIsBar, setSelectedDiet, toggleExclusion, clearFilters } = mainSlice.actions;
+export const { switchIsBar, setIsBar, toggleExclusion, clearFilters } = mainSlice.actions;
 export default mainSlice.reducer;
