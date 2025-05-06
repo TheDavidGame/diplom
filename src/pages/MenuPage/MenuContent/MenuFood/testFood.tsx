@@ -135,7 +135,7 @@ export const saladsFood: Dish[] = [
         price: 400,
         weight: 250,
         src: '/snacksFood/snacksFood1.svg',
-        hiddenFor: ['spicy', 'onion', 'sesame', 'tomatoes']
+        hiddenFor: ['spicy', 'onion', 'sesame', 'tomatoes', 'vegetarian', 'vegan']
     },
     {
         id: 2,

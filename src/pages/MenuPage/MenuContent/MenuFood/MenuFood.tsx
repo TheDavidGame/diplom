@@ -10,7 +10,7 @@ const MenuFood = () => {
 
     const filteredEvents = filterDishes(eventsFood, selectedExclusions);
     const filteredMain = filterDishes(mainFood, selectedExclusions);
-    const filteredSalads = filterDishes(saladsFood,selectedExclusions);
+    const filteredSalads = filterDishes(saladsFood, selectedExclusions);
     const filteredSnacks = filterDishes(snacksFood, selectedExclusions);
 
     return (
@@ -32,6 +32,12 @@ const MenuFood = () => {
                                 </div>
                                 <div className={MenuFoodStyles.eventsListTitle} style={{whiteSpace: 'pre-line'}}>
                                     {el.title}
+                                    {!el.hiddenFor?.includes('vegan') && !el.hiddenFor?.includes('vegetarian') && (
+                                        <img src="/veganIcon.svg" alt="veganIcon" className={MenuFoodStyles.icons}/>
+                                    )}
+                                    {el.hiddenFor?.includes('spicy') && (
+                                        <img src="/spicyIcon.svg" alt="spicyIcon" className={MenuFoodStyles.icons}/>
+                                    )}
                                 </div>
                                 <div className={MenuFoodStyles.eventsListSubTitle} style={{whiteSpace: 'pre-line'}}>
                                     {el.subTitle}
@@ -74,6 +80,12 @@ const MenuFood = () => {
                                 </div>
                                 <div className={MenuFoodStyles.mainListTitle} style={{whiteSpace: 'pre-line'}}>
                                     {el.title}
+                                    {!el.hiddenFor?.includes('vegan') && !el.hiddenFor?.includes('vegetarian') && (
+                                        <img src="/veganIcon.svg" alt="veganIcon" className={MenuFoodStyles.icons}/>
+                                    )}
+                                    {el.hiddenFor?.includes('spicy') && (
+                                        <img src="/spicyIcon.svg" alt="spicyIcon" className={MenuFoodStyles.icons}/>
+                                    )}
                                 </div>
                                 <div className={MenuFoodStyles.mainListSubTitle} style={{whiteSpace: 'pre-line'}}>
                                     {el.subTitle}
@@ -115,6 +127,12 @@ const MenuFood = () => {
                                 </div>
                                 <div className={MenuFoodStyles.snacksListTitle} style={{whiteSpace: 'pre-line'}}>
                                     {el.title}
+                                    {!el.hiddenFor?.includes('vegan') && !el.hiddenFor?.includes('vegetarian') && (
+                                        <img src="/veganIcon.svg" alt="veganIcon" className={MenuFoodStyles.icons}/>
+                                    )}
+                                    {el.hiddenFor?.includes('spicy') && (
+                                        <img src="/spicyIcon.svg" alt="spicyIcon" className={MenuFoodStyles.icons}/>
+                                    )}
                                 </div>
                                 <div className={MenuFoodStyles.snacksListSubTitle} style={{whiteSpace: 'pre-line'}}>
                                     {el.subTitle}
@@ -151,6 +169,12 @@ const MenuFood = () => {
                                 </div>
                                 <div className={MenuFoodStyles.snacksListTitle} style={{whiteSpace: 'pre-line'}}>
                                     {el.title}
+                                    {!el.hiddenFor?.includes('vegan') && !el.hiddenFor?.includes('vegetarian') && (
+                                        <img src="/veganIcon.svg" alt="veganIcon" className={MenuFoodStyles.icons}/>
+                                    )}
+                                    {el.hiddenFor?.includes('spicy') && (
+                                        <img src="/spicyIcon.svg" alt="spicyIcon" className={MenuFoodStyles.icons}/>
+                                    )}
                                 </div>
                                 <div className={MenuFoodStyles.snacksListSubTitle} style={{whiteSpace: 'pre-line'}}>
                                     {el.subTitle}
