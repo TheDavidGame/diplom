@@ -25,6 +25,7 @@ export interface UnderMainPageProps {
     isMainPageVisible: boolean;
     setIsMainPageVisible: (visible: boolean) => void;
 }
+
 export interface HeaderProps {
     stickyMode?: boolean;
     mainPageRef?: React.RefObject<HTMLDivElement | null>;
@@ -47,10 +48,38 @@ export interface RootState {
 
 export interface MainSliceState {
     isBar: boolean;
-    selectedDiet: string | null;
-    selectedExclusions: string[];
+    selectedExclusions: FilterType[];
 }
 
 export interface FilterPageProps {
     onClose: () => void;
+}
+
+export type FilterType =
+    | 'vegetarian'
+    | 'vegan'
+    | 'spicy'
+    | 'gluten'
+    | 'nuts'
+    | 'soy'
+    | 'sesame'
+    | 'peanuts'
+    | 'seafood'
+    | 'onion'
+    | 'tomatoes'
+    | 'beans'
+
+export interface Dish {
+    id: string | number;
+    title: string;
+    subTitle: string;
+    price: number;
+    weight: number;
+    src: string;
+    hiddenFor?: FilterType[]; // фильтры
+}
+
+export interface FilterOption {
+    id: FilterType;
+    label: string
 }
