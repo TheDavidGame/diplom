@@ -3,6 +3,7 @@ import HeaderStyles from './Header.module.scss';
 import {HeaderProps} from "../../entity/index.entity";
 import Modal from "../Modal/Modal";
 import BurgerModalPage from "../../pages/BurgerModalPage/BurgerModalPage";
+import ReservationModalPage from "../../pages/ReservationModalPage/ReservationModalPage";
 
 
 const Header: React.FC<HeaderProps> = ({stickyMode = false, mainPageRef, setIsMainPageVisible}) => {
@@ -10,6 +11,7 @@ const Header: React.FC<HeaderProps> = ({stickyMode = false, mainPageRef, setIsMa
     const [headerHeight, setHeaderHeight] = useState(0);
     const [isSticky, setIsSticky] = useState(false);
     const [isModalOpen, setIsModalOpen] = useState(false);
+    const [isModalOpenReservation, setIsModalOpenReservation] = useState(false);
 
     useEffect(() => {
         if (headerRef.current) {
@@ -34,8 +36,16 @@ const Header: React.FC<HeaderProps> = ({stickyMode = false, mainPageRef, setIsMa
         }
     }, [stickyMode]);
 
-    const handleOpenModal = () => setIsModalOpen(true);
+    const handleOpenModal = () => {
+        setIsModalOpenReservation(false);
+        setIsModalOpen(true);
+    };
     const handleCloseModal = () => setIsModalOpen(false);
+    const handleOpenModalReservation = () => {
+        setIsModalOpen(false);
+        setIsModalOpenReservation(true);
+    };
+    const handleCloseModalReservation = () => setIsModalOpenReservation(false);
 
     return (
         <>
@@ -48,7 +58,7 @@ const Header: React.FC<HeaderProps> = ({stickyMode = false, mainPageRef, setIsMa
                 <div className={HeaderStyles.logo}>
                     <img src="/logoHeader.svg" alt="Logo"/>
                 </div>
-                <div className={HeaderStyles.reservation}>
+                <div className={HeaderStyles.reservation} onClick={handleOpenModalReservation}>
                     <img src="/reservationHeader.svg" alt="Reservation"/>
                 </div>
             </div>
@@ -56,6 +66,11 @@ const Header: React.FC<HeaderProps> = ({stickyMode = false, mainPageRef, setIsMa
             {isModalOpen && (
                 <Modal onClose={handleCloseModal}>
                     <BurgerModalPage/>
+                </Modal>
+            )}
+            {isModalOpenReservation && (
+                <Modal onClose={handleCloseModalReservation}>
+                    <ReservationModalPage/>
                 </Modal>
             )}
 

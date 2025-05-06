@@ -1,7 +1,7 @@
 import React from 'react';
 import BurgerModalPageStyles from './BurgerModalPage.module.scss';
 import {menuHeaderItem} from "../../entity/index.entity";
-import HeaderStyles from '../../components/Header/Header.module.scss'
+import Header from "../../components/Header/Header";
 
 const BurgerModalPage = () => {
 
@@ -49,26 +49,8 @@ const BurgerModalPage = () => {
 
     return (
         <div className={BurgerModalPageStyles.wrapper}>
-            <div
-                className={`${HeaderStyles.header}`}
-            >
-                <img
-                    src="/bckrndHeader.svg"
-                    alt="Header background"
-                    className={HeaderStyles.background}
-                />
-
-                <div className={HeaderStyles.burger}>
-                    <img src="/burgerHeader.svg" alt="Menu"/>
-                </div>
-
-                <div className={HeaderStyles.logo}>
-                    <img src="/logoHeader.svg" alt="Logo"/>
-                </div>
-
-                <div className={HeaderStyles.reservation}>
-                    <img src="/reservationHeader.svg" alt="Reservation"/>
-                </div>
+            <div className={BurgerModalPageStyles.header}>
+                <Header/>
             </div>
 
             <div className={BurgerModalPageStyles.list}>
