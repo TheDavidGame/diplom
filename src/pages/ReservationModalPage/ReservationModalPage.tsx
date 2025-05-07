@@ -1,9 +1,12 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import ReservationModalPageStyles from './ReservationModalPage.module.scss';
 import { motion } from 'framer-motion';
 import { Calendar, Clock, Users } from 'react-feather';
 
 const ReservationModalPage = () => {
+
+    const navigate = useNavigate();
 
     const [people, setPeople] = useState('');
     const [date, setDate] = useState('');
@@ -29,7 +32,7 @@ const ReservationModalPage = () => {
 
         const hasErrors = Object.values(newErrors).some(Boolean);
         if (!hasErrors) {
-            alert("URAAAAA");
+            navigate('/reservationDone');
         }
     };
 
