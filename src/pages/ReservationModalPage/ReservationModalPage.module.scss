@@ -45,10 +45,102 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin-top: 48px;
 
   &Btn {
     &Item {
       cursor: pointer;
     }
+  }
+}
+
+.selectorContainer {
+  display: flex;
+  gap: 32px;
+  margin: 40px 0;
+  padding: 0 20px;
+  width: 100%;
+  max-width: 1200px;
+  justify-content: center;
+}
+
+.selector {
+  position: relative;
+  background: #FFFFFF;
+  border-radius: 16px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.selectorIcon {
+  width: 24px;
+  height: 24px;
+  color: #5C4B34;
+}
+
+.select {
+  border: none;
+  background: transparent;
+  font-size: 18px;
+  font-weight: 500;
+  color: #5C4B34;
+  outline: none;
+  cursor: pointer;
+  appearance: none;
+  padding-right: 30px;
+  background: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%235C4B34' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e") no-repeat right center;
+}
+
+.dateInput {
+  border: none;
+  background: transparent;
+  font-size: 18px;
+  font-weight: 500;
+  color: #5C4B34;
+  outline: none;
+  cursor: pointer;
+  min-width: 200px;
+
+  &::-webkit-calendar-picker-indicator {
+    filter: invert(0.4);
+    cursor: pointer;
+  }
+}
+
+.error {
+  border: 2px solid red !important;
+}
+
+.emailField,
+.commentField {
+  width: 100%;
+  max-width: 600px;
+  margin: 16px auto;
+
+  input,
+  textarea {
+    width: 96%;
+    padding: 14px 10px 14px 10px;
+    border-radius: 12px;
+    border: 2px solid #ddd;
+    font-size: 16px;
+    font-family: inherit;
+    color: #5C4B34;
+    outline: none;
+    resize: vertical;
+    transition: 0.3s;
+
+    &:focus {
+      border-color: #5C4B34;
+    }
+  }
+
+  textarea {
+    min-height: 100px;
   }
 }
