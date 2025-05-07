@@ -1,0 +1,62 @@
+.wrapper {
+  position: relative;
+  background-color: #FBF5EE;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+}
+
+.leftStar {
+  position: absolute;
+  left: -400px;
+  top: -500px;
+
+  &Item {
+    // Можно добавить стили при необходимости
+  }
+}
+
+.rightStar {
+  position: absolute;
+  right: -400px;
+  top: -500px;
+
+  &Item {
+    // Можно добавить стили при необходимости
+  }
+}
+
+.top {
+  display: flex;
+  align-items: center;
+  margin-top: 170px;
+
+  &Title {
+    font-size: 96px;
+    font-weight: 800;
+    margin: 24px 28px;
+  }
+}
+
+.bottom {
+  &Title {
+    font-size: 64px;
+    font-weight: 500;
+    margin: 24px 0;
+  }
+}
+
+.submit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 48px;
+
+  &Btn {
+    &Item {
+      cursor: pointer;
+    }
+  }
+}
