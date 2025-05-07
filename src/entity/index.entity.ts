@@ -32,6 +32,15 @@ export interface HeaderProps {
     setIsMainPageVisible?: (visible: boolean) => void;
 }
 
+export interface menuHeader {
+    text: string;
+    url: string;
+}
+
+export interface BurgerModalPageProps {
+    onClose: () => void;
+}
+
 export interface menuHeaderItem {
     text: string;
 }

@@ -65,7 +65,7 @@ const Header: React.FC<HeaderProps> = ({stickyMode = false, mainPageRef, setIsMa
 
             {isModalOpen && (
                 <Modal onClose={handleCloseModal}>
-                    <BurgerModalPage/>
+                    <BurgerModalPage onClose={handleCloseModal}/>
                 </Modal>
             )}
             {isModalOpenReservation && (
