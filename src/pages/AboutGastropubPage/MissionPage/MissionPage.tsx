@@ -9,7 +9,7 @@ const MissionPage = () => {
                     МИССИЯ
                 </div>
                 <div className={MissionPageStyles.mainDescription}>
-                    Наша миссия — вдохновлять людей через искусство и культуру
+                    Наша миссия — вдохновлять людей через <br/> искусство и культуру
                 </div>
             </div>
         </div>
