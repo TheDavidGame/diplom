@@ -29,7 +29,7 @@ const BurgerModalPage = ({onClose}: BurgerModalPageProps) => {
         {text: 'МЕНЮ', url: '/menu'},
         {text: 'БАРНАЯ КАРТА', url: '/menu'},
         {text: 'СОБЫТИЯ', url: '/'},
-        {text: 'О НАС', url: '/'}
+        {text: 'О НАС', url: '/aboutGastro'}
     ];
 
     const footerList: menuHeaderItem[] = [
