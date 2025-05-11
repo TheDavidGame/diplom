@@ -1,0 +1,31 @@
+.parallax {
+  position: absolute;
+  width: 130%;
+  min-width: 800px;
+  height: 108px;
+  overflow: hidden;
+  left: -15%;
+  top: 0;
+  pointer-events: none;
+  z-index: 10;
+  background: #FFE100;
+  border-radius: 0;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.scroller {
+  display: flex;
+  will-change: transform;
+  align-items: center;
+  height: 100%;
+  font-size: 130px;
+  font-weight: 900;
+  color: #2E281D;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  line-height: 1;
+  white-space: nowrap;
+  pointer-events: none;
+}

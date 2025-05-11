@@ -92,3 +92,8 @@ export interface FilterOption {
     id: FilterType;
     label: string
 }
+
+export interface ParallaxProps {
+    children: React.ReactNode;
+    baseVelocity?: number;
+}
