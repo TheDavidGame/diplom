@@ -1,5 +1,7 @@
 .wrapper {
   max-height: 700px;
+  padding-bottom: 160px;
+  position: relative;
 }
 
 .main {
@@ -9,7 +11,6 @@
   justify-content: center;
 
   padding-top: 160px;
-  padding-bottom: 160px;
   box-sizing: border-box;
   text-align: center;
 
