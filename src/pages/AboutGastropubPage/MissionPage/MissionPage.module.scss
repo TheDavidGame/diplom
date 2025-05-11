@@ -9,13 +9,45 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
+  overflow: hidden;
 }
+
+.stripes {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.stripe {
+  position: absolute;
+  width: 130%;
+  line-height: 1;
+  padding: 0;
+  min-width: 800px;
+  height: 108px;
+  background: #FFE100;
+  color: #2E281D;
+  font-size: 130px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
 
 .main {
   display: flex;
   align-items: center;
   flex-direction: column;
   text-align: center;
+
   &Title {
     font-size: 96px;
     color: #FBF5EE;
