@@ -3,6 +3,7 @@ import MainPage from "./MainPage/MainPage";
 import UnderHeader from "./UnderHeader/UnderHeader";
 import MissionPage from "./MissionPage/MissionPage";
 import UnderMissionPage from "./UnderMissionPage/UnderMissionPage";
+import LiveCulturePage from "./LiveCulturePage/LiveCulturePage";
 
 const AboutGastroPage = () => {
     const mainPageRef = useRef<HTMLDivElement>(null);
@@ -17,6 +18,7 @@ const AboutGastroPage = () => {
             />
             <MissionPage/>
             <UnderMissionPage/>
+            <LiveCulturePage />
         </div>
     );
 };
