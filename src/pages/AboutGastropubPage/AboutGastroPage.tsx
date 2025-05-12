@@ -4,6 +4,7 @@ import UnderHeader from "./UnderHeader/UnderHeader";
 import MissionPage from "./MissionPage/MissionPage";
 import UnderMissionPage from "./UnderMissionPage/UnderMissionPage";
 import LiveCulturePage from "./LiveCulturePage/LiveCulturePage";
+import TasteEventPage from "./TasteEventPage/TasteEventPage";
 
 const AboutGastroPage = () => {
     const mainPageRef = useRef<HTMLDivElement>(null);
@@ -19,6 +20,7 @@ const AboutGastroPage = () => {
             <MissionPage/>
             <UnderMissionPage/>
             <LiveCulturePage />
+            <TasteEventPage />
         </div>
     );
 };

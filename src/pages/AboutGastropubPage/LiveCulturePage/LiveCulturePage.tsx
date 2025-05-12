@@ -18,11 +18,10 @@ const LiveCulturePage = () => {
                     У нас регулярно проходят джазовые <br/> вечера, поэтические чтения, лекции и <br/> просмотры фильмов
                 </div>
                 <div className={LiveCulturePageStyles.topBtn}>
-
+                    <img src="/liveCultureBtn.svg" alt="liveCultureBtn" />
                 </div>
             </div>
             <div className={LiveCulturePageStyles.bottom}>
-
             </div>
         </div>
     );
