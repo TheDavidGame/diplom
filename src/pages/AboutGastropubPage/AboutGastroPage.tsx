@@ -6,6 +6,8 @@ import UnderMissionPage from "./UnderMissionPage/UnderMissionPage";
 import LiveCulturePage from "./LiveCulturePage/LiveCulturePage";
 import TasteEventPage from "./TasteEventPage/TasteEventPage";
 import FrequentQuestions from "./FrequentQuestions/FrequentQuestions";
+import UpperFooterPage from "../UpperFooterPage/UpperFooterPage";
+import AppFooter from "../AppFooter/AppFooter";
 
 const AboutGastroPage = () => {
     const mainPageRef = useRef<HTMLDivElement>(null);
@@ -23,6 +25,8 @@ const AboutGastroPage = () => {
             <LiveCulturePage />
             <TasteEventPage />
             <FrequentQuestions />
+            <UpperFooterPage />
+            <AppFooter/>
         </div>
     );
 };
