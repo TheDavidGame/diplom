@@ -1,29 +1,27 @@
 import React, {useRef} from 'react';
 import AboutUsPageStyles from './AboutUsPage.module.scss';
 import Slider from "../../components/Slider/Slider";
-import {SlideItem} from "../../entity/index.entity";
 import {motion, useInView} from 'framer-motion';
+import HexagonButton from "../../components/HexagonButton/HexagonButton";
+import {useNavigate} from "react-router-dom";
+import {setIsBar} from "../../services/slices/mainSlice";
+import {useDispatch} from "react-redux";
 
 const AboutUsPage = () => {
-    // const scrollerItems = ['menuFood1', 'menuFood2', 'menuFood3', 'menuFood4', 'menuFood5'];
-    const scrollerItems = [ {
+    const scrollerItems = [{
         image: '/mainFood/menuFood1.svg',
         text: 'ЧЕВАПЧИМИЧИ',
     }, {
         image: '/mainFood/menuFood2.svg',
         text: 'ЧИЛИ ЧИКЕН',
-    },{
+    }, {
         image: '/mainFood/menuFood3.svg',
         text: 'ВЕСТЕРН БОУНС',
-    },{
+    }, {
         image: '/mainFood/menuFood4.svg',
         text: 'БЭЙБИ ПОТАТА',
     }];
     const slides = [...scrollerItems, ...scrollerItems];
-    // const slides: SlideItem[] = duplicatedImages.map(item => ({
-    //     image: `/mainFood/${item}.svg`,
-    //     text: 'Текст под фото'
-    // }));
     const ref1 = useRef<HTMLDivElement>(null);
     const ref2 = useRef<HTMLDivElement>(null);
 
@@ -37,6 +35,14 @@ const AboutUsPage = () => {
         margin: "0px 0px -30% 0px"
     });
 
+    const dispatch = useDispatch();
+    const navigate = useNavigate();
+
+    const navigateItem = (text: string) => {
+        if (text === "МЕНЮ") dispatch(setIsBar(false));
+        if (text === "БАРНАЯ КАРТА") dispatch(setIsBar(true));
+        navigate('/menu');
+    };
 
     return (
         <div className={AboutUsPageStyles.wrapper}>
@@ -73,17 +79,15 @@ const AboutUsPage = () => {
                         Искусство и еда
                     </motion.div>
                     <div className={AboutUsPageStyles.artFoodDescriptionText}>
-                        Забудьте о скучных местах! <br />
+                        Забудьте о скучных местах! <br/>
                         Откройте для себя особое <br/>
                         пространство, где искусство <br/>
                         и кулинария объединяются.
                     </div>
                     <div className={AboutUsPageStyles.artFoodDescriptionBtn}>
-                        <img
-                            src="/artFoodDescriptionBtn.svg"
-                            alt="artFoodWrapperPhoto"
-                            className={AboutUsPageStyles.artFoodDescriptionBtn}
-                        />
+                        <HexagonButton onClick={() => navigateItem('МЕНЮ')}>
+                            НАШЕ МЕНЮ
+                        </HexagonButton>
                     </div>
                 </div>
             </div>
@@ -142,11 +146,9 @@ const AboutUsPage = () => {
                         но всегда гармоничный.
                     </div>
                     <div className={AboutUsPageStyles.artFoodBarDescriptionBtn}>
-                        <img
-                            src="/artFoodBarBtn.svg"
-                            alt="artFoodBarBtn"
-                            className={AboutUsPageStyles.artFoodBarDescriptionBtn}
-                        />
+                        <HexagonButton onClick={() => navigateItem('БАРНАЯ КАРТА')}>
+                            БАРНАЯ КАРТА
+                        </HexagonButton>
                     </div>
                 </div>
             </div>
