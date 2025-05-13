@@ -111,7 +111,7 @@ export const cocktailBar = [
     },
     {
         id: 2,
-        title: 'СЕВЕРНОЕ СИЯНИЕ',
+        title: 'ДЖАЗОВЫЙ МУЛ',
         subTitle: 'Лимонно-яблочный коктейль на \n основе джина',
         price: 400,
         weight: 200,
@@ -250,7 +250,7 @@ export const nonAlcoholBar = [
     },
     {
         id: 4,
-        title: 'ЛИМОНАД “ТАРХУН”',
+        title: 'ДОМАШНИЙ ЛИМОНАД',
         price: 250,
         weight: 500,
         src: '/nonAlcoholBar/nonAlcoholBar4.svg'

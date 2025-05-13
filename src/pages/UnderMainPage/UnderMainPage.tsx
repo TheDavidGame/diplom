@@ -10,10 +10,10 @@ const UnderMainPage: React.FC<UnderMainPageProps> = ({
                                                          isMainPageVisible,
                                                          setIsMainPageVisible
                                                      }) => {
-    const scrollerItems = ['testImage', 'testImage', 'testImage', 'testImage', 'testImage'];
+    const scrollerItems = ['underMainPagePhoto1', 'underMainPagePhoto2', 'underMainPagePhoto3', 'underMainPagePhoto4'];
     const duplicatedImages = [...scrollerItems, ...scrollerItems];
     const slides: SlideItem[] = duplicatedImages.map(item => ({
-        image: `/${item}.jpg`,
+        image: `/${item}.svg`,
         text: 'Текст под фото'
     }));
     const ref = useRef<HTMLDivElement>(null);

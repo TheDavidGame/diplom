@@ -21,7 +21,7 @@ export const eventsFood: Dish[] = [
     },
     {
         id: 3,
-        title: 'ДЮК ЭЛЛИНГТОН \n ЧИЗКЕЙК',
+        title: 'SAMOSA CHAAT',
         subTitle: 'Кремовый чизкейк с лимонным \n вкусом и свежими ягодами',
         price: 400,
         weight: 250,

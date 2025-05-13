@@ -5,12 +5,25 @@ import {SlideItem} from "../../entity/index.entity";
 import {motion, useInView} from 'framer-motion';
 
 const AboutUsPage = () => {
-    const scrollerItems = ['testImage', 'testImage', 'testImage', 'testImage', 'testImage'];
-    const duplicatedImages = [...scrollerItems, ...scrollerItems];
-    const slides: SlideItem[] = duplicatedImages.map(item => ({
-        image: `/${item}.jpg`,
-        text: 'Текст под фото'
-    }));
+    // const scrollerItems = ['menuFood1', 'menuFood2', 'menuFood3', 'menuFood4', 'menuFood5'];
+    const scrollerItems = [ {
+        image: '/mainFood/menuFood1.svg',
+        text: 'ЧЕВАПЧИМИЧИ',
+    }, {
+        image: '/mainFood/menuFood2.svg',
+        text: 'ЧИЛИ ЧИКЕН',
+    },{
+        image: '/mainFood/menuFood3.svg',
+        text: 'ВЕСТЕРН БОУНС',
+    },{
+        image: '/mainFood/menuFood4.svg',
+        text: 'БЭЙБИ ПОТАТА',
+    }];
+    const slides = [...scrollerItems, ...scrollerItems];
+    // const slides: SlideItem[] = duplicatedImages.map(item => ({
+    //     image: `/mainFood/${item}.svg`,
+    //     text: 'Текст под фото'
+    // }));
     const ref1 = useRef<HTMLDivElement>(null);
     const ref2 = useRef<HTMLDivElement>(null);
 
