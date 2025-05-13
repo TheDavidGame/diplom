@@ -4,16 +4,19 @@ import Slider from "../../components/Slider/Slider";
 import {SlideItem, UnderMainPageProps} from "../../entity/index.entity";
 import {motion, useInView} from 'framer-motion';
 import Header from "../../components/Header/Header";
+import HexagonButton from "../../components/HexagonButton/HexagonButton";
+import {useNavigate} from "react-router-dom";
 
 const UnderMainPage: React.FC<UnderMainPageProps> = ({
                                                          mainPageRef,
                                                          isMainPageVisible,
                                                          setIsMainPageVisible
                                                      }) => {
-    const scrollerItems = ['testImage', 'testImage', 'testImage', 'testImage', 'testImage'];
+
+    const scrollerItems = ['underMainPagePhoto1', 'underMainPagePhoto2', 'underMainPagePhoto3', 'underMainPagePhoto4'];
     const duplicatedImages = [...scrollerItems, ...scrollerItems];
     const slides: SlideItem[] = duplicatedImages.map(item => ({
-        image: `/${item}.jpg`,
+        image: `/${item}.svg`,
         text: 'Текст под фото'
     }));
     const ref = useRef<HTMLDivElement>(null);
@@ -21,6 +24,8 @@ const UnderMainPage: React.FC<UnderMainPageProps> = ({
         once: true,
         margin: "0px 0px -30% 0px"
     });
+    const navigate = useNavigate();
+
     return (
         <div className={UnderMainPageStyles.wrapper}>
             <Header
@@ -99,7 +104,9 @@ const UnderMainPage: React.FC<UnderMainPageProps> = ({
                 </div>
 
                 <div className={UnderMainPageStyles.underScrollerAboutUs}>
-                    <img src="/aboutUsUnderScroller.svg" alt="aboutUsUnderScroller"/>
+                    <HexagonButton onClick={() => navigate('/aboutGastro')}>
+                        О НАС
+                    </HexagonButton>
                 </div>
             </div>
 
