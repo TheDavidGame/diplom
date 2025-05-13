@@ -1,7 +1,11 @@
 import React from 'react';
 import UpperFooterPageStyles from './UpperFooterPage.module.scss';
+import {useNavigate} from "react-router-dom";
+import HexagonButton from "../../components/HexagonButton/HexagonButton";
 
 const UpperFooterPage = () => {
+    const navigate = useNavigate();
+
     return (
         <div className={UpperFooterPageStyles.wrapper}>
             <div className={UpperFooterPageStyles.header}>
@@ -46,11 +50,9 @@ const UpperFooterPage = () => {
                         пт-вс 12:00-2:00
                     </div>
                     <div className={UpperFooterPageStyles.rightBtn}>
-                        <img
-                            src="/UpperFooterPageBtn.svg"
-                            alt="UpperFooterPageBtn"
-                            className={UpperFooterPageStyles.rightAddressItem}
-                        />
+                        <HexagonButton onClick={() => navigate('/reservationDone')}>
+                            ЗАБРОНИРОВАТЬ СТОЛ
+                        </HexagonButton>
                     </div>
                 </div>
             </div>
