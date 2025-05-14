@@ -1,9 +1,9 @@
-import React, {useEffect, useRef, useState} from 'react';
+import React, {forwardRef, useEffect, useRef, useState} from 'react';
 import EventPageStyles from './EventsPage.module.scss';
 import {EventSlideItem} from "../../entity/index.entity";
 import { motion, useInView } from 'framer-motion';
 
-const EventsPage = () => {
+const EventsPage = forwardRef<HTMLDivElement>((props, eventRef) => {
     const [currentSlide, setCurrentSlide] = useState(0);
     const [slideWidth, setSlideWidth] = useState(0);
     const ref = useRef<HTMLDivElement>(null);
@@ -62,7 +62,7 @@ const EventsPage = () => {
     };
 
     return (
-        <div className={EventPageStyles.wrapper} id='event'>
+        <div ref={eventRef} className={EventPageStyles.wrapper} id='event'>
             <div className={EventPageStyles.header}>
                 <img
                     src={'/eventsPageHeader.svg'}
@@ -157,6 +157,6 @@ const EventsPage = () => {
             </div>
         </div>
     );
-};
+});
 
 export default EventsPage;
