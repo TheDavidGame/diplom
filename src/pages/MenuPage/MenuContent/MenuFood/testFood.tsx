@@ -105,7 +105,7 @@ export const mainFood: Dish[] = [
         subTitle: 'Шампиньоны, маринованные в  \n смеси восточных пряностей и \n трав, обжаренные на гриле',
         price: 400,
         weight: 250,
-        src: '/mainFood/menuFood5.svg'
+        src: '/mainFood/menuFood5.png'
     },
     {
         id: 6,
@@ -113,7 +113,7 @@ export const mainFood: Dish[] = [
         subTitle: 'Хрустящий фалафель с нутом, овощами и кремовым соусом',
         price: 400,
         weight: 250,
-        src: '/mainFood/menuFood6.svg',
+        src: '/mainFood/menuFood6.png',
         hiddenFor: ['nuts', 'tomatoes']
     },
     {
@@ -122,7 +122,7 @@ export const mainFood: Dish[] = [
         subTitle: 'Тако-клэм, тако сиера, тако луэс, чили чикен, \n соус тайхо, и напиток на выбор',
         price: 400,
         weight: 250,
-        src: '/mainFood/menuFood7.svg',
+        src: '/mainFood/menuFood7.png',
         hiddenFor: ['vegetarian', 'vegan', 'spicy']
     }
 ];
@@ -134,7 +134,7 @@ export const saladsFood: Dish[] = [
         subTitle: 'Курица, обжаренная с перцем и луком, авокадо, помидоры, сыр, и заправка из сальсы',
         price: 400,
         weight: 250,
-        src: '/saladsFood/saladsFood1.svg',
+        src: '/saladsFood/saladsFood1.png',
         hiddenFor: ['spicy', 'onion', 'sesame', 'tomatoes', 'vegetarian', 'vegan']
     },
     {
@@ -143,7 +143,7 @@ export const saladsFood: Dish[] = [
         subTitle: 'Грибы, обжаренные с чесноком, помидоры, зелень, соевый соус',
         price: 400,
         weight: 250,
-        src: '/saladsFood/saladsFood2.svg',
+        src: '/saladsFood/saladsFood2.png',
         hiddenFor: ['soy', 'tomatoes']
     },
     {
@@ -152,7 +152,7 @@ export const saladsFood: Dish[] = [
         subTitle: 'Жареные креветки, рисовая лапша, чука, стручковый горошек, имбирная заправка',
         price: 400,
         weight: 250,
-        src: '/saladsFood/saladsFood3.svg',
+        src: '/saladsFood/saladsFood3.png',
         hiddenFor: ['seafood']
     },
     {
@@ -161,7 +161,7 @@ export const saladsFood: Dish[] = [
         subTitle: 'Черная фасоль, кукуруза, помидоры и авокадо, смешанные с зеленью и заправленные сальсой',
         price: 400,
         weight: 250,
-        src: '/saladsFood/saladsFood4.svg',
+        src: '/saladsFood/saladsFood4.png',
         hiddenFor: ['beans', 'tomatoes']
     }
 ];
@@ -173,7 +173,7 @@ export const snacksFood: Dish[] = [
         subTitle: 'Веганские тако с красной фасолью, томатным соусом и авокадо',
         price: 400,
         weight: 250,
-        src: '/snacksFood/snacksFood1.svg',
+        src: '/snacksFood/snacksFood1.png',
         hiddenFor: ['beans']
     },
     {
@@ -182,7 +182,7 @@ export const snacksFood: Dish[] = [
         subTitle: 'Острые куриные тако с чили соусом и свежими травами',
         price: 400,
         weight: 250,
-        src: '/snacksFood/snacksFood2.svg',
+        src: '/snacksFood/snacksFood2.png',
         hiddenFor: ['spicy', 'vegetarian', 'vegan']
     },
     {
@@ -191,7 +191,7 @@ export const snacksFood: Dish[] = [
         subTitle: 'Сытные говяжьи тако с морковью, луком, и чили',
         price: 400,
         weight: 250,
-        src: '/snacksFood/snacksFood3.svg',
+        src: '/snacksFood/snacksFood3.png',
         hiddenFor: ['spicy', 'vegetarian', 'vegan', 'onion']
     },
     {
@@ -200,7 +200,7 @@ export const snacksFood: Dish[] = [
         subTitle: 'Хрустящие куриные палочки в остром чили соусе.',
         price: 400,
         weight: 250,
-        src: '/snacksFood/snacksFood4.svg',
+        src: '/snacksFood/snacksFood4.png',
         hiddenFor: ['vegetarian', 'vegan',]
     },
     {
@@ -209,7 +209,7 @@ export const snacksFood: Dish[] = [
         subTitle: 'Пирожки с начинкой из курицы и сыра, обжаренные в остром кляре.',
         price: 400,
         weight: 250,
-        src: '/snacksFood/snacksFood5.svg',
+        src: '/snacksFood/snacksFood5.png',
         hiddenFor: ['vegetarian', 'vegan',]
     },
     {
@@ -218,6 +218,6 @@ export const snacksFood: Dish[] = [
         subTitle: 'Кукурузные чипсы: Чили-Лайм / Паприка / Карри',
         price: 400,
         weight: 250,
-        src: '/snacksFood/snacksFood6.svg'
+        src: '/snacksFood/snacksFood6.png'
     }
 ];
