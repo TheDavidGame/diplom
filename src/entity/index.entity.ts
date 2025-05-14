@@ -45,6 +45,11 @@ export interface menuHeaderItem {
     text: string;
 }
 
+export interface menuSwitchFood {
+    title?: string;
+    text: string;
+}
+
 export interface ModalProps {
     onClose: () => void;
     children: React.ReactNode;
@@ -85,7 +90,7 @@ export interface Dish {
     price: number;
     weight: number;
     src: string;
-    hiddenFor?: FilterType[]; // фильтры
+    hiddenFor?: FilterType[];
 }
 
 export interface FilterOption {
@@ -96,4 +101,9 @@ export interface FilterOption {
 export interface ParallaxProps {
     children: React.ReactNode;
     baseVelocity?: number;
+}
+
+export interface HexagonButtonProps {
+    children: React.ReactNode;
+    onClick?: React.MouseEventHandler<HTMLButtonElement>;
 }

@@ -1,12 +1,10 @@
 import React from 'react';
 import DoneReservationModalPageStyles from './DoneReservationModalPage.module.scss';
 import { useNavigate } from 'react-router-dom';
+import HexagonButton from "../../../components/HexagonButton/HexagonButton";
 
 const DoneReservationModalPage = () => {
     const navigate = useNavigate();
-    const handleBackToHome = () => {
-        navigate('/');
-    };
     return (
         <div className={DoneReservationModalPageStyles.wrapper}>
             <div className={DoneReservationModalPageStyles.leftStar}>
@@ -42,12 +40,9 @@ const DoneReservationModalPage = () => {
 
             <div className={DoneReservationModalPageStyles.submit}>
                 <div className={DoneReservationModalPageStyles.submitBtn}>
-                    <img
-                        src="/doneReservationBtn.svg"
-                        alt="doneReservationBtn"
-                        className={DoneReservationModalPageStyles.submitBtnItem}
-                        onClick={handleBackToHome}
-                    />
+                    <HexagonButton onClick={() => navigate('/')}>
+                        ГЛАВНАЯ
+                    </HexagonButton>
                 </div>
             </div>
         </div>

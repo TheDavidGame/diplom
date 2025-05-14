@@ -18,7 +18,11 @@ const BurgerModalPage = ({onClose}: BurgerModalPageProps) => {
         if (text === "БАРНАЯ КАРТА") dispatch(setIsBar(true));
 
         if (location.pathname !== url) {
-            navigate(url);
+            if (text === "СОБЫТИЯ") {
+                navigate(url, { state: { scrollToId: 'event' } });
+            } else {
+                navigate(url);
+            }
         } else {
             window.scrollTo({top: 0, behavior: 'smooth'});
         }
@@ -28,7 +32,7 @@ const BurgerModalPage = ({onClose}: BurgerModalPageProps) => {
         {text: 'ГЛАВНАЯ', url: '/'},
         {text: 'МЕНЮ', url: '/menu'},
         {text: 'БАРНАЯ КАРТА', url: '/menu'},
-        {text: 'СОБЫТИЯ', url: '/'},
+        {text: 'СОБЫТИЯ', url: '/#event'},
         {text: 'О НАС', url: '/aboutGastro'}
     ];
 
@@ -52,17 +56,15 @@ const BurgerModalPage = ({onClose}: BurgerModalPageProps) => {
 
             <div className={BurgerModalPageStyles.list}>
                 {menuList.map((el, index) => (
-                    <>
-                        <div className={BurgerModalPageStyles.listItem} key={index}
-                             onClick={() => navigateItem(el.text, el.url)}>
+                    <React.Fragment key={index}>
+                        <div className={BurgerModalPageStyles.listItem} onClick={() => navigateItem(el.text, el.url)}>
                             {el.text}
                             <div className={BurgerModalPageStyles.underline}></div>
                         </div>
                         <div className={BurgerModalPageStyles.listArrow}>
-                            <img src="/BurgerModalListItemArrow.svg" alt="star"
-                                 className={BurgerModalPageStyles.listArrowItem}/>
+                            <img src="/BurgerModalListItemArrow.svg" alt="star" className={BurgerModalPageStyles.listArrowItem}/>
                         </div>
-                    </>
+                    </React.Fragment>
                 ))}
             </div>
 

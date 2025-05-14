@@ -38,6 +38,9 @@ const ReservationModalPage = () => {
 
     return (
         <div className={ReservationModalPageStyles.wrapper}>
+            <div className={ReservationModalPageStyles.close} onClick={() => navigate('/')}>
+                <img src="/frequentQuestionsCross.svg" alt="close" className={ReservationModalPageStyles.closeItem} />
+            </div>
             <div className={ReservationModalPageStyles.leftStar}>
                 <img src="/filterLeftStar.svg" alt="filterLeftStar" className={ReservationModalPageStyles.leftStarItem} />
             </div>
@@ -60,13 +63,14 @@ const ReservationModalPage = () => {
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                 >
-                    <Users className={ReservationModalPageStyles.selectorIcon} />
+
                     <select value={people} onChange={(e) => setPeople(e.target.value)} className={ReservationModalPageStyles.select}>
                         <option value="">Выберите</option>
                         {[1,2,3,4,5,6].map(num => (
                             <option key={num} value={num}>{num} человек</option>
                         ))}
                     </select>
+                    <Users className={ReservationModalPageStyles.selectorIcon} />
                 </motion.div>
 
                 <motion.div
@@ -75,7 +79,6 @@ const ReservationModalPage = () => {
                     whileTap={{ scale: 0.95 }}
                     transition={{ delay: 0.1 }}
                 >
-                    <Calendar className={ReservationModalPageStyles.selectorIcon} />
                     <input
                         type="date"
                         className={ReservationModalPageStyles.dateInput}
@@ -91,13 +94,14 @@ const ReservationModalPage = () => {
                     whileTap={{ scale: 0.95 }}
                     transition={{ delay: 0.2 }}
                 >
-                    <Clock className={ReservationModalPageStyles.selectorIcon} />
+
                     <select value={time} onChange={(e) => setTime(e.target.value)} className={ReservationModalPageStyles.select}>
                         <option value="">Выберите</option>
                         {['17:00', '18:00', '19:00', '20:00', '21:00', '22:00', '23:00'].map(t => (
                             <option key={t} value={t}>{t}</option>
                         ))}
                     </select>
+                    <Clock className={ReservationModalPageStyles.selectorIcon} />
                 </motion.div>
             </motion.div>
 

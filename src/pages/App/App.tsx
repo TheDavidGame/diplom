@@ -4,15 +4,20 @@ import MenuPage from "../MenuPage/MenuPage";
 import DoneReservationModalPage from "../ReservationModalPage/DoneReservationModalPage/DoneReservationModalPage";
 import HomePage from "../HomePage/HomePage";
 import AboutGastroPage from "../AboutGastropubPage/AboutGastroPage";
+import ReservationModalPage from "../ReservationModalPage/ReservationModalPage";
+import React from "react";
+import ScrollToTop from "../../components/ScrollToTop/ScrollToTop";
 
 const App = () => {
     return (
         <BrowserRouter>
             <div className="App">
+                <ScrollToTop />
                 <Routes>
                     <Route path="/" element={<HomePage />} />
                     <Route path="/menu" element={<MenuPage />} />
                     <Route path="/aboutGastro" element={<AboutGastroPage />} />
+                    <Route path="/reservation" element={<ReservationModalPage/>} />
                     <Route path="/reservationDone" element={<DoneReservationModalPage />} />
                 </Routes>
             </div>
