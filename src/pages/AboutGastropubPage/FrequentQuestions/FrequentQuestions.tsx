@@ -1,5 +1,6 @@
-import React, {useState} from 'react';
+import React, {useRef, useState} from 'react';
 import FrequentQuestionsStyles from './FrequentQuestions.module.scss';
+import {motion, useInView} from "framer-motion";
 
 const questionsList = [
     {
@@ -34,6 +35,11 @@ const questionsList = [
 
 const FrequentQuestions = () => {
     const [openIndex, setOpenIndex] = useState<number | null>(null);
+    const ref = useRef<HTMLDivElement>(null);
+    const isInView = useInView(ref, {
+        once: true,
+        margin: "0px 0px -30% 0px"
+    });
 
     const handleToggle = (index: number) => {
         setOpenIndex(openIndex === index ? null : index);
@@ -44,12 +50,24 @@ const FrequentQuestions = () => {
             <div className={FrequentQuestionsStyles.leftStar}>
                 <img src="/filterLeftStar.svg" alt="filterLeftStar" className={FrequentQuestionsStyles.leftStarItem} />
             </div>
-            {/*<div className={FrequentQuestionsStyles.rightStar}>*/}
-            {/*    <img src="/filterRightStar.svg" alt="filterRightStar" className={FrequentQuestionsStyles.rightStarItem} />*/}
-            {/*</div>*/}
-            <div className={FrequentQuestionsStyles.title}>
+            <motion.div
+                className={FrequentQuestionsStyles.title}
+                ref={ref}
+                initial={{y: 100, opacity: 0}}
+                animate={isInView ? {
+                    y: 0,
+                    opacity: 1,
+                    top: '10%',
+                    transition: {
+                        type: "spring",
+                        stiffness: 80,
+                        damping: 10
+                    }
+                } : {}}
+                style={{position: 'relative'}}
+            >
                 ЧАСТЫЕ ВОПРОСЫ
-            </div>
+            </motion.div>
             <div className={FrequentQuestionsStyles.list}>
                 {questionsList.map((el, index) => (
                     <div
