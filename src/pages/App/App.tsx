@@ -6,11 +6,13 @@ import HomePage from "../HomePage/HomePage";
 import AboutGastroPage from "../AboutGastropubPage/AboutGastroPage";
 import ReservationModalPage from "../ReservationModalPage/ReservationModalPage";
 import React from "react";
+import ScrollToTop from "../../components/ScrollToTop/ScrollToTop";
 
 const App = () => {
     return (
         <BrowserRouter>
             <div className="App">
+                <ScrollToTop />
                 <Routes>
                     <Route path="/" element={<HomePage />} />
                     <Route path="/menu" element={<MenuPage />} />

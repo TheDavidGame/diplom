@@ -32,7 +32,7 @@ const BurgerModalPage = ({onClose}: BurgerModalPageProps) => {
         {text: 'ГЛАВНАЯ', url: '/'},
         {text: 'МЕНЮ', url: '/menu'},
         {text: 'БАРНАЯ КАРТА', url: '/menu'},
-        {text: 'СОБЫТИЯ', url: '/'},
+        {text: 'СОБЫТИЯ', url: '/#event'},
         {text: 'О НАС', url: '/aboutGastro'}
     ];
 
