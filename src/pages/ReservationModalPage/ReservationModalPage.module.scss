@@ -113,7 +113,6 @@
   color: #5C4B34;
   outline: none;
   cursor: pointer;
-  min-width: 200px;
 
   &::-webkit-calendar-picker-indicator {
     filter: invert(0.4);
@@ -123,6 +122,7 @@
 
 .error {
   border: 2px solid red !important;
+  border-radius: 15px;
 }
 
 .emailField,
