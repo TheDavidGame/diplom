@@ -50,7 +50,7 @@ const UpperFooterPage = () => {
                         пт-вс 12:00-2:00
                     </div>
                     <div className={UpperFooterPageStyles.rightBtn}>
-                        <HexagonButton onClick={() => navigate('/reservationDone')}>
+                        <HexagonButton onClick={() => navigate('/reservation')}>
                             ЗАБРОНИРОВАТЬ СТОЛ
                         </HexagonButton>
                     </div>

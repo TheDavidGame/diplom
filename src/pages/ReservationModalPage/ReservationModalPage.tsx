@@ -38,6 +38,9 @@ const ReservationModalPage = () => {
 
     return (
         <div className={ReservationModalPageStyles.wrapper}>
+            <div className={ReservationModalPageStyles.close} onClick={() => navigate('/')}>
+                <img src="/frequentQuestionsCross.svg" alt="close" className={ReservationModalPageStyles.closeItem} />
+            </div>
             <div className={ReservationModalPageStyles.leftStar}>
                 <img src="/filterLeftStar.svg" alt="filterLeftStar" className={ReservationModalPageStyles.leftStarItem} />
             </div>
