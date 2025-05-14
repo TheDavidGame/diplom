@@ -5,7 +5,7 @@ import UnderMissionPageStyles from './UnderMissionPage.module.scss';
 const UnderMissionPage = () => {
     const {scrollYProgress} = useScroll();
 
-    const rawScale = useTransform(scrollYProgress, [0, 1], [0.2, 1]);
+    const rawScale = useTransform(scrollYProgress, [0, 1], [0.5, 1]);
 
     const scale = useSpring(rawScale, {
         stiffness: 100,
