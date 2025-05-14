@@ -9,16 +9,16 @@ import {useDispatch} from "react-redux";
 
 const AboutUsPage = () => {
     const scrollerItems = [{
-        image: '/mainFood/menuFood2.svg',
+        image: '/mainFood/menuFood1.png',
         text: 'ЧЕВАПЧИМИЧИ',
     }, {
-        image: '/mainFood/menuFood2.svg',
+        image: '/mainFood/menuFood2.png',
         text: 'ЧИЛИ ЧИКЕН',
     }, {
-        image: '/mainFood/menuFood3.svg',
+        image: '/mainFood/menuFood3.png',
         text: 'ВЕСТЕРН БОУНС',
     }, {
-        image: '/mainFood/menuFood4.svg',
+        image: '/mainFood/menuFood4.png',
         text: 'БЭЙБИ ПОТАТА',
     }];
     const slides = [...scrollerItems, ...scrollerItems];

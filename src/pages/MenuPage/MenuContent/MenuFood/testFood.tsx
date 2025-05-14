@@ -7,7 +7,7 @@ export const eventsFood: Dish[] = [
         subTitle: 'Мини-бургеры с говядиной и \n сыром, с запеченными овощами',
         price: 400,
         weight: 250,
-        src: '/menuFood/mainFood1.svg',
+        src: '/menuFood/mainFood1.png',
         hiddenFor: ['vegetarian', 'vegan']
     },
     {
@@ -16,7 +16,7 @@ export const eventsFood: Dish[] = [
         subTitle: 'Острый рис с колбасой, \n курицей, приготовленный по \n кулинарным традициям \n Луизианы',
         price: 400,
         weight: 250,
-        src: '/menuFood/mainFood2.svg',
+        src: '/menuFood/mainFood2.png',
         hiddenFor: ['vegetarian', 'vegan', 'spicy']
     },
     {
@@ -25,7 +25,7 @@ export const eventsFood: Dish[] = [
         subTitle: 'Кремовый чизкейк с лимонным \n вкусом и свежими ягодами',
         price: 400,
         weight: 250,
-        src: '/menuFood/mainFood3.svg',
+        src: '/menuFood/mainFood3.png',
         hiddenFor: ['vegetarian', 'vegan']
     },
     {
@@ -34,7 +34,7 @@ export const eventsFood: Dish[] = [
         subTitle: 'Коктейль на основе джина с \n имбирным пивом и лаймом',
         price: 400,
         weight: 250,
-        src: '/menuFood/mainFood4.svg'
+        src: '/menuFood/mainFood4.png'
     },
     {
         id: 5,
@@ -42,7 +42,7 @@ export const eventsFood: Dish[] = [
         subTitle: 'Кислый виски-коктейль с \n цитрусовым вкусом',
         price: 400,
         weight: 250,
-        src: '/menuFood/mainFood5.svg'
+        src: '/menuFood/mainFood5.png'
     },
     {
         id: 6,
@@ -50,7 +50,7 @@ export const eventsFood: Dish[] = [
         subTitle: 'Хрустящие грибные крокеты с \n чесночным майонезом.',
         price: 400,
         weight: 250,
-        src: '/menuFood/mainFood6.svg'
+        src: '/menuFood/mainFood6.png'
     },
     {
         id: 7,
@@ -58,7 +58,7 @@ export const eventsFood: Dish[] = [
         subTitle: 'Курица в соусе карри, подаётся с \n гарниром из риса басмати',
         price: 400,
         weight: 250,
-        src: '/menuFood/mainFood7.svg',
+        src: '/menuFood/mainFood7.png',
         hiddenFor: ['vegetarian', 'vegan']
     }
 ];
@@ -70,7 +70,7 @@ export const mainFood: Dish[] = [
         subTitle: 'Маленькие колбаски из \n говядины, обжаренные на гриле ',
         price: 400,
         weight: 250,
-        src: '/mainFood/menuFoodTest.png',
+        src: '/mainFood/menuFood1.png',
         hiddenFor: ['vegetarian', 'vegan']
     },
     {
@@ -79,7 +79,7 @@ export const mainFood: Dish[] = [
         subTitle: 'Обжаренная курица в остром \n чили соусе, с овощами гриль',
         price: 400,
         weight: 250,
-        src: '/mainFood/menuFood2.svg',
+        src: '/mainFood/menuFood2.png',
         hiddenFor: ['vegetarian', 'vegan', 'spicy']
     },
     {
@@ -88,7 +88,7 @@ export const mainFood: Dish[] = [
         subTitle: 'Запечёная баранина на кости, с зеленью и кавказскими травами',
         price: 400,
         weight: 250,
-        src: '/mainFood/menuFood3.svg',
+        src: '/mainFood/menuFood3.png',
         hiddenFor: ['vegetarian', 'vegan']
     },
     {
@@ -97,7 +97,7 @@ export const mainFood: Dish[] = [
         subTitle: 'Веганские оладьи из картофеля \n с соусом на растительной основе',
         price: 400,
         weight: 250,
-        src: '/mainFood/menuFood4.svg'
+        src: '/mainFood/menuFood4.png'
     },
     {
         id: 5,
