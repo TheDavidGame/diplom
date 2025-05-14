@@ -1,13 +1,13 @@
-import React, {useState} from 'react';
+import React, {memo, useCallback, useState} from 'react';
 import {motion} from 'framer-motion';
 import MenuSwitchStyles from './MenuSwitch.module.scss';
 import {menuHeaderItem, menuSwitchFood, RootState} from "../../../entity/index.entity";
-import {useDispatch, useSelector} from "react-redux";
+import {shallowEqual, useDispatch, useSelector} from "react-redux";
 import {switchIsBar} from "../../../services/slices/mainSlice";
 import Modal from "../../../components/Modal/Modal";
 import FilterPage from "./FilterPage/FilterPage";
 
-const MenuSwitch = () => {
+const MenuSwitch = memo(() => {
     const menuSwitchFood: menuSwitchFood[] = [
         {
             title: 'СОБЫТИЙНОЕ МЕНЮ',
@@ -43,7 +43,7 @@ const MenuSwitch = () => {
     ];
 
     const dispatch = useDispatch();
-    const isBar = useSelector((state: RootState) => state.mainSlice.isBar);
+    const isBar = useSelector((state: RootState) => state.mainSlice.isBar, shallowEqual);
     const [isModalOpen, setIsModalOpen] = useState(false);
 
     const toggleSwitch = () => {
@@ -52,6 +52,13 @@ const MenuSwitch = () => {
 
     const handleOpenModal = () => setIsModalOpen(true);
     const handleCloseModal = () => setIsModalOpen(false);
+
+    const handleClickMenuItem = useCallback((id: string) => {
+        const element = document.getElementById(id);
+        if (element) {
+            element.scrollIntoView({ behavior: 'smooth' });
+        }
+    }, []);
 
     return (
         <>
@@ -82,12 +89,7 @@ const MenuSwitch = () => {
                         menuSwitchBar.map((el, index) => (
                             <div key={index}
                                  className={`${MenuSwitchStyles.menuFoodItem} ${isBar ? MenuSwitchStyles.isBarActive : ''}`}
-                                 onClick={() => {
-                                     const element = document.getElementById(el.text);
-                                     if (element) {
-                                         element.scrollIntoView({behavior: 'smooth'});
-                                     }
-                                 }}
+                                 onClick={() => handleClickMenuItem(el.text)}
                             >
                                 {el.text}
                             </div>
@@ -96,12 +98,7 @@ const MenuSwitch = () => {
                         menuSwitchFood.map((el, index) => (
                             <div key={index}
                                  className={MenuSwitchStyles.menuFoodItem}
-                                 onClick={() => {
-                                     const element = document.getElementById(el.text);
-                                     if (element) {
-                                         element.scrollIntoView({behavior: 'smooth'});
-                                     }
-                                 }}>
+                                 onClick={() => handleClickMenuItem(el.title ?? el.text)}>
                                 {el.title ? (el.title) : (el.text)}
                             </div>
                         ))
@@ -125,6 +122,6 @@ const MenuSwitch = () => {
             )}
         </>
     );
-};
+});
 
 export default MenuSwitch;
