@@ -98,7 +98,7 @@ const MenuSwitch = memo(() => {
                         menuSwitchFood.map((el, index) => (
                             <div key={index}
                                  className={MenuSwitchStyles.menuFoodItem}
-                                 onClick={() => handleClickMenuItem(el.title ?? el.text)}>
+                                 onClick={() => handleClickMenuItem(el.text)}>
                                 {el.title ? (el.title) : (el.text)}
                             </div>
                         ))

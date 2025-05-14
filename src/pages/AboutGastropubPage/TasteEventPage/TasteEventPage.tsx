@@ -1,8 +1,10 @@
 import React, {useRef} from 'react';
 import TasteEventPageStyles from './TasteEventPage.module.scss';
 import HexagonButton from "../../../components/HexagonButton/HexagonButton";
-import {HashLink} from "react-router-hash-link";
 import {motion, useInView} from "framer-motion";
+import {setIsBar} from "../../../services/slices/mainSlice";
+import {useNavigate} from "react-router-dom";
+import {useDispatch} from "react-redux";
 
 const TasteEventPage = () => {
     const ref = useRef<HTMLDivElement>(null);
@@ -10,6 +12,12 @@ const TasteEventPage = () => {
         once: true,
         margin: "0px 0px -30% 0px"
     });
+    const dispatch = useDispatch();
+    const navigate = useNavigate();
+    const navigateItem = (text: string) => {
+        if (text === "МЕНЮ") dispatch(setIsBar(false));
+        navigate('/menu');
+    };
     return (
         <>
             <div className={TasteEventPageStyles.wrapper}>
@@ -41,11 +49,9 @@ const TasteEventPage = () => {
                     хаусного кинематографа
                 </div>
                 <div className={TasteEventPageStyles.btn}>
-                    <HashLink smooth to="/menu/#eventMenu">
-                        <HexagonButton>
-                            СОБЫТИЙНОЕ МЕНЮ
-                        </HexagonButton>
-                    </HashLink>
+                    <HexagonButton onClick={() => navigateItem('МЕНЮ')}>
+                        НАШЕ МЕНЮ
+                    </HexagonButton>
 
                 </div>
             </div>
