@@ -5,26 +5,19 @@
   flex-direction: column;
   align-items: center;
   height: 100vh;
+  overflow: hidden;
 }
 
 .leftStar {
   position: absolute;
   left: -400px;
   top: -500px;
-
-  &Item {
-    // Можно добавить стили при необходимости
-  }
 }
 
 .rightStar {
   position: absolute;
   right: -400px;
   top: -500px;
-
-  &Item {
-    // Можно добавить стили при необходимости
-  }
 }
 
 .top {

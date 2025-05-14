@@ -90,7 +90,7 @@ export interface Dish {
     price: number;
     weight: number;
     src: string;
-    hiddenFor?: FilterType[]; // фильтры
+    hiddenFor?: FilterType[];
 }
 
 export interface FilterOption {
