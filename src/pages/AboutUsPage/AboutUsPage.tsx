@@ -9,7 +9,7 @@ import {useDispatch} from "react-redux";
 
 const AboutUsPage = () => {
     const scrollerItems = [{
-        image: '/mainFood/menuFood1.svg',
+        image: `${process.env.PUBLIC_URL}/mainFood/menuFood2.svg`,
         text: 'ЧЕВАПЧИМИЧИ',
     }, {
         image: '/mainFood/menuFood2.svg',
@@ -100,7 +100,6 @@ const AboutUsPage = () => {
                 <Slider
                     slides={slides}
                     showText={true}
-
                 />
                 <img
                     src="/artFoodSliderArrowBot.svg"
