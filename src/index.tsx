@@ -6,7 +6,7 @@ import {DevSupport} from "@react-buddy/ide-toolbox";
 import {ComponentPreviews, useInitial} from "./dev";
 import {Provider} from "react-redux";
 import {store} from "./services/store/store";
-
+import './fonts/fonts.css';
 const root = ReactDOM.createRoot(
     document.getElementById('root') as HTMLElement
 );
