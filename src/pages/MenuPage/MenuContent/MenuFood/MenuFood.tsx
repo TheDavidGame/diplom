@@ -69,43 +69,51 @@ const MenuFood = () => {
                         ОСНОВНЫЕ БЛЮДА
                     </div>
                     <div className={MenuFoodStyles.mainList}>
-                        {filteredMain.map((el, index) => (
-                            <div key={el.id} className={MenuFoodStyles.mainListItem}>
-                                <div className={MenuFoodStyles.mainListImg}>
-                                    <img
-                                        src={el.src}
-                                        alt={el.title}
-                                        className={MenuFoodStyles.mainListImgItem}
-                                    />
-                                </div>
-                                <div className={MenuFoodStyles.mainListTitle} style={{whiteSpace: 'pre-line'}}>
-                                    {el.title}
-                                    {!el.hiddenFor?.includes('vegan') && !el.hiddenFor?.includes('vegetarian') && (
-                                        <img src="/veganIcon.svg" alt="veganIcon" className={MenuFoodStyles.icons}/>
-                                    )}
-                                    {el.hiddenFor?.includes('spicy') && (
-                                        <img src="/spicyIcon.svg" alt="spicyIcon" className={MenuFoodStyles.icons}/>
-                                    )}
-                                </div>
-                                <div className={MenuFoodStyles.mainListSubTitle} style={{whiteSpace: 'pre-line'}}>
-                                    {el.subTitle}
-                                </div>
-                                <div className={MenuFoodStyles.mainListDescription}>
-                                    {
-                                        index !== mainFood.length - 1 ? (
-                                            <>
-                                                <div className={MenuFoodStyles.mainListDescriptionPrice}>
-                                                    {el.price}р
-                                                </div>
-                                                <div className={MenuFoodStyles.mainListDescriptionWeight}>
-                                                    ({el.weight}г)
-                                                </div>
-                                            </>) : null
-                                    }
+                        {filteredMain.map((el, index) => {
+                            const isLast = index === filteredMain.length - 1;
+                            const isSpecialLast = isLast && el.id === 7;
 
+                            return (
+                                <div
+                                    key={el.id}
+                                    className={`${MenuFoodStyles.mainListItem} ${isSpecialLast ? MenuFoodStyles.lastSpecial : ''}`}
+                                >
+                                    <div className={MenuFoodStyles.mainListImg}>
+                                        <img
+                                            src={el.src}
+                                            alt={el.title}
+                                            className={MenuFoodStyles.mainListImgItem}
+                                        />
+                                    </div>
+                                    <div className={MenuFoodStyles.mainListTitle} style={{whiteSpace: 'pre-line'}}>
+                                        {el.title}
+                                        {!el.hiddenFor?.includes('vegan') && !el.hiddenFor?.includes('vegetarian') && (
+                                            <img src="/veganIcon.svg" alt="veganIcon" className={MenuFoodStyles.icons}/>
+                                        )}
+                                        {el.hiddenFor?.includes('spicy') && (
+                                            <img src="/spicyIcon.svg" alt="spicyIcon" className={MenuFoodStyles.icons}/>
+                                        )}
+                                    </div>
+                                    <div className={MenuFoodStyles.mainListSubTitle} style={{whiteSpace: 'pre-line'}}>
+                                        {el.subTitle}
+                                    </div>
+                                    <div className={MenuFoodStyles.mainListDescription}>
+                                        {
+                                            index !== mainFood.length - 1 ? (
+                                                <>
+                                                    <div className={MenuFoodStyles.mainListDescriptionPrice}>
+                                                        {el.price}р
+                                                    </div>
+                                                    <div className={MenuFoodStyles.mainListDescriptionWeight}>
+                                                        ({el.weight}г)
+                                                    </div>
+                                                </>) : null
+                                        }
+
+                                    </div>
                                 </div>
-                            </div>
-                        ))}
+                            );
+                        })}
                     </div>
                 </div>
             )}
