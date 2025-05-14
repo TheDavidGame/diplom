@@ -70,7 +70,7 @@ export const mainFood: Dish[] = [
         subTitle: 'Маленькие колбаски из \n говядины, обжаренные на гриле ',
         price: 400,
         weight: 250,
-        src: '/mainFood/menuFood1.svg',
+        src: '/mainFood/menuFoodTest.png',
         hiddenFor: ['vegetarian', 'vegan']
     },
     {

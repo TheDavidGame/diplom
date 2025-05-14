@@ -9,7 +9,7 @@ import {useDispatch} from "react-redux";
 
 const AboutUsPage = () => {
     const scrollerItems = [{
-        image: `${process.env.PUBLIC_URL}/mainFood/menuFood2.svg`,
+        image: '/mainFood/menuFood2.svg',
         text: 'ЧЕВАПЧИМИЧИ',
     }, {
         image: '/mainFood/menuFood2.svg',
