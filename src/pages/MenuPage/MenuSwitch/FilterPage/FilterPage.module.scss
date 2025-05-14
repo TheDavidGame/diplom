@@ -76,6 +76,7 @@
     flex-wrap: wrap;
     justify-content: center;
     gap: 12px;
+    z-index: 2;
 
     &Item {
       font-size: 48px;
@@ -99,7 +100,7 @@
   justify-content: center;
 
   &ClearBtn {
-    margin: 0 0 44px 0;
+    margin: 36px 0 36px 0;
     font-size: 24px;
     text-transform: uppercase;
     cursor: pointer;

@@ -72,14 +72,14 @@ const MenuBar = () => {
                                         {el.price}р
                                     </div>
                                     <div className={MenuBarStyles.wineListDescriptionWeight}>
-                                        ({el.weight}г)
+                                        ({el.weight}мл)
                                     </div>
                                     <div className={MenuBarStyles.wineListDescriptionAnd}> |</div>
                                     <div className={MenuBarStyles.wineListDescriptionPrice}>
                                         {el.secondPrice}р
                                     </div>
                                     <div className={MenuBarStyles.wineListDescriptionWeight}>
-                                        ({el.secondWeight}г)
+                                        ({el.secondWeight}мл)
                                     </div>
                                 </div>
                             </div>

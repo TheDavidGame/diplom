@@ -70,7 +70,7 @@ export const wineBar = [
     },
     {
         id: 2,
-        title: 'INKOSI CHENIN BLANC',
+        title: 'IN CRISITELANC BLANC',
         subTitle: 'Полусухое красное, с яркими \n ароматами цитрусовых и нотами \n ананаса. Подходит к лёгким \n мясным закускам',
         price: 550,
         weight: 250,
