@@ -1,5 +1,7 @@
 import React from 'react';
 import LiveCulturePageStyles from './LiveCulturePage.module.scss';
+import { HashLink } from 'react-router-hash-link';
+import HexagonButton from "../../../components/HexagonButton/HexagonButton";
 
 const LiveCulturePage = () => {
     return (
@@ -18,7 +20,11 @@ const LiveCulturePage = () => {
                     У нас регулярно проходят джазовые <br/> вечера, поэтические чтения, лекции и <br/> просмотры фильмов
                 </div>
                 <div className={LiveCulturePageStyles.topBtn}>
-                    <img src="/liveCultureBtn.svg" alt="liveCultureBtn" />
+                    <HashLink smooth to="/#event">
+                        <HexagonButton >
+                            СОБЫТИЯ
+                        </HexagonButton>
+                    </HashLink>
                 </div>
             </div>
             <div className={LiveCulturePageStyles.bottom}>

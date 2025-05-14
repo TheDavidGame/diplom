@@ -1,16 +1,17 @@
 import React, {useState} from 'react';
 import {motion} from 'framer-motion';
 import MenuSwitchStyles from './MenuSwitch.module.scss';
-import {menuHeaderItem, RootState} from "../../../entity/index.entity";
+import {menuHeaderItem, menuSwitchFood, RootState} from "../../../entity/index.entity";
 import {useDispatch, useSelector} from "react-redux";
 import {switchIsBar} from "../../../services/slices/mainSlice";
 import Modal from "../../../components/Modal/Modal";
 import FilterPage from "./FilterPage/FilterPage";
 
 const MenuSwitch = () => {
-    const menuSwitchFood: menuHeaderItem[] = [
+    const menuSwitchFood: menuSwitchFood[] = [
         {
-            text: 'СОБЫТИЙНОЕ МЕНЮ'
+            title: 'СОБЫТИЙНОЕ МЕНЮ',
+            text: 'eventMenu'
         },
         {
             text: 'ОСНОВНЫЕ БЛЮДА'
@@ -101,7 +102,7 @@ const MenuSwitch = () => {
                                          element.scrollIntoView({behavior: 'smooth'});
                                      }
                                  }}>
-                                {el.text}
+                                {el.title ? (el.title) : (el.text)}
                             </div>
                         ))
                     )}

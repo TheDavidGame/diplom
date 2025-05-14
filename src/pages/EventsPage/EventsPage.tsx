@@ -62,7 +62,7 @@ const EventsPage = () => {
     };
 
     return (
-        <div className={EventPageStyles.wrapper}>
+        <div className={EventPageStyles.wrapper} id='event'>
             <div className={EventPageStyles.header}>
                 <img
                     src={'/eventsPageHeader.svg'}

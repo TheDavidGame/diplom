@@ -1,5 +1,7 @@
 import React from 'react';
 import TasteEventPageStyles from './TasteEventPage.module.scss';
+import HexagonButton from "../../../components/HexagonButton/HexagonButton";
+import {HashLink} from "react-router-hash-link";
 
 const TasteEventPage = () => {
     return (
@@ -18,7 +20,12 @@ const TasteEventPage = () => {
                     хаусного кинематографа
                 </div>
                 <div className={TasteEventPageStyles.btn}>
-                    <img src="/tasteEventPageBtn.svg" alt="tasteEventPageBtn"/>
+                    <HashLink smooth to="/menu/#eventMenu">
+                        <HexagonButton>
+                            СОБЫТИЙНОЕ МЕНЮ
+                        </HexagonButton>
+                    </HashLink>
+
                 </div>
             </div>
 

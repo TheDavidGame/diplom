@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import MenuFoodStyles from './MenuFood.module.scss';
 import {eventsFood, mainFood, saladsFood, snacksFood} from "./testFood";
 import {useSelector} from "react-redux";
@@ -17,7 +17,7 @@ const MenuFood = () => {
         <div className={MenuFoodStyles.wrapper}>
             {filteredEvents.length > 0 && (
                 <div className={MenuFoodStyles.events}>
-                    <div className={MenuFoodStyles.eventsTitle} id="СОБЫТИЙНОЕ МЕНЮ">
+                    <div className={MenuFoodStyles.eventsTitle} id="eventMenu">
                         СОБЫТИЙНОЕ МЕНЮ
                     </div>
                     <div className={MenuFoodStyles.eventsList}>
