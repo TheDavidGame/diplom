@@ -21,14 +21,32 @@
   justify-content: center;
 }
 
-.mainImage {
+@media screen and (max-width: 640px) {
+  .wrapper {
+    overflow: hidden;
+  }
+  .title {
+    padding-top: 48px;
+    font-size: 28px;
+  }
 
-}
+  .awardsWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
 
-.footer {
-  margin: 120px 0 -5px 0;
-}
+    &Item {
+      height: 256px;
+      margin: 32px 0;
+    }
+  }
 
-.footerItem {
-  width: 99vw;
+  .mainImageWrapper {
+  }
+
+  .mainImage {
+    margin-left: 5%;
+  }
+
 }

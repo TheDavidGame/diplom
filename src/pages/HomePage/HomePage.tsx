@@ -31,7 +31,7 @@ const HomePage = () => {
             />
             <AboutUsPage />
             {/*<EventsPage ref={eventsRef}/>*/}
-            {/*<AwardsPage />*/}
+            <AwardsPage />
             {/*<UpperFooterPage />*/}
             {/*<AppFooter />*/}
         </>

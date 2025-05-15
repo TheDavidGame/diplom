@@ -1,6 +1,7 @@
 import React, {useRef} from 'react';
 import AwardsPageStyles from './AwardsPage.module.scss';
 import { motion, useInView } from 'framer-motion';
+import {useMobile} from "../../utils";
 
 const AWARDS_IMAGES = [
     '/awardsPageFirst.svg',
@@ -15,6 +16,8 @@ const AwardsPage = () => {
         once: true,
         margin: "0px 0px -30% 0px"
     });
+
+    const isMobile = useMobile();
 
     return (
         <div className={AwardsPageStyles.wrapper}>
@@ -44,16 +47,26 @@ const AwardsPage = () => {
                         key={index}
                         src={src}
                         alt={`Awards ${index + 1}`}
+                        className={AwardsPageStyles.awardsWrapperItem}
                     />
                 ))}
             </div>
 
             <div className={AwardsPageStyles.mainImageWrapper}>
-                <img
-                    src="/awardsPageImage.svg"
-                    alt="Основное изображение наград"
-                    className={AwardsPageStyles.mainImage}
-                />
+                {isMobile ?
+                    <img
+                        src="/mobile/awardsPageImageMobile.png"
+                        alt="Основное изображение наград"
+                        className={AwardsPageStyles.mainImage}
+                    />
+                :
+                    <img
+                        src="/awardsPageImage.svg"
+                        alt="Основное изображение наград"
+                        className={AwardsPageStyles.mainImage}
+                    />
+                }
+
             </div>
         </div>
     );
