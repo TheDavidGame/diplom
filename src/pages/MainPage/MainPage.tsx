@@ -1,8 +1,11 @@
 import React, {forwardRef} from 'react';
 import MainPageStyles from './MainPage.module.scss';
 import {MainPageProps} from "../../entity/index.entity";
+import {useMobile} from "../../utils";
 
 const MainPage = forwardRef<HTMLDivElement, MainPageProps>((props, ref) => {
+    const isMobile = useMobile();
+
     return (
         <div ref={ref} className={MainPageStyles.wrapper}>
             <img
@@ -11,11 +14,20 @@ const MainPage = forwardRef<HTMLDivElement, MainPageProps>((props, ref) => {
                 className={MainPageStyles.background}
             />
 
-            <img
-                src="/mainPageLogo.svg"
-                alt="mainPageLogo"
-                className={MainPageStyles.mainPageLogo}
-            />
+            {isMobile ?
+                <img
+                    src="/mobile/mainPageLogoMobile.png"
+                    alt="mainPageLogo"
+                    className={MainPageStyles.mainPageLogo}
+                />
+                :
+                <img
+                    src="/mainPageLogo.svg"
+                    alt="mainPageLogo"
+                    className={MainPageStyles.mainPageLogo}
+                />
+            }
+
 
             <img
                 src="/mainPageGroupFirst.svg"

@@ -4,6 +4,7 @@ import {HeaderProps} from "../../entity/index.entity";
 import Modal from "../Modal/Modal";
 import BurgerModalPage from "../../pages/BurgerModalPage/BurgerModalPage";
 import {useNavigate} from "react-router-dom";
+import {useMobile} from "../../utils";
 
 
 const Header: React.FC<HeaderProps> = ({stickyMode = false, mainPageRef, setIsMainPageVisible}) => {
@@ -41,11 +42,19 @@ const Header: React.FC<HeaderProps> = ({stickyMode = false, mainPageRef, setIsMa
     };
     const handleCloseModal = () => setIsModalOpen(false);
 
+    const isMobile = useMobile();
+
     return (
         <>
             {isSticky && <div style={{height: headerHeight}}/>}
             <div ref={headerRef} className={`${HeaderStyles.header} ${isSticky ? HeaderStyles.sticky : ''}`}>
-                <img src="/bckrndHeader.svg" alt="Header background" className={HeaderStyles.background}/>
+                {isMobile
+                    ?
+                    <img src="/mobile/bckrndHeaderMobile.png" alt="Header background" className={HeaderStyles.background}/>
+                    :
+                    <img src="/bckrndHeader.svg" alt="Header background" className={HeaderStyles.background}/>
+                }
+
                 <div className={HeaderStyles.burger} onClick={handleOpenModal}>
                     <img src="/burgerHeader.svg" alt="Menu"/>
                 </div>

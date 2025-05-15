@@ -43,3 +43,21 @@
 .hexButton:active {
   transform: translateY(8px);
 }
+
+@media screen and (max-width: 640px) {
+  .hexButtonWrapper {
+    width: 168px;
+  }
+
+  .hexButtonShadow {
+    top: 8px;
+    height: 43px;
+  }
+
+  .hexButton {
+    width: 168px;
+    height: 43px;
+    font-size: 14px;
+    padding: 0;
+  }
+}

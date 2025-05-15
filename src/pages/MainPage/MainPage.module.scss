@@ -123,3 +123,50 @@
     transform: translateY(-5px);
   }
 }
+
+@media screen and (max-width: 640px) {
+  .wrapper {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background-color: #FF5101;
+
+    .background {
+      display: none;
+    }
+
+    .mainPageLogo {
+      margin: 74px 0 48px 0;
+      width: 90vw;
+      max-width: 100%;
+      height: auto;
+      left: 5%;
+    }
+
+    .mainPhoto,
+    .mainPhotoStar {
+      width: 70vw;
+      height: auto;
+      left: 50%;
+      top: 40%;
+      transform: translate(-50%, -50%);
+    }
+
+    .mainPageGroupFirst,
+    .mainPageGroupSecond,
+    .mainPageGroupThird,
+    .mainPageGroupFourth {
+      display: none;
+    }
+
+    .ctaBlock {
+      bottom: 15%;
+
+      .mainPageArrow {
+        width: 300px;
+        height: 52px;
+      }
+    }
+  }
+}
+

@@ -64,3 +64,57 @@
   z-index: 0;
   transition: height 0.3s ease;
 }
+
+@media screen and (max-width: 640px) {
+  .header {
+    padding: 20px 12px;
+
+    &.sticky {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      transform: translateY(0);
+      background: rgba(255, 255, 255, 0.97);
+      box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+
+      .background {
+        transition: height 0.3s ease;
+      }
+
+      .logo {
+        top: 60% !important;
+        transform: translate(-50%, -50%);
+        transition: all 0.3s ease;
+      }
+    }
+
+    .burger {
+      flex: 0 0 auto;
+      z-index: 1;
+      cursor: pointer;
+
+      img {
+        height: 32px;
+      }
+    }
+
+    .reservation {
+     display: none;
+    }
+
+    .logo {
+      left: 50%;
+      top: 60%;
+
+      img {
+        height: 69px;
+      }
+    }
+  }
+
+  .background {
+    width: 100vw;
+    height: 84px;
+  }
+}

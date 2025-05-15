@@ -54,23 +54,23 @@ const UnderMainPage: React.FC<UnderMainPageProps> = ({
                     МЕСТО СИЛЫ <br/> ЛЮБИТЕЛЕЙ ДЖАЗА <br/> И ОБЩЕНИЯ
                 </motion.div>
                 <div className={UnderMainPageStyles.underHeaderList}>
-                    <img src="/starUnderMain.svg" alt="star"/>
+                    <img src="/starUnderMain.svg" alt="star" className={UnderMainPageStyles.underHeaderListStar}/>
                     <div>
                         ТАКО
                     </div>
-                    <img src="/starUnderMain.svg" alt="star"/>
+                    <img src="/starUnderMain.svg" alt="star" className={UnderMainPageStyles.underHeaderListStar}/>
                     <div>
                         СНЭКИ
                     </div>
-                    <img src="/starUnderMain.svg" alt="star"/>
+                    <img src="/starUnderMain.svg" alt="star" className={UnderMainPageStyles.underHeaderListStar}/>
                     <div>
                         КРАФТ
                     </div>
-                    <img src="/starUnderMain.svg" alt="star"/>
+                    <img src="/starUnderMain.svg" alt="star" className={UnderMainPageStyles.underHeaderListStar}/>
                     <div>
                         ШОТЫ
                     </div>
-                    <img src="/starUnderMain.svg" alt="star"/>
+                    <img src="/starUnderMain.svg" alt="star" className={UnderMainPageStyles.underHeaderListStar}/>
                 </div>
             </div>
 
