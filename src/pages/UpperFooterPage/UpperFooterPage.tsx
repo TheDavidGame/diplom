@@ -2,9 +2,11 @@ import React from 'react';
 import UpperFooterPageStyles from './UpperFooterPage.module.scss';
 import {useNavigate} from "react-router-dom";
 import HexagonButton from "../../components/HexagonButton/HexagonButton";
+import {useMobile} from "../../utils";
 
 const UpperFooterPage = () => {
     const navigate = useNavigate();
+    const isMobile = useMobile();
 
     return (
         <div className={UpperFooterPageStyles.wrapper}>
@@ -35,7 +37,18 @@ const UpperFooterPage = () => {
                         Где мы <br/> находимся
                     </div>
                     <div className={UpperFooterPageStyles.rightUnderTitle}>
-                        В уютном дворике на станции <br/> метро Чистые пруды
+                        {isMobile ?
+                            <span>В уютном дворике на <br/>  станции метро Чистые <br/> пруды</span>
+                            :
+                            <span>В уютном дворике на станции <br/> метро Чистые пруды</span>
+                        }
+                    </div>
+                    <div className={UpperFooterPageStyles.rightMobile}>
+                        <img
+                            src="/mobile/UpperFooterPagePhotoMobile.png"
+                            alt="UpperFooterPagePhoto"
+                            className={UpperFooterPageStyles.rightMobileItem}
+                        />
                     </div>
                     <div className={UpperFooterPageStyles.rightAddress}>
                         <img

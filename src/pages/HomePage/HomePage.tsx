@@ -32,7 +32,7 @@ const HomePage = () => {
             <AboutUsPage />
             {/*<EventsPage ref={eventsRef}/>*/}
             <AwardsPage />
-            {/*<UpperFooterPage />*/}
+            <UpperFooterPage />
             {/*<AppFooter />*/}
         </>
     );

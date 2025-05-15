@@ -22,7 +22,8 @@ const AboutUsPage = () => {
         image: '/mainFood/menuFood4.png',
         text: 'БЭЙБИ ПОТАТА',
     }];
-    const slides = [...scrollerItems, ...scrollerItems];
+    const slides1 = [...scrollerItems, ...scrollerItems];
+    const slides = [...scrollerItems, ...slides1];
     const ref1 = useRef<HTMLDivElement>(null);
     const ref2 = useRef<HTMLDivElement>(null);
 
@@ -141,7 +142,6 @@ const AboutUsPage = () => {
                         {isMobile ?
                             <span>
                                 Крафт и коктейли
-
                             </span>
                             :
                             <span>

@@ -39,6 +39,10 @@
     line-height: 1;
   }
 
+  &Mobile {
+    display: none;
+  }
+
   &UnderTitle {
     color: #FBF5EE;
     font-size: 40px;
@@ -51,5 +55,67 @@
     font-size: 36px;
     line-height: 1;
     margin: 48px 0 48px 0;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .wrapper {
+    padding-bottom: 0;
+  }
+
+  .header {
+    padding-bottom: 48px;
+
+    &Item {
+    }
+  }
+
+  .container {
+    flex-direction: column-reverse;
+  }
+
+  .left {
+    margin-right: 67px;
+    z-index: 2;
+
+    &Item {
+      display: none;
+    }
+  }
+
+  .star {
+    display: none;
+  }
+
+  .right {
+    text-align: center;
+    overflow: hidden;
+
+    &Title {
+      font-size: 28px;
+    }
+
+    &Mobile {
+      display: block;
+      transform: translate(20px, 0);
+    }
+
+    &UnderTitle {
+      font-size: 20px;
+      margin: 12px 0 16px 0;
+    }
+
+    &Address {
+      display: none;
+    }
+
+    &WorkTime {
+      font-size: 20px;
+      margin: 16px 0 48px 0;
+    }
+
+    &Btn {
+      display: none;
+    }
   }
 }
