@@ -6,6 +6,7 @@ import HexagonButton from "../../components/HexagonButton/HexagonButton";
 import {useNavigate} from "react-router-dom";
 import {setIsBar} from "../../services/slices/mainSlice";
 import {useDispatch} from "react-redux";
+import {useMobile} from "../../utils";
 
 const AboutUsPage = () => {
     const scrollerItems = [{
@@ -37,6 +38,7 @@ const AboutUsPage = () => {
 
     const dispatch = useDispatch();
     const navigate = useNavigate();
+    const isMobile = useMobile();
 
     const navigateItem = (text: string) => {
         if (text === "МЕНЮ") dispatch(setIsBar(false));
@@ -136,13 +138,35 @@ const AboutUsPage = () => {
                         } : {}}
                         style={{position: 'relative'}}
                     >
-                        Крафт <br/>
-                        и коктейли
+                        {isMobile ?
+                            <span>
+                                Крафт и коктейли
+
+                            </span>
+                            :
+                            <span>
+                            Крафт <br/>
+                                и коктейли
+                            </span>
+                        }
+
                     </motion.div>
                     <div className={AboutUsPageStyles.artFoodBarDescriptionText}>
-                        Каждый напиток — как джазовая <br/>
-                        импровизация: непредсказуемый, <br/>
-                        но всегда гармоничный.
+                        {isMobile ?
+                            <span>
+                                Каждый напиток — <br/>
+                                джазовая импровизация: <br/>
+                                непредсказуемый, но всегда <br/>
+                                гармоничный.
+                            </span>
+                            :
+                            <span>
+                                Каждый напиток — джазовая <br/>
+                                импровизация: непредсказуемый, <br/>
+                                но всегда гармоничный.
+                            </span>
+                        }
+
                     </div>
                     <div className={AboutUsPageStyles.artFoodBarDescriptionBtn}>
                         <HexagonButton onClick={() => navigateItem('БАРНАЯ КАРТА')}>
