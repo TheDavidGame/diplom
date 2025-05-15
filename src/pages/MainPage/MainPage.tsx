@@ -63,11 +63,19 @@ const MainPage = forwardRef<HTMLDivElement, MainPageProps>((props, ref) => {
             />
 
             <div className={MainPageStyles.ctaBlock}>
-                <img
-                    src="/mainPageArrow.svg"
-                    alt="arrow"
-                    className={MainPageStyles.mainPageArrow}
-                />
+                {isMobile ?
+                    <img
+                        src="/mobile/mainPageArrowMobile.png"
+                        alt="mainPageLogo"
+                        className={MainPageStyles.mainPageLogo}
+                    />
+                    :
+                    <img
+                        src="/mainPageArrow.svg"
+                        alt="arrow"
+                        className={MainPageStyles.mainPageArrow}
+                    />
+                }
             </div>
         </div>
     )
