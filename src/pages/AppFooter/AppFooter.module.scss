@@ -41,3 +41,53 @@
     margin-right: 82px;
   }
 }
+
+@media screen and (max-width: 640px) {
+  .wrapper {
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+  .list {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: flex-start;
+
+    &Item {
+      font-size: 12px;
+      margin: 24px 0 12px 24px;
+    }
+
+    &Item:first-child {
+      margin-left: 24px;
+      margin-right: 0;
+    }
+
+    &Item:not(:first-child) {
+      text-decoration: underline;
+    }
+
+    &Item:last-child {
+      margin-left: 24px;
+      margin-right: 0;
+      margin-bottom: 0;
+    }
+  }
+
+  .icons {
+    display: flex;
+
+    &Item {
+      margin: 6px;
+    }
+
+    &Item:last-child {
+      margin-right: 24px;
+    }
+
+    &Img {
+      height: 24px;
+    }
+  }
+
+}
