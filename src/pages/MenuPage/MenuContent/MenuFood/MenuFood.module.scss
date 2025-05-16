@@ -189,3 +189,189 @@
 .icons {
   margin: 0 5px 0 5px;
 }
+
+@media screen and (max-width: 640px) {
+  .wrapper {
+    clip-path: none;
+  }
+
+  .menuFoodStar {
+   display: none;
+  }
+
+  .events {
+    background-color: #FF5101;
+    padding: 56px 0 0 0;
+    clip-path: none;
+    position: relative;
+
+    &Title {
+      font-size: 28px;
+    }
+
+    &List {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0;
+      justify-content: center;
+
+      &Item {
+        max-width: 256px;
+        margin: 32px 0 32px 0;
+      }
+
+      &Item:first-child {
+        margin: 0 0 32px 0;
+      }
+
+      &Img {
+        pointer-events: none;
+
+        &Item {
+          height: 256px;
+        }
+      }
+
+      &Title {
+        font-size: 22px;
+        margin: 16px 0 8px 0;
+        font-weight: 700;
+      }
+
+      &SubTitle {
+        font-size: 16px;
+      }
+
+      &Description {
+        margin-top: 8px;
+
+        &Price {
+          font-size: 16px;
+          margin-right: 5px;
+        }
+
+        &Weight {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+
+  .main {
+    padding-top: 32px;
+
+    &Title {
+      font-size: 28px;
+    }
+
+    &List {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0;
+      margin: 32px 0;
+      justify-content: center;
+
+      &Item {
+        max-width: 256px;
+        margin: 32px 0 32px 0;
+      }
+
+      &Item:first-child {
+        margin: 0 0 32px 0;
+      }
+
+      .lastSpecial {
+        display: none;
+      }
+
+      &Img {
+        &Item {
+          height: 256px;
+        }
+      }
+
+      &Title {
+        font-size: 22px;
+        margin: 16px 0 8px 0;
+        font-weight: 700;
+      }
+
+      &SubTitle {
+        max-width: 256px;
+        font-size: 16px;
+      }
+
+      &Description {
+        margin-top: 8px;
+
+        &Price {
+          font-size: 16px;
+          margin-right: 5px;
+        }
+
+        &Weight {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+
+  .snacks {
+    padding-top: 32px;
+
+    &Title {
+      font-size: 28px;
+    }
+
+    &List {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0;
+      margin: 32px 0;
+      justify-content: center;
+
+      &Item {
+        max-width: 256px;
+        margin: 32px 0 32px 0;
+      }
+
+      &Item:first-child {
+        margin: 0 0 32px 0;
+      }
+
+      &Img {
+        &Item {
+          height: 256px;
+        }
+      }
+
+      &Title {
+        font-size: 22px;
+        margin: 16px 0 8px 0;
+        font-weight: 700;
+      }
+
+      &SubTitle {
+        max-width: 256px;
+        font-size: 16px;
+      }
+
+      &Description {
+        margin-top: 8px;
+
+        &Price {
+          font-size: 16px;
+          margin-right: 5px;
+        }
+
+        &Weight {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+
+  .icons {
+    margin: 0 5px 0 5px;
+  }
+}

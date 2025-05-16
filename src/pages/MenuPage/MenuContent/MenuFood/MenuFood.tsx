@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 import MenuFoodStyles from './MenuFood.module.scss';
 import {eventsFood, mainFood, saladsFood, snacksFood} from "./testFood";
 import {useSelector} from "react-redux";
@@ -130,7 +130,7 @@ const MenuFood = () => {
                                     <img
                                         src={el.src}
                                         alt={el.title}
-                                        className={MenuFoodStyles.snackssnacksImgItem}
+                                        className={MenuFoodStyles.snacksListImgItem}
                                     />
                                 </div>
                                 <div className={MenuFoodStyles.snacksListTitle} style={{whiteSpace: 'pre-line'}}>
@@ -172,7 +172,7 @@ const MenuFood = () => {
                                     <img
                                         src={el.src}
                                         alt={el.title}
-                                        className={MenuFoodStyles.snackssnacksImgItem}
+                                        className={MenuFoodStyles.snacksListImgItem}
                                     />
                                 </div>
                                 <div className={MenuFoodStyles.snacksListTitle} style={{whiteSpace: 'pre-line'}}>
