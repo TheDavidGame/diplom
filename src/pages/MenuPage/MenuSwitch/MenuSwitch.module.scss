@@ -125,3 +125,42 @@
     transform: rotate(360deg);
   }
 }
+
+@media screen and (max-width: 640px) {
+  .wrapper {
+    margin-bottom: -70px;
+    padding-top: 0;
+    height: 800px;
+  }
+
+  .switchContainer {
+    width: 256px;
+    height: 42px;
+    margin: 152px 0 48px 0;
+  }
+
+  .switchLabel {
+    span {
+      font-size: 28px;
+    }
+  }
+
+  .menuFood {
+    display: flex;
+    flex-direction: column;
+
+    &Item {
+      font-size: 20px;
+      font-weight: 700;
+    }
+  }
+
+  .filter {
+    bottom: 24px;
+
+    &Item {
+      width: 82px;
+    }
+  }
+
+}

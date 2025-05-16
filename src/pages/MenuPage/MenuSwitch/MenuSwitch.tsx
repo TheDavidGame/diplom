@@ -6,6 +6,7 @@ import {shallowEqual, useDispatch, useSelector} from "react-redux";
 import {switchIsBar} from "../../../services/slices/mainSlice";
 import Modal from "../../../components/Modal/Modal";
 import FilterPage from "./FilterPage/FilterPage";
+import {useMobile} from "../../../utils";
 
 const MenuSwitch = memo(() => {
     const menuSwitchFood: menuSwitchFood[] = [
@@ -45,6 +46,7 @@ const MenuSwitch = memo(() => {
     const dispatch = useDispatch();
     const isBar = useSelector((state: RootState) => state.mainSlice.isBar, shallowEqual);
     const [isModalOpen, setIsModalOpen] = useState(false);
+    const isMobile = useMobile();
 
     const toggleSwitch = () => {
         dispatch(switchIsBar());
@@ -74,7 +76,7 @@ const MenuSwitch = memo(() => {
                         className={MenuSwitchStyles.switch}
                         initial={false}
                         animate={{
-                            x: isBar ? '434px' : '0',
+                            x: isBar ? (isMobile ? '128px' : '434px') : '0',
                         }}
                         transition={{
                             duration: 0.8,
