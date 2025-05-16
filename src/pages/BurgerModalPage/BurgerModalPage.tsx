@@ -1,10 +1,11 @@
 import React from 'react';
 import BurgerModalPageStyles from './BurgerModalPage.module.scss';
-import {BurgerModalPageProps, menuHeader, menuHeaderItem, ModalProps} from "../../entity/index.entity";
+import {BurgerModalPageProps, menuHeader, menuHeaderItem} from "../../entity/index.entity";
 import Header from "../../components/Header/Header";
 import {useLocation, useNavigate} from "react-router-dom";
 import {setIsBar} from "../../services/slices/mainSlice";
 import {useDispatch} from "react-redux";
+import {useMobile} from "../../utils";
 
 const BurgerModalPage = ({onClose}: BurgerModalPageProps) => {
 
@@ -48,6 +49,8 @@ const BurgerModalPage = ({onClose}: BurgerModalPageProps) => {
         {text: '/burgerModalIconsInst.svg'}
     ];
 
+    const isMobile = useMobile();
+
     return (
         <div className={BurgerModalPageStyles.wrapper}>
             <div className={BurgerModalPageStyles.header}>
@@ -68,9 +71,15 @@ const BurgerModalPage = ({onClose}: BurgerModalPageProps) => {
                 ))}
             </div>
 
-            <div className={BurgerModalPageStyles.star}>
-                <img src="/burgerModalPageStar.svg" alt="star"/>
-            </div>
+            {isMobile ?
+                <div className={BurgerModalPageStyles.star}>
+                    <img src="/mobile/burgerModalPageStarMobile.png" alt="star"/>
+                </div>
+                :
+                <div className={BurgerModalPageStyles.star}>
+                    <img src="/burgerModalPageStar.svg" alt="star"/>
+                </div>
+            }
 
             <div className={BurgerModalPageStyles.footer}>
                 <div className={BurgerModalPageStyles.footerItems}>
