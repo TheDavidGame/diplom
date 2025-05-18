@@ -21,8 +21,8 @@ const AboutGastroPage = () => {
                 setIsMainPageVisible={setIsMainPageVisible}
             />
             <MissionPage/>
-            {/*<UnderMissionPage/>*/}
-            {/*<LiveCulturePage />*/}
+            <UnderMissionPage/>
+            <LiveCulturePage />
             {/*<TasteEventPage />*/}
             {/*<FrequentQuestions />*/}
             {/*<UpperFooterPage />*/}

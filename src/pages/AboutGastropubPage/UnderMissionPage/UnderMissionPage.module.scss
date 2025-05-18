@@ -19,3 +19,12 @@
     transform-origin: center center;
   }
 }
+
+@media screen and (max-width: 640px) {
+  .wrapper {
+    height: 100vh;
+    img {
+      height: 320px;
+    }
+  }
+}
