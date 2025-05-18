@@ -5,9 +5,10 @@
 
 .header {
   padding-bottom: 112px;
+  overflow: hidden;
 
   &Item {
-    width: 99vw;
+    width: 200vw;
   }
 }
 

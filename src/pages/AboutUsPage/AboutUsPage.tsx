@@ -94,7 +94,7 @@ const AboutUsPage = () => {
                     </div>
                 </div>
             </div>
-            <div style={{backgroundColor: '#FF5101'}}>
+            <div style={{backgroundColor: '#FF5101', overflow: 'hidden'}}>
                 <img
                     src="/artFoodSliderArrowTop.svg"
                     alt="artFoodSliderArrowTop"
