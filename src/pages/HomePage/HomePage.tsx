@@ -30,7 +30,7 @@ const HomePage = () => {
                 setIsMainPageVisible={setIsMainPageVisible}
             />
             <AboutUsPage />
-            {/*<EventsPage ref={eventsRef}/>*/}
+            <EventsPage ref={eventsRef}/>
             <AwardsPage />
             <UpperFooterPage />
             <AppFooter />
