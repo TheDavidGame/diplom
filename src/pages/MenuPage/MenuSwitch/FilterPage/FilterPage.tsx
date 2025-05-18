@@ -1,14 +1,17 @@
 import React from 'react';
 import FilterPageStyles from './FilterPage.module.scss';
-import {dietTypes, exclusions} from "./filterOptions";
+import {dietTypes, exclusions, exclusionsMobile} from "./filterOptions";
 import {FilterPageProps, RootState} from "../../../../entity/index.entity";
 import {useDispatch, useSelector} from "react-redux";
 import {clearFilters, toggleExclusion} from "../../../../services/slices/mainSlice";
+import HexagonButton from "../../../../components/HexagonButton/HexagonButton";
+import {useMobile} from "../../../../utils";
 
-const FilterPage = ({ onClose }: FilterPageProps) => {
+const FilterPage = ({onClose}: FilterPageProps) => {
 
     const dispatch = useDispatch();
     const selectedExclusions = useSelector((state: RootState) => state.mainSlice.selectedExclusions);
+    const isMobile = useMobile();
 
     const handleToggleExclusion = (id: string) => {
         dispatch(toggleExclusion(id));
@@ -55,26 +58,38 @@ const FilterPage = ({ onClose }: FilterPageProps) => {
             <div className={FilterPageStyles.bottom}>
                 <div className={FilterPageStyles.bottomTitle}>Я НЕ ЕМ</div>
                 <div className={FilterPageStyles.bottomFilter}>
-                    {exclusions.map(item => (
-                        <div
-                            key={item.id}
-                            onClick={() => handleToggleExclusion(item.id)}
-                            className={`${FilterPageStyles.bottomFilterItem} ${selectedExclusions.includes(item.id) ? FilterPageStyles.bottomFilterItemActive : ''}`}
-                        >
-                            {item.label}
-                            <div className={FilterPageStyles.underline}></div>
-                        </div>
-                    ))}
+                    {isMobile ?
+                        exclusionsMobile.map(item => (
+                            <div
+                                key={item.id}
+                                onClick={() => handleToggleExclusion(item.id)}
+                                className={`${FilterPageStyles.bottomFilterItem} ${selectedExclusions.includes(item.id) ? FilterPageStyles.bottomFilterItemActive : ''}`}
+                            >
+                                {item.label}
+                                <div className={FilterPageStyles.underline}></div>
+                            </div>
+                        ))
+                        :
+                        exclusions.map(item => (
+                            <div
+                                key={item.id}
+                                onClick={() => handleToggleExclusion(item.id)}
+                                className={`${FilterPageStyles.bottomFilterItem} ${selectedExclusions.includes(item.id) ? FilterPageStyles.bottomFilterItemActive : ''}`}
+                            >
+                                {item.label}
+                                <div className={FilterPageStyles.underline}></div>
+                            </div>
+                        ))
+                    }
+
                 </div>
             </div>
             <div className={FilterPageStyles.submit}>
                 <div className={FilterPageStyles.submitClearBtn} onClick={handleClearFilters}>Очистить фильтры</div>
                 <div className={FilterPageStyles.submitBtn} onClick={onClose}>
-                    <img
-                        src={'/filterSubmitBtn.svg'}
-                        alt={'filterSubmitBtn'}
-                        className={FilterPageStyles.submitBtnItem}
-                    />
+                    <HexagonButton onClick={onClose}>
+                        ПОДТВЕРДИТЬ
+                    </HexagonButton>
                 </div>
             </div>
         </div>
