@@ -23,7 +23,7 @@ const AboutGastroPage = () => {
             <MissionPage/>
             <UnderMissionPage/>
             <LiveCulturePage />
-            {/*<TasteEventPage />*/}
+            <TasteEventPage />
             {/*<FrequentQuestions />*/}
             {/*<UpperFooterPage />*/}
             {/*<AppFooter/>*/}

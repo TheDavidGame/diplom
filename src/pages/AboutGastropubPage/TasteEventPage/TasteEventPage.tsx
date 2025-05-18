@@ -5,6 +5,7 @@ import {motion, useInView} from "framer-motion";
 import {setIsBar} from "../../../services/slices/mainSlice";
 import {useNavigate} from "react-router-dom";
 import {useDispatch} from "react-redux";
+import {useMobile} from "../../../utils";
 
 const TasteEventPage = () => {
     const ref = useRef<HTMLDivElement>(null);
@@ -18,6 +19,8 @@ const TasteEventPage = () => {
         if (text === "МЕНЮ") dispatch(setIsBar(false));
         navigate('/menu');
     };
+    const isMobile = useMobile();
+
     return (
         <>
             <div className={TasteEventPageStyles.wrapper}>
@@ -42,12 +45,25 @@ const TasteEventPage = () => {
                 >
                     ВКУС СОБЫТИЯ
                 </motion.div>
-                <div className={TasteEventPageStyles.description}>
-                    Наше меню состоит из основных блюд и особых <br/>
-                    событийных явств и напитков, вдохновленных разными <br/>
-                    культурами и стилями, от классического джаза до арт-<br/>
-                    хаусного кинематографа
-                </div>
+                {isMobile ?
+                    <div className={TasteEventPageStyles.description}>
+                        Наше меню состоит из <br/>
+                        основных блюд и особых <br/>
+                        событийных явств и напитков, <br/>
+                        вдохновленных разными <br/>
+                        культурами и стилями, от <br/>
+                        классического джаза до арт-<br/>
+                        хаусного кинематографа
+                    </div>
+                :
+                    <div className={TasteEventPageStyles.description}>
+                        Наше меню состоит из основных блюд и особых <br/>
+                        событийных явств и напитков, вдохновленных разными <br/>
+                        культурами и стилями, от классического джаза до арт-<br/>
+                        хаусного кинематографа
+                    </div>
+                }
+
                 <div className={TasteEventPageStyles.btn}>
                     <HexagonButton onClick={() => navigateItem('МЕНЮ')}>
                         НАШЕ МЕНЮ
