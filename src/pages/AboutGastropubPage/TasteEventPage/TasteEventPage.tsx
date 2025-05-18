@@ -24,8 +24,10 @@ const TasteEventPage = () => {
     return (
         <>
             <div className={TasteEventPageStyles.wrapper}>
-                <img src="/tasteEventPageLeftStar.svg" alt="tasteEventPageLeftStar" className={TasteEventPageStyles.leftStar}/>
-                <img src="/tasteEventPageRightStar.svg" alt="tasteEventPageRightStar" className={TasteEventPageStyles.rightStar}/>
+                <img src="/tasteEventPageLeftStar.svg" alt="tasteEventPageLeftStar"
+                     className={TasteEventPageStyles.leftStar}/>
+                <img src="/tasteEventPageRightStar.svg" alt="tasteEventPageRightStar"
+                     className={TasteEventPageStyles.rightStar}/>
 
                 <motion.div
                     className={TasteEventPageStyles.title}
@@ -55,7 +57,7 @@ const TasteEventPage = () => {
                         классического джаза до арт-<br/>
                         хаусного кинематографа
                     </div>
-                :
+                    :
                     <div className={TasteEventPageStyles.description}>
                         Наше меню состоит из основных блюд и особых <br/>
                         событийных явств и напитков, вдохновленных разными <br/>

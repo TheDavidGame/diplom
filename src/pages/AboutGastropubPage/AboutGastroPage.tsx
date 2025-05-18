@@ -24,9 +24,9 @@ const AboutGastroPage = () => {
             <UnderMissionPage/>
             <LiveCulturePage />
             <TasteEventPage />
-            {/*<FrequentQuestions />*/}
-            {/*<UpperFooterPage />*/}
-            {/*<AppFooter/>*/}
+            <FrequentQuestions />
+            <UpperFooterPage />
+            <AppFooter/>
         </div>
     );
 };
