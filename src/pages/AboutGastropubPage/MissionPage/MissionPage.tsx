@@ -2,6 +2,7 @@ import React, {useRef} from 'react';
 import MissionPageStyles from './MissionPage.module.scss';
 import {ParallaxText} from "../../../components/ParallaxText/ParallaxText";
 import {motion, useInView} from "framer-motion";
+import {useMobile} from "../../../utils";
 
 const MissionPage = () => {
     const ref = useRef<HTMLDivElement>(null);
@@ -9,18 +10,18 @@ const MissionPage = () => {
         once: true,
         margin: "0px 0px -30% 0px"
     });
+    const isMobile = useMobile();
+
     return (
         <div className={MissionPageStyles.wrapper}>
             <div className={MissionPageStyles.stripes}>
-                <div className={MissionPageStyles.stripe}
-                     style={{top: '250px', left: '-15%', transform: 'rotate(-12deg)'}}>
+
+                <div className={`${MissionPageStyles.stripe} ${MissionPageStyles.stripeFirst}`}>
                     <ParallaxText baseVelocity={-2}>СОБЫТИЕ ГАСТРОНОМ</ParallaxText>
                 </div>
-                <div className={MissionPageStyles.stripe}
-                     style={{top: '300px', left: '-10%', transform: 'rotate(5deg)'}}>
+                <div className={`${MissionPageStyles.stripe} ${MissionPageStyles.stripeSecond}`}>
                     <ParallaxText baseVelocity={2}>НОВОЕ ИСКУССТВО</ParallaxText>
                 </div>
-
             </div>
 
             <div className={MissionPageStyles.main}>
@@ -42,9 +43,16 @@ const MissionPage = () => {
                 >
                     МИССИЯ
                 </motion.div>
-                <div className={MissionPageStyles.mainDescription}>
-                    Наша миссия — вдохновлять людей через <br/> искусство и культуру
-                </div>
+                {isMobile ?
+                    <div className={MissionPageStyles.mainDescription}>
+                        Наша миссия — <br/> вдохновлять людей через <br/> искусство и культуру
+                    </div>
+                :
+                    <div className={MissionPageStyles.mainDescription}>
+                        Наша миссия — вдохновлять людей через <br/> искусство и культуру
+                    </div>
+                }
+
             </div>
         </div>
     );

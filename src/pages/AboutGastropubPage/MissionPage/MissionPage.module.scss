@@ -40,6 +40,17 @@
   pointer-events: none;
 }
 
+.stripeFirst {
+  top: 250px;
+  left: -15%;
+  transform: rotate(-12deg);
+}
+
+.stripeSecond {
+  top: 300px;
+  left: -10%;
+  transform: rotate(5deg);
+}
 
 .main {
   display: flex;
@@ -58,5 +69,67 @@
     font-size: 48px;
     color: #FBF5EE;
     margin-bottom: 48px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .wrapper {
+    height: 320px;
+  }
+
+  .stripes {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    pointer-events: none;
+    z-index: 10;
+  }
+
+  .stripe {
+    position: absolute;
+    width: 120%;
+    line-height: 1;
+    padding: 0;
+    min-width: 100px;
+    height: 18px;
+    background: #FFE100;
+    color: #2E281D;
+    font-size: 20px;
+    font-weight: 900;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+  }
+
+  .stripeFirst {
+    top: 35px;
+    left: -15%;
+    transform: rotate(-8deg);
+  }
+
+  .stripeSecond {
+    top: 30px;
+    left: -10%;
+    transform: rotate(5deg);
+  }
+
+  .main {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+
+    &Title {
+      font-size: 28px;
+      margin-bottom: 1px;
+    }
+
+    &Description {
+      font-size: 20px;
+      margin-bottom: 42px;
+    }
   }
 }

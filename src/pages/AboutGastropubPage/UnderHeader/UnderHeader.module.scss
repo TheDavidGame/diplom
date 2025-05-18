@@ -28,3 +28,24 @@
     max-width: 1434px;
   }
 }
+
+@media screen and (max-width: 640px) {
+  .wrapper {
+    max-height: 400px;
+    padding-bottom: 48px;
+  }
+
+  .main {
+    padding-top: 48px;
+
+    &Title {
+      font-size: 28px;
+      margin-bottom: 16px;
+    }
+
+    &Description {
+      font-size: 20px;
+      max-width: 1434px;
+    }
+  }
+}

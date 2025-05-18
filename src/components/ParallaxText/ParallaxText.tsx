@@ -44,7 +44,7 @@ export const ParallaxText = memo(function ParallaxText({ children, baseVelocity 
                 <span>{children}&nbsp;</span>
                 <span>{children}&nbsp;</span>
                 <span>{children}&nbsp;</span>
-
+                <span>{children}&nbsp;</span>
             </motion.div>
         </div>
     );

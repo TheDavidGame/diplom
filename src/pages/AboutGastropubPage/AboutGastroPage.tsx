@@ -14,19 +14,19 @@ const AboutGastroPage = () => {
     const [isMainPageVisible, setIsMainPageVisible] = useState(true);
     return (
         <div>
-            <MainPage ref={mainPageRef}/>
+            {/*<MainPage ref={mainPageRef}/>*/}
             <UnderHeader
                 mainPageRef={mainPageRef}
                 isMainPageVisible={isMainPageVisible}
                 setIsMainPageVisible={setIsMainPageVisible}
             />
             <MissionPage/>
-            <UnderMissionPage/>
-            <LiveCulturePage />
-            <TasteEventPage />
-            <FrequentQuestions />
-            <UpperFooterPage />
-            <AppFooter/>
+            {/*<UnderMissionPage/>*/}
+            {/*<LiveCulturePage />*/}
+            {/*<TasteEventPage />*/}
+            {/*<FrequentQuestions />*/}
+            {/*<UpperFooterPage />*/}
+            {/*<AppFooter/>*/}
         </div>
     );
 };

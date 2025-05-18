@@ -3,6 +3,7 @@ import UnderHeaderStyles from './UnderHeader.module.scss';
 import {UnderMainPageProps} from "../../../entity/index.entity";
 import Header from "../../../components/Header/Header";
 import {motion, useInView} from "framer-motion";
+import {useMobile} from "../../../utils";
 
 const UnderHeader: React.FC<UnderMainPageProps> = ({
                                                        mainPageRef,
@@ -14,6 +15,8 @@ const UnderHeader: React.FC<UnderMainPageProps> = ({
         once: true,
         margin: "0px 0px -30% 0px"
     });
+    const isMobile = useMobile();
+
     return (
         <div className={UnderHeaderStyles.wrapper}>
             <Header
@@ -41,11 +44,21 @@ const UnderHeader: React.FC<UnderMainPageProps> = ({
                 >
                     ИСКУССТВО И ВКУС
                 </motion.div>
-                <div className={UnderHeaderStyles.mainDescription}>
-                    <span style={{fontWeight:"bold"}}>CULTURE BLAST  </span>— это уникальный гастро-бар, где <br/> сходятся искусство и гастрономия.
-                    Мы создаем <br/> пространство, где каждый может насладиться не <br/>только вкусной едой,
-                    но и погрузиться в мир искусства <br/> и культуры.
-                </div>
+
+                {isMobile ?
+                    <div className={UnderHeaderStyles.mainDescription}>
+                        <span style={{fontWeight: "bold"}}>CULTURE BLAST  </span>— это <br/>
+                        уникальный гастро-бар, <br/>
+                        где сходятся искусство и гастрономия.
+                    </div>
+                    :
+                    <div className={UnderHeaderStyles.mainDescription}>
+                        <span style={{fontWeight: "bold"}}>CULTURE BLAST  </span>— это уникальный гастро-бар,
+                        где <br/> сходятся искусство и гастрономия.
+                        Мы создаем <br/> пространство, где каждый может насладиться не <br/>только вкусной едой,
+                        но и погрузиться в мир искусства <br/> и культуры.
+                    </div>
+                }
             </div>
         </div>
     );
