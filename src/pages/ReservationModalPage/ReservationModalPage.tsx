@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import ReservationModalPageStyles from './ReservationModalPage.module.scss';
 import { motion } from 'framer-motion';
 import { Calendar, Clock, Users } from 'react-feather';
+import HexagonButton from "../../components/HexagonButton/HexagonButton";
 
 const ReservationModalPage = () => {
 
@@ -124,11 +125,9 @@ const ReservationModalPage = () => {
 
             <div className={ReservationModalPageStyles.submit}>
                 <div className={ReservationModalPageStyles.submitBtn} onClick={handleSubmit}>
-                    <img
-                        src="/filterSubmitBtn.svg"
-                        alt="filterSubmitBtn"
-                        className={ReservationModalPageStyles.submitBtnItem}
-                    />
+                    <HexagonButton onClick={handleSubmit}>
+                        Подтвердить
+                    </HexagonButton>
                 </div>
             </div>
         </div>
