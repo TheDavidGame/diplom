@@ -4,10 +4,22 @@
   height: 100vh;
   overflow: hidden;
 
+  .backgroundVideo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 668px;
+    height: 668px;
+    transform: translate(-50%, -50%);
+    object-fit: contain;
+    background-color: #FF5101;
+    z-index: 4;
+  }
+
   .background {
     position: absolute;
     width: 100%;
-    height: 100%;
+    height: 150vh;
     object-fit: cover;
     z-index: 1;
   }
@@ -17,7 +29,7 @@
     width: 1181px;
     position: absolute;
     left: 20%;
-    z-index: 5;
+    z-index: 6;
   }
 
   .mainPageGroupFirst,
@@ -52,37 +64,6 @@
   .mainPageGroupFourth {
     top: 55%;
     width: 220px;
-  }
-
-  .mainPhoto {
-    position: absolute;
-    width: 768px;
-    height: 768px;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 5;
-  }
-
-  .mainPhotoStar {
-    position: absolute;
-    width: 768px;
-    height: 768px;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 4;
-    animation: rotate 20s linear infinite;
-    transform-origin: center center;
-  }
-
-  @keyframes rotate {
-    from {
-      transform: translate(-50%, -50%) rotate(0deg);
-    }
-    to {
-      transform: translate(-50%, -50%) rotate(360deg);
-    }
   }
 
   .ctaBlock {
@@ -127,12 +108,24 @@
 @media screen and (max-width: 640px) {
   .wrapper {
     width: 100%;
-    height: 120vh;
+    height: 100vh;
     overflow: hidden;
     background-color: #FF5101;
 
     .background {
       display: none;
+    }
+
+    .backgroundVideo {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 340px;
+      height: 340px;
+      transform: translate(-50%, -50%);
+      object-fit: contain;
+      background-color: #FF5101;
+      z-index: 4;
     }
 
     .mainPageLogo {
@@ -143,15 +136,6 @@
       max-width: 100%;
       height: auto;
       position: relative;
-    }
-
-    .mainPhoto,
-    .mainPhotoStar {
-      width: 344px;
-      height: 344px;
-      left: 50%;
-      top: 60%;
-      transform: translate(-50%, -50%);
     }
 
     .mainPageGroupFirst,

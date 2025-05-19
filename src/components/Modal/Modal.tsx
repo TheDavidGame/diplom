@@ -35,11 +35,6 @@ const Modal = ({onClose, children}: ModalProps) => {
         <>
             <ModalOverlay onClose={onClose}/>
             <div className={ModalOverlayStyles.modal}>
-                {/*<div className={ModalOverlayStyles.modalHeader}>*/}
-                {/*    <button className={ModalOverlayStyles.closeBtn} onClick={onClose} data-cy="modal-close">*/}
-                {/*        <img src="/close.svg" alt={'close'}/>*/}
-                {/*    </button>*/}
-                {/*</div>*/}
                 {children}
             </div>
         </>,

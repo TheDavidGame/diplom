@@ -9,7 +9,7 @@ const MainPage = forwardRef<HTMLDivElement, MainPageProps>((props, ref) => {
     return (
         <div ref={ref} className={MainPageStyles.wrapper}>
             <img
-                src="/bkcgrndMainPage.svg"
+                src="/bkcgrndMainPage.png"
                 alt="mainBackground"
                 className={MainPageStyles.background}
             />
@@ -51,16 +51,17 @@ const MainPage = forwardRef<HTMLDivElement, MainPageProps>((props, ref) => {
                 className={MainPageStyles.mainPageGroupFourth}
             />
 
-            <img
-                src="/mainPhoto.svg"
-                alt="main content"
-                className={MainPageStyles.mainPhoto}
-            />
-            <img
-                src="/mainPageStar.svg"
-                alt="main content"
-                className={MainPageStyles.mainPhotoStar}
-            />
+            <video
+                className={MainPageStyles.backgroundVideo}
+                autoPlay
+                loop
+                muted
+                playsInline
+                preload="auto"
+            >
+                <source src="/mainPageVideo.webm" type="video/webm" />
+                Ваш браузер не поддерживает видео.
+            </video>
 
             <div className={MainPageStyles.ctaBlock}>
                 {isMobile ?
