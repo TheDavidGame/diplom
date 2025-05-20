@@ -9,7 +9,7 @@ const MenuBar = () => {
     return (
         <>
             {isBar && (
-                <div>
+                <div style={{overflow: 'hidden'}}>
                     <img
                         src={'/headerBar.svg'}
                         alt={'headerBar'}
