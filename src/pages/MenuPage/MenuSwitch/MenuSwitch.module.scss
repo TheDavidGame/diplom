@@ -148,7 +148,7 @@
   .menuFood {
     display: flex;
     flex-direction: column;
-
+    grid-gap: 16px;
     &Item {
       font-size: 20px;
       font-weight: 700;

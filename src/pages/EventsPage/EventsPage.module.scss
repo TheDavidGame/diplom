@@ -155,7 +155,7 @@
   align-items: center;
 }
 
-.showMoreButton, .hideButton {
+.hideButton {
   padding: 12px 32px;
   border: none;
   border-radius: 25px;
@@ -163,15 +163,6 @@
   font-weight: 500;
   cursor: pointer;
   transition: all 0.3s;
-}
-
-.showMoreButton {
-  background-color: #000;
-  color: white;
-
-  &:hover {
-    background-color: #333;
-  }
 }
 
 .hideButton {

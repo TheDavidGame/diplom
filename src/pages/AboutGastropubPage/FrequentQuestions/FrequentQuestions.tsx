@@ -80,7 +80,7 @@ const FrequentQuestions = () => {
                             aria-expanded={openIndex === index}
                             type="button"
                         >
-                            <span>{el.title}</span>
+                            <span style={{color: 'black'}}>{el.title}</span>
                             <span className={FrequentQuestionsStyles.icon}>
                                 {openIndex === index ? (
                                     <img

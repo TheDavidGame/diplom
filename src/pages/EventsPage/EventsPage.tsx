@@ -3,6 +3,7 @@ import EventPageStyles from './EventsPage.module.scss';
 import {EventSlideItem} from "../../entity/index.entity";
 import {motion, useInView} from 'framer-motion';
 import {useMobile} from "../../utils";
+import HexagonButton from "../../components/HexagonButton/HexagonButton";
 
 const EventsPage = forwardRef<HTMLDivElement>((props, eventRef) => {
     const [currentSlide, setCurrentSlide] = useState(0);
@@ -185,12 +186,9 @@ const EventsPage = forwardRef<HTMLDivElement>((props, eventRef) => {
 
                     <div className={EventPageStyles.mobileButtons}>
                         {visibleEvents < slides.length && (
-                            <button
-                                onClick={handleShowMore}
-                                className={EventPageStyles.showMoreButton}
-                            >
+                            <HexagonButton  onClick={handleShowMore}>
                                 Показать дальше
-                            </button>
+                            </HexagonButton>
                         )}
                         {visibleEvents > 2 && (
                             <button
