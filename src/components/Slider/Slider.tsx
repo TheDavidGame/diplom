@@ -34,6 +34,7 @@ const Slider: React.FC<ImageSliderProps> = ({ slides, showText }) => {
                             {isVideo ? (
                                 <video
                                     src={slide.image}
+                                    poster={slide.image}
                                     autoPlay
                                     muted
                                     loop
