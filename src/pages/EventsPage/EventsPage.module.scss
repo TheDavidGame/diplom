@@ -178,11 +178,12 @@
 @media screen and (max-width: 640px) {
   .wrapper {
     background-color: #F1B4D9;
+    overflow: hidden;
   }
 
   .headerItem {
     padding-bottom: 32px;
-    width: 99vw;
+    width: 150vw;
   }
 
   .title {
@@ -199,6 +200,7 @@
   }
 
   .footerItem {
-    width: 99vw;
+    margin-top: -5px;
+    width: 150vw;
   }
 }

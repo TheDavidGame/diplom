@@ -26,6 +26,7 @@
   width: 484px;
   height: 80px;
   background-color: #FFBB00;
+  font-family: "Montserrat", sans-serif;
   color: #2E281D;
   font-weight: 800;
   font-size: 24px;
@@ -50,7 +51,7 @@
   }
 
   .hexButtonShadow {
-    top: 8px;
+    top: 4px;
     height: 43px;
   }
 
@@ -59,5 +60,9 @@
     height: 43px;
     font-size: 14px;
     padding: 0;
+  }
+
+  .hexButton:active {
+    transform: translateY(4px);
   }
 }

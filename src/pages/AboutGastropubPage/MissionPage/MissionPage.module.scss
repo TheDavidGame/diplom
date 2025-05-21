@@ -1,16 +1,19 @@
 .wrapper {
   width: 100%;
   height: 1820px;
-  background-image: url('~../../../../public/missionBkgrnd.png');
+  background: #222 url('~../../../../public/missionBkgrnd.webp') center/cover no-repeat;
+  transition: background-image 0.5s;
   background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
 
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
   overflow: hidden;
+}
+
+.wrapper.loaded {
+  background-image: url('~../../../../public/missionBkgrnd.png');
 }
 
 .stripes {
