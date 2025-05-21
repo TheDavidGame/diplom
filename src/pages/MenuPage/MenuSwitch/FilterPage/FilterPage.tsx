@@ -6,6 +6,7 @@ import {useDispatch, useSelector} from "react-redux";
 import {clearFilters, toggleExclusion} from "../../../../services/slices/mainSlice";
 import HexagonButton from "../../../../components/HexagonButton/HexagonButton";
 import {useMobile} from "../../../../utils";
+import ReservationModalPageStyles from "../../../ReservationModalPage/ReservationModalPage.module.scss";
 
 const FilterPage = ({onClose}: FilterPageProps) => {
 
@@ -23,6 +24,9 @@ const FilterPage = ({onClose}: FilterPageProps) => {
 
     return (
         <div className={FilterPageStyles.wrapper}>
+            <div className={FilterPageStyles.close} onClick={onClose}>
+                <img src="/frequentQuestionsCross.svg" alt="close" className={FilterPageStyles.closeItem} />
+            </div>
             <div className={FilterPageStyles.leftStar}>
                 <img
                     src={'/filterLeftStar.svg'}
