@@ -50,7 +50,8 @@ const Header: React.FC<HeaderProps> = ({stickyMode = false, mainPageRef, setIsMa
             <div ref={headerRef} className={`${HeaderStyles.header} ${isSticky ? HeaderStyles.sticky : ''}`}>
                 {isMobile
                     ?
-                    <img src="/mobile/bckrndHeaderMobile.png" alt="Header background" className={HeaderStyles.background}/>
+                    <img src="/mobile/bckrndHeaderMobile.png" alt="Header background"
+                         className={HeaderStyles.background}/>
                     :
                     <img src="/bckrndHeader.svg" alt="Header background" className={HeaderStyles.background}/>
                 }
@@ -61,6 +62,11 @@ const Header: React.FC<HeaderProps> = ({stickyMode = false, mainPageRef, setIsMa
                 <div className={HeaderStyles.logo}>
                     <img src="/logoHeader.svg" alt="Logo"/>
                 </div>
+                {isMobile && (
+                    <div className={HeaderStyles.reservationMobile} onClick={() => navigate('/reservation')}>
+                        <img src="/mobile/reservationMobile.png" alt="Reservation"/>
+                    </div>
+                )}
                 <div className={HeaderStyles.reservation} onClick={() => navigate('/reservation')}>
                     <img src="/reservationHeader.svg" alt="Reservation"/>
                 </div>
