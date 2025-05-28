@@ -1,11 +1,11 @@
 import React from 'react';
 import BurgerModalPageStyles from './BurgerModalPage.module.scss';
 import {BurgerModalPageProps, menuHeader, menuHeaderItem} from "../../entity/index.entity";
-import Header from "../../components/Header/Header";
 import {useLocation, useNavigate} from "react-router-dom";
 import {setIsBar} from "../../services/slices/mainSlice";
 import {useDispatch} from "react-redux";
 import {useMobile} from "../../utils";
+import HeaderStyles from "../../components/Header/Header.module.scss";
 
 const BurgerModalPage = ({onClose}: BurgerModalPageProps) => {
 
@@ -54,7 +54,30 @@ const BurgerModalPage = ({onClose}: BurgerModalPageProps) => {
     return (
         <div className={BurgerModalPageStyles.wrapper}>
             <div className={BurgerModalPageStyles.header}>
-                <Header/>
+                <div className={`${HeaderStyles.header}`}>
+                    {isMobile
+                        ?
+                        <img src="/mobile/bckrndHeaderMobile.png" alt="Header background"
+                             className={HeaderStyles.background}/>
+                        :
+                        <img src="/bckrndHeader.svg" alt="Header background" className={HeaderStyles.background}/>
+                    }
+
+                    <div className={HeaderStyles.burger} onClick={() => onClose()}>
+                        <img src="/frequentQuestionsCross.svg" alt="Menu"/>
+                    </div>
+                    <div className={HeaderStyles.logo}>
+                        <img src="/logoHeader.svg" alt="Logo"/>
+                    </div>
+                    {isMobile && (
+                        <div className={HeaderStyles.reservationMobile} onClick={() => navigate('/reservation')}>
+                            <img src="/mobile/reservationMobile.png" alt="Reservation"/>
+                        </div>
+                    )}
+                    <div className={HeaderStyles.reservation} onClick={() => navigate('/reservation')}>
+                        <img src="/reservationHeader.svg" alt="Reservation"/>
+                    </div>
+                </div>
             </div>
 
             <div className={BurgerModalPageStyles.list}>
