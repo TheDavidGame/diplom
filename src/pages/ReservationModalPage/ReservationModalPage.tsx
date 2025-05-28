@@ -4,10 +4,12 @@ import ReservationModalPageStyles from './ReservationModalPage.module.scss';
 import { motion } from 'framer-motion';
 import { Calendar, Clock, Users } from 'react-feather';
 import HexagonButton from "../../components/HexagonButton/HexagonButton";
+import {useMobile} from "../../utils";
 
 const ReservationModalPage = () => {
 
     const navigate = useNavigate();
+    const isMobile = useMobile();
 
     const [people, setPeople] = useState('');
     const [date, setDate] = useState('');
@@ -80,6 +82,9 @@ const ReservationModalPage = () => {
                     whileTap={{ scale: 0.95 }}
                     transition={{ delay: 0.1 }}
                 >
+                    {isMobile && !date && (
+                        <span className={ReservationModalPageStyles.datePlaceholder}>Выберите</span>
+                    )}
                     <input
                         type="date"
                         className={ReservationModalPageStyles.dateInput}
