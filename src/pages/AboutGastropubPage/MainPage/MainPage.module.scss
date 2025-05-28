@@ -5,13 +5,19 @@
   overflow: hidden;
 }
 
-.mainPhoto {
-  &Item {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    max-width: 100%;
+.mainVideo {
+
+}
+
+.backgroundVideo {
+    width: 100vw;
+    height: 100vh;
     object-fit: cover;
+    background: #000;
+}
+
+@media screen and (max-width: 640px) {
+  .backgroundVideo {
+    object-position: center
   }
 }
