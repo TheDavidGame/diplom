@@ -9,24 +9,28 @@ const DoneReservationModalPage = () => {
         <div className={DoneReservationModalPageStyles.wrapper}>
             <div className={DoneReservationModalPageStyles.leftStar}>
                 <img src="/filterLeftStar.svg" alt="filterLeftStar"
-                     className={DoneReservationModalPageStyles.leftStarItem}/>
+                     className={DoneReservationModalPageStyles.leftStarItem}
+                />
             </div>
             <div className={DoneReservationModalPageStyles.rightStar}>
                 <img src="/filterRightStar.svg" alt="filterRightStar"
-                     className={DoneReservationModalPageStyles.rightStarItem}/>
+                     className={DoneReservationModalPageStyles.rightStarItem}
+                />
             </div>
 
             <div className={DoneReservationModalPageStyles.top}>
                 <div className={DoneReservationModalPageStyles.topStar}>
                     <img src="/DoneReservationStar.svg" alt="DoneReservationStar"
-                         className={DoneReservationModalPageStyles.topStarItem}/>
+                         className={DoneReservationModalPageStyles.topStarItem}
+                    />
                 </div>
 
                 <div className={DoneReservationModalPageStyles.topTitle}>Ждём вас!</div>
 
                 <div className={DoneReservationModalPageStyles.topStar}>
                     <img src="/DoneReservationStar.svg" alt="DoneReservationStar"
-                         className={DoneReservationModalPageStyles.topStarItem}/>
+                         className={DoneReservationModalPageStyles.topStarItem}
+                    />
                 </div>
 
             </div>

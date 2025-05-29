@@ -16,6 +16,7 @@ const ReservationModalPage = () => {
     const [time, setTime] = useState('');
     const [email, setEmail] = useState('');
     const [comment, setComment] = useState('');
+    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 
     const [errors, setErrors] = useState({
         people: false,
@@ -29,7 +30,8 @@ const ReservationModalPage = () => {
             people: !people,
             date: !date,
             time: !time,
-            email: !email || !/\S+@\S+\.\S+/.test(email),
+            email: !email || !emailRegex.test(email),
+
         };
         setErrors(newErrors);
 
@@ -89,6 +91,7 @@ const ReservationModalPage = () => {
                         type="date"
                         className={ReservationModalPageStyles.dateInput}
                         min={new Date().toISOString().split('T')[0]}
+                        max="2027-12-31"
                         value={date}
                         onChange={(e) => setDate(e.target.value)}
                     />
