@@ -68,9 +68,11 @@ const ReservationModalPage = () => {
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                 >
-
+                    {isMobile && (
+                        <span className={ReservationModalPageStyles.datePlaceholder}>Выберите</span>
+                    )}
                     <select value={people} onChange={(e) => setPeople(e.target.value)} className={ReservationModalPageStyles.select}>
-                        <option value="">Выберите</option>
+                        {/*<option value="">Выберите</option>*/}
                         {[1,2,3,4,5,6].map(num => (
                             <option key={num} value={num}>{num} человек</option>
                         ))}
@@ -81,6 +83,7 @@ const ReservationModalPage = () => {
                 <motion.div
                     className={`${ReservationModalPageStyles.selector} ${errors.date ? ReservationModalPageStyles.error : ''}`}
                     whileHover={{ scale: 1.05 }}
+                    style={{ position: 'relative' }}
                     whileTap={{ scale: 0.95 }}
                     transition={{ delay: 0.1 }}
                 >
@@ -103,9 +106,11 @@ const ReservationModalPage = () => {
                     whileTap={{ scale: 0.95 }}
                     transition={{ delay: 0.2 }}
                 >
-
+                    {isMobile && (
+                        <span className={ReservationModalPageStyles.datePlaceholder}>Выберите</span>
+                    )}
                     <select value={time} onChange={(e) => setTime(e.target.value)} className={ReservationModalPageStyles.select}>
-                        <option value="">Выберите</option>
+                        {/*<option value="">Выберите</option>*/}
                         {['17:00', '18:00', '19:00', '20:00', '21:00', '22:00', '23:00'].map(t => (
                             <option key={t} value={t}>{t}</option>
                         ))}
