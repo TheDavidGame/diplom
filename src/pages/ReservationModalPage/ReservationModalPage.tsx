@@ -68,7 +68,7 @@ const ReservationModalPage = () => {
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                 >
-                    {isMobile && (
+                    {isMobile && !people && (
                         <span className={ReservationModalPageStyles.datePlaceholder}>Выберите</span>
                     )}
                     <select value={people} onChange={(e) => setPeople(e.target.value)} className={ReservationModalPageStyles.select}>
@@ -106,7 +106,7 @@ const ReservationModalPage = () => {
                     whileTap={{ scale: 0.95 }}
                     transition={{ delay: 0.2 }}
                 >
-                    {isMobile && (
+                    {isMobile && !time && (
                         <span className={ReservationModalPageStyles.datePlaceholder}>Выберите</span>
                     )}
                     <select value={time} onChange={(e) => setTime(e.target.value)} className={ReservationModalPageStyles.select}>
