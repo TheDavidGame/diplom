@@ -16,6 +16,7 @@ export const exclusions: FilterOption[] = [
     { id: 'onion', label: 'Лук' },
     { id: 'tomatoes', label: 'Помидоры' },
     { id: 'beans', label: 'Бобы' },
+    { id: 'other', label: 'Другое' },
 ];
 
 export const exclusionsMobile: FilterOption[] = [

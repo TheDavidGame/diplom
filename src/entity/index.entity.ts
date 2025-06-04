@@ -82,6 +82,7 @@ export type FilterType =
     | 'onion'
     | 'tomatoes'
     | 'beans'
+    | 'other'
 
 export interface Dish {
     id: string | number;
