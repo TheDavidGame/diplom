@@ -28,14 +28,19 @@ const EventsPage = forwardRef<HTMLDivElement>((props, eventRef) => {
             text: 'Турнир по шахматам. Начало в 18:00'
         },
         {
-            image: '/eventSliderItemFirst.svg',
+            image: '/eventSliderItem3.png',
             date: 'ПТ, 16 ИЮЛЯ',
             text: 'Концерт Lasta R’evero, под аккомпонемент Six Guys'
         },
         {
-            image: '/eventSliderItemFirst.svg',
+            image: '/eventSliderItem4.png',
             date: 'СБ—ВС, 17—18 ИЮЛЯ',
-            text: 'Джазовый сет от наших музыкантов. Lounge, bossa-nova. Начало в 19:00 '
+            text: 'Лекция на тему "Стереотипы и рамки". Начало в 19:00 '
+        },
+        {
+            image: '/eventSliderItem5.png',
+            date: 'СБ—ВС, 17—18 ИЮЛЯ',
+            text: 'Киновечер Тарковского'
         }
     ];
 
